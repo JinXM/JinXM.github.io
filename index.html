@@ -329,25 +329,24 @@
       
         
           
-            <h5 id="关于蒙特卡罗方法"><a href="#关于蒙特卡罗方法" class="headerlink" title="关于蒙特卡罗方法"></a>关于蒙特卡罗方法</h5><p>蒙特卡罗方法是一种计算机仿真方法，起源于“曼哈顿计划”，名字来源于著名的赌城 - 摩纳哥的 MonteCarlo。</p>
-<p>该方法主要是基于“随机数”来解决问题。</p>
-<h5 id="原理和实施过程"><a href="#原理和实施过程" class="headerlink" title="原理和实施过程"></a>原理和实施过程</h5><p><strong>原理</strong></p>
-<p>其原理是利用计算机产生大量符合规则的随机数 M，然后查看落在目标中的随机数个数 N,通过 N/M 这个值来评估所需要的结果。</p>
-<p><strong>实施过程</strong></p>
-<ol>
-<li>分析问题，构造或描述出一个可以使用随机数的数学模型；</li>
-<li>利用计算机产生（大量）各种概率分布的随机数；</li>
-<li>从这大量的随机数中统计模型的数字特征，得到模拟解；</li>
-</ol>
-<h5 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h5><p>按照实际应用方向，有求面积、求积分、分析概率分布、物理方面的统计等等。但是抽象出来，都可以转换为长度（一维）、面积（二维）、体积（三维）…这些数学问题。而且随着维度的增加，不会出现计算难度（量）几何增长的问题。</p>
-<p>例如均匀分布的概率就可以转为二维坐标系中求面积的问题，非均匀分布的概率可以转换为三维坐标系中求体积的问题。</p>
-<h5 id="一个示例"><a href="#一个示例" class="headerlink" title="一个示例"></a>一个示例</h5><p><strong>问：</strong>计算两条抛物线 y=x² ，x=y² 所围成的图形的面积？</p>
-<p>首先我们先使用计算机绘制出这条抛物线的图像</p>
-<img src="/img/MonteCarlo.png" title="抛物线几何图">
-<p>两条抛物线的交点分别是[0,0],[1,1]，可以构成一个矩形.<br>所以我们使用计算机的（伪）随机函数在这个矩形随机均匀产生100000个点。然后统计（y &lt;= sqrt(x) &amp; y &gt;= x^2）的点得个数 N. 然后多组仿真的模拟结果大概是0.333左右。</p>
-<p>而使用定积分∫[0,1]（√x - x²)dx 计算的结果是1/3，与仿真结果很接近。</p>
+          关于蒙特卡罗方法蒙特卡罗方法是一种计算机仿真方法，起源于“曼哈顿计划”，名字来源于著名的赌城 - 摩纳哥的 MonteCarlo。
+该方法主要是基于“随机数”来解决问题。
+原理和实施过程原理
+其原理是利用计算机产生大量符合规则的随机数 M，然后查看落在目标中的随机数个数 N,通过 N/M 这个值来评估所需要的结果。
+实施过程
 
-          
+分析问题，构造或描述出一个可以使用随机数的数学模型；
+利用计算机产生（大量）各种概率分布的随机数；
+从这大量的随机数中统计模型的数字特征，得到模拟解；
+
+应用按照实际应用
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/22/蒙特卡罗方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -465,26 +464,16 @@
       
         
           
-            <h5 id="关于这部分摘记"><a href="#关于这部分摘记" class="headerlink" title="关于这部分摘记"></a>关于这部分摘记</h5><p>读《Head First Programming》这本书的时候，在序文里看到一段关于方法类的文字“让你的大脑顺从你的方法”，里边共给出了9个阅读程序类书籍的方法。这对于我这种这类书籍阅读能力较弱的人来说，无疑是一件好事，故在此作读书记录。</p>
-<h5 id="摘记正文"><a href="#摘记正文" class="headerlink" title="摘记正文"></a>摘记正文</h5><p><strong><code>1</code> Slow down. The more you understand, the less you have to memorize</strong></p>
-<p>Don’t just read. Stop and think. When the book asks you a question, don’t just skip to the answer. Imagine that someone really is asking the question. The<br>more deeply you force your brain to think, the better chance you have of learning and remembering.</p>
-<p><strong><code>2</code> Do the exercises. Write your own notes</strong></p>
-<p>We put them in, but if we did them for you, that would be like having someone else do your workouts for you. And don’t just look at the exercises. <code>Use a pencil</code>. There’s plenty of evidence that physical activity while learning can increase the learning.</p>
-<p><strong><code>3</code> Read the “There are No Dumb Questions”</strong></p>
-<p>That means all of them. They’re not optional sidebars, they’re part of the core content! Don’t skip them.</p>
-<p><strong><code>4</code> Make this the last thing you read before bed. Or at least the last challenging thing</strong></p>
-<p>Part of the learning (especially the transfer to long-term memory) happens <code>after</code> you put the book down. Your brain needs time on its own, to do more processing. If you put in something new during that processing time, some of what you just learned will be lost.</p>
-<p><strong><code>5</code> Talk about it. Out loud</strong></p>
-<p>Speaking activates a different part of the brain. If you’re trying to understand something, or increase your chance of remembering it later, say it out loud. Better still, try to explain it out loud to someone else. You’ll learn more quickly, and you might uncover ideas you hadn’t known were there when you were reading about it.</p>
-<p><strong><code>6</code> Drink water. Lots of it</strong><br>Your brain works best in a nice bath of fluid. Dehydration (which can happen before you ever feel thirsty) decreases cognitive function.</p>
-<p><strong><code>7</code> Listen to your brain</strong></p>
-<p>Your brain needs to know that this matters. Get involved with the stories. Make up your own captions for the photos. Groaning over a bad joke is still better than feeling nothing at all.</p>
-<p><strong><code>8</code> Feel something</strong></p>
-<p>Your brain needs to know that this matters. Get involved with the stories. Make up your own captions for the photos. Groaning over a bad joke is still better than feeling nothing at all.</p>
-<p><strong><code>9</code> Write a lot of code!</strong></p>
-<p>There’s only one way to learn to program: writing a lot of code. And that’s what you’re going to<br>do throughout this book. Coding is a skill, and the only way to get good at it is to practice. We’re going to give you a lot of practice: every chapter has exercises that pose a problem for you to solve. Don’t just skip over them—a lot of the learning happens when you solve the exercises. We included a solution to each exercise—don’t be afraid to <code>peek at the solution</code> if you get stuck! (It’s easy to get snagged on something small.) But try to solve the problem before you look at the solution. And definitely get it working before you move on to the next part of the book.</p>
+          关于这部分摘记读《Head First Programming》这本书的时候，在序文里看到一段关于方法类的文字“让你的大脑顺从你的方法”，里边共给出了9个阅读程序类书籍的方法。这对于我这种这类书籍阅读能力较弱的人来说，无疑是一件好事，故在此作读书记录。
+摘记正文1 Slow down. The more you understand, the less you have to memorize
+Don’t just read. Stop and think. When the book asks
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/22/Head First Programming-读书笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -602,15 +591,21 @@
       
         
           
-            <p>博客搭建中，敬请期待…</p>
-<p><strong>TODO-List</strong></p>
-<ol>
-<li>图标的替换；</li>
-<li>添加评论和搜索模块；</li>
-<li>添加每日故事模块；</li>
-</ol>
+          博客搭建中，敬请期待…
+TODO-List
+
+图标的替换；
+添加评论和搜索模块；
+添加每日故事模块；
+
 
           
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/15/博客搭建计划/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
