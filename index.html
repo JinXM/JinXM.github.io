@@ -279,6 +279,150 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/31/JS数据类型：基本类型-读书笔记/" itemprop="url">
+                  JS数据类型：基本类型-读书笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T17:24:18+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/31/JS数据类型：基本类型-读书笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/JS数据类型：基本类型-读书笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="JS-数据类型"><a href="#JS-数据类型" class="headerlink" title="JS  数据类型"></a>JS  数据类型</h3><p>在 ES 5标准中，JS 有6个基础的数据类型。</p>
+<p><img src="/img/2016-05/JS-dataType.png"></p>
+<h3 id="数据类型的判断方法"><a href="#数据类型的判断方法" class="headerlink" title="数据类型的判断方法"></a>数据类型的判断方法</h3><p>可以使用 typeof操作符和 instanceof运算符来检测数据类。          </p>
+<p>typeof 主要用于检测基本的数据类型。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 语法  typeof(value)</span></span><br><span class="line"><span class="keyword">typeof</span>(stringValue)  <span class="comment">// "string"</span></span><br><span class="line"><span class="keyword">typeof</span>(numberValue)  <span class="comment">// "number"</span></span><br><span class="line"><span class="keyword">typeof</span>(booleanValue) <span class="comment">// "boolean"</span></span><br><span class="line"><span class="keyword">typeof</span>(undefiedValue) <span class="comment">// "undefined"</span></span><br><span class="line"><span class="keyword">typeof</span>(objectValue) <span class="comment">// "object"</span></span><br><span class="line"><span class="keyword">typeof</span>(<span class="literal">null</span>) <span class="comment">// "object"</span></span><br><span class="line"><span class="keyword">typeof</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;) <span class="comment">// "function"</span></span><br></pre></td></tr></table></figure>
+<p>instanceof 主要用于检测是什么类型的 Object。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 语法  value instanceof constructor</span></span><br><span class="line"><span class="comment">// Seg:</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="keyword">instanceof</span> <span class="built_in">Array</span>   <span class="comment">// true</span></span><br><span class="line">regObj <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>   <span class="comment">// true</span></span><br><span class="line">基本类型 instance <span class="keyword">of</span> <span class="built_in">Object</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h3 id="undefined-和-null"><a href="#undefined-和-null" class="headerlink" title="undefined 和 null"></a>undefined 和 null</h3><ul>
+<li>undefined：变量声明了但未初始化时候的值。</li>
+<li>null：空指针。使用尚未声明的变量会得到 null。</li>
+</ul>
+<h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><ol>
+<li>Number 类型用来表示整数、浮点数、不同进制的数。</li>
+<li>当超过了 Number 的数值大小限制时，用特殊值 NaN (Not a Number)表示。</li>
+<li>有 Number()、parseInt()、parseFloat()三个函数将其他类型转换为 Number 类型。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">1</span>;       <span class="comment">// 整数</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">1.25</span>;    <span class="comment">// 浮点数</span></span><br><span class="line"><span class="keyword">var</span> num3 = <span class="number">0X11</span>;    <span class="comment">// 十六进制</span></span><br><span class="line"></span><br><span class="line">alert(<span class="built_in">isNaN</span>(<span class="number">10e10000000</span>));      <span class="comment">// NaN</span></span><br><span class="line">alert(<span class="literal">NaN</span>==<span class="literal">NaN</span>);                <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">"isString"</span>);             <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">"444"</span>);                  <span class="comment">// 444</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">"444nice"</span>);            <span class="comment">// 444</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">"154.444"</span>);          <span class="comment">// 154.444</span></span><br></pre></td></tr></table></figure>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><ul>
+<li>特殊符号转义</li>
+<li>字符串拼接：+</li>
+<li>转换为字符串：toString(value)、String()</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strValue1 = <span class="string">"Nice"</span>;</span><br><span class="line"><span class="keyword">var</span> strValue = <span class="string">"to meet you."</span>;</span><br><span class="line"><span class="keyword">var</span> notAStr = <span class="number">1993</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(strValue + strValue);   <span class="comment">// "Nice to meet you"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">String</span>(notAStr);                    <span class="comment">// "1993",不能用于 null 和 undefined </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 每种类型的值都有一个 value.toString()方法 ,用于转为 String</span></span><br><span class="line">num.toString(<span class="number">333</span>)                   <span class="comment">// "333"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h3><p>只有 <code>true/false</code> 两个值。<br>Boolean(value)方法可以将任意值转换为布尔值，会被转换为 false 的值有空字符串、0、NaN、null、undefined。</p>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p>详见其他笔记</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/31/JS概述-读书笔记/" itemprop="url">
                   JS概述-读书笔记
                 </a>
@@ -1042,7 +1186,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1059,7 +1203,7 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
