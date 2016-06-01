@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript 高级程序设计,读书笔记,JavaScript," />
+  <meta name="keywords" content="JinXM, Blog, 前端" />
 
 
 
@@ -80,21 +80,15 @@
 
 
 
-<meta name="description" content="写在前边这部分笔记是记录阅读《JavaScript 高级程序设计》时的一些摘记，总结~
-笔记主要通过 图+代码+少量阐述性文字 的形式进行表述~">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JS概述-读书笔记">
-<meta property="og:url" content="http://jinxm.github.io/2016/05/31/JS概述-读书笔记/index.html">
+<meta name="description" content="FE \ IOSer \ Ali">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JinXM">
+<meta property="og:url" content="http://jinxm.github.io/page/2/index.html">
 <meta property="og:site_name" content="JinXM">
-<meta property="og:description" content="写在前边这部分笔记是记录阅读《JavaScript 高级程序设计》时的一些摘记，总结~
-笔记主要通过 图+代码+少量阐述性文字 的形式进行表述~">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-05/JS-composition.png">
-<meta property="og:updated_time" content="2016-05-31T08:52:30.000Z">
+<meta property="og:description" content="FE \ IOSer \ Ali">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS概述-读书笔记">
-<meta name="twitter:description" content="写在前边这部分笔记是记录阅读《JavaScript 高级程序设计》时的一些摘记，总结~
-笔记主要通过 图+代码+少量阐述性文字 的形式进行表述~">
-<meta name="twitter:image" content="http://jinxm.github.io/img/2016-05/JS-composition.png">
+<meta name="twitter:title" content="JinXM">
+<meta name="twitter:description" content="FE \ IOSer \ Ali">
 
 
 
@@ -112,7 +106,7 @@
   };
 </script>
 
-  <title> JS概述-读书笔记 | JinXM </title>
+  <title> JinXM </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +137,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -260,9 +256,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
   
@@ -282,7 +278,10 @@
             
             
               
-                JS概述-读书笔记
+                
+                <a class="post-title-link" href="/2015/11/25/我的Sublime配置清单/" itemprop="url">
+                  我的Sublime配置清单
+                </a>
               
             
           </h1>
@@ -294,8 +293,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-31T14:22:00+08:00" content="2016-05-31">
-              2016-05-31
+            <time itemprop="dateCreated" datetime="2015-11-25T14:42:03+08:00" content="2015-11-25">
+              2015-11-25
             </time>
           </span>
 
@@ -308,8 +307,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
+                  <a href="/categories/环境配置/" itemprop="url" rel="index">
+                    <span itemprop="name">环境配置</span>
                   </a>
                 </span>
 
@@ -324,8 +323,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/31/JS概述-读书笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/31/JS概述-读书笔记/" itemprop="commentsCount"></span>
+                <a href="/2015/11/25/我的Sublime配置清单/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/25/我的Sublime配置清单/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -348,81 +347,47 @@
       
 
       
-        <h3 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h3><p>这部分笔记是记录阅读《JavaScript 高级程序设计》时的一些摘记，总结~</p>
-<p>笔记主要通过 <code>图+代码+少量阐述性文字</code> 的形式进行表述~<br><a id="more"></a></p>
-<h3 id="JS-的组成"><a href="#JS-的组成" class="headerlink" title="JS 的组成"></a>JS 的组成</h3><pre><code>JavaScript = ECMAScript + DOM + BOM
-</code></pre><p>具体如下思维导图所示：</p>
-<p><img src="/img/2016-05/JS-composition.png"></p>
-<h3 id="在-HTML-中使用-JavaScript"><a href="#在-HTML-中使用-JavaScript" class="headerlink" title="在 HTML 中使用 JavaScript"></a>在 HTML 中使用 JavaScript</h3><p>HTML 中使用&amp;l tscript&gt;标签来引用JS脚本。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>使用 JS 脚本<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">noscript</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>当游览器不支持或禁用 JS 脚本时候，会显示这段话<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="comment">// 内部脚本内容，每次刷新页面都会被重新加载</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 引用外部脚本，推荐这样做。一是好维护；二是加载后会被缓存，一次加载多次使用 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- src 属性可以加载来自不同域的资源，这一特征可以用来实现跨域 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"myScript.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="ECMAScript-语言构成"><a href="#ECMAScript-语言构成" class="headerlink" title="ECMAScript 语言构成"></a>ECMAScript 语言构成</h3><ol>
-<li>关键字：var、new、if等，这些关键字在具有特定用途。</li>
-<li>保留字：一些目前没有用途但被保留下来以后可能会被使用的词。</li>
-<li>操作符：+、-、.等。</li>
-<li>语句：while、for、if…else 等语句。</li>
-<li>语法：如何使用 JS 的规则。</li>
-<li>数据类型：定义了 JS 的数据结构。</li>
-</ol>
-
+        
+          <p>在新公司实习，拿到新电脑当然是先个性化配置一番了。在这里记录并分析一下自己的 Sublime 配置，这里只放一些在个人开发中觉得很实用的东西。</p>
+<p>水平有限，恳请指正。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/25/我的Sublime配置清单/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
       
     </div>
     
     <div>
       
-        
-      
     </div>
 
     <div>
-      
-        
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/JavaScript-高级程序设计/" rel="tag">#JavaScript 高级程序设计</a>
-          
-            <a href="/tags/读书笔记/" rel="tag">#读书笔记</a>
-          
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/04/22/蒙特卡罗方法/" rel="next" title="蒙特卡罗方法">
-                <i class="fa fa-chevron-left"></i> 蒙特卡罗方法
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/31/JS数据类型：基本类型-读书笔记/" rel="prev" title="JS数据类型：基本类型-读书笔记">
-                JS数据类型：基本类型-读书笔记 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -430,14 +395,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/05/31/JS概述-读书笔记/"
-           data-title="JS概述-读书笔记" data-url="http://jinxm.github.io/2016/05/31/JS概述-读书笔记/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -457,17 +414,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/JinXM.jpg"
@@ -537,17 +485,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前边"><span class="nav-number">1.</span> <span class="nav-text">写在前边</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS-的组成"><span class="nav-number">2.</span> <span class="nav-text">JS 的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-HTML-中使用-JavaScript"><span class="nav-number">3.</span> <span class="nav-text">在 HTML 中使用 JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAScript-语言构成"><span class="nav-number">4.</span> <span class="nav-text">ECMAScript 语言构成</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -651,10 +588,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
