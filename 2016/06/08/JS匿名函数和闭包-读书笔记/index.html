@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="我参与的,产品记," />
+  <meta name="keywords" content="JavaScript 高级程序设计,读书笔记,JavaScript,匿名函数,闭包," />
 
 
 
@@ -80,55 +80,16 @@
 
 
 
-<meta name="description" content="关于前端产品记前端产品记这个系列，主要是用来记录我从学习前端开发开始的自己折腾的小东西或者在企业实习参与开发的产品。
-这些”产品”或许很 low，或许奇奇怪怪，但都是我一路走来的见证。也愿自已能够一直走下去。
-正文
-name: 纸蜻蜓
-type: IOS APP 
-dev-time: 2016.2-2016.4
-
-纸蜻蜓是我在阿里实习的时候参与开发的，主要是负责 IOS 客户端的部分页面。虽然只参">
+<meta name="description" content="匿名函数匿名函数介绍1234567891011121314// 声明方式1function sum(arg0,arg1)&amp;#123;    return arg0 + arg1;&amp;#125;// 声明方式2var myFun = function()&amp;#123;    console.log(&quot;Hello&quot;);&amp;#125;// 单纯匿名函数的执行(function(name)&amp;#123;    c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端产品记-纸蜻蜓">
-<meta property="og:url" content="http://jinxm.github.io/2016/06/07/前端产品记-纸蜻蜓/index.html">
+<meta property="og:title" content="JS匿名函数和闭包-读书笔记">
+<meta property="og:url" content="http://jinxm.github.io/2016/06/08/JS匿名函数和闭包-读书笔记/index.html">
 <meta property="og:site_name" content="JinXM">
-<meta property="og:description" content="关于前端产品记前端产品记这个系列，主要是用来记录我从学习前端开发开始的自己折腾的小东西或者在企业实习参与开发的产品。
-这些”产品”或许很 low，或许奇奇怪怪，但都是我一路走来的见证。也愿自已能够一直走下去。
-正文
-name: 纸蜻蜓
-type: IOS APP 
-dev-time: 2016.2-2016.4
-
-纸蜻蜓是我在阿里实习的时候参与开发的，主要是负责 IOS 客户端的部分页面。虽然只参">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/1qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/2qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/3qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/4qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/5qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/6qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/7qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/8qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/9qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/10qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/11qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/12qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/13qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/14qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/15qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/16qingtingtrip.PNG">
-<meta property="og:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/17qingtingtrip.PNG">
-<meta property="og:updated_time" content="2016-06-07T13:53:20.000Z">
+<meta property="og:description" content="匿名函数匿名函数介绍1234567891011121314// 声明方式1function sum(arg0,arg1)&amp;#123;    return arg0 + arg1;&amp;#125;// 声明方式2var myFun = function()&amp;#123;    console.log(&quot;Hello&quot;);&amp;#125;// 单纯匿名函数的执行(function(name)&amp;#123;    c">
+<meta property="og:updated_time" content="2016-06-16T11:11:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端产品记-纸蜻蜓">
-<meta name="twitter:description" content="关于前端产品记前端产品记这个系列，主要是用来记录我从学习前端开发开始的自己折腾的小东西或者在企业实习参与开发的产品。
-这些”产品”或许很 low，或许奇奇怪怪，但都是我一路走来的见证。也愿自已能够一直走下去。
-正文
-name: 纸蜻蜓
-type: IOS APP 
-dev-time: 2016.2-2016.4
-
-纸蜻蜓是我在阿里实习的时候参与开发的，主要是负责 IOS 客户端的部分页面。虽然只参">
-<meta name="twitter:image" content="http://jinxm.github.io/img/2016-06/qingtingtrip/1qingtingtrip.PNG">
+<meta name="twitter:title" content="JS匿名函数和闭包-读书笔记">
+<meta name="twitter:description" content="匿名函数匿名函数介绍1234567891011121314// 声明方式1function sum(arg0,arg1)&amp;#123;    return arg0 + arg1;&amp;#125;// 声明方式2var myFun = function()&amp;#123;    console.log(&quot;Hello&quot;);&amp;#125;// 单纯匿名函数的执行(function(name)&amp;#123;    c">
 
 
 
@@ -146,7 +107,7 @@ dev-time: 2016.2-2016.4
   };
 </script>
 
-  <title> 前端产品记-纸蜻蜓 | JinXM </title>
+  <title> JS匿名函数和闭包-读书笔记 | JinXM </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,7 +277,7 @@ dev-time: 2016.2-2016.4
             
             
               
-                前端产品记-纸蜻蜓
+                JS匿名函数和闭包-读书笔记
               
             
           </h1>
@@ -328,8 +289,8 @@ dev-time: 2016.2-2016.4
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-07T21:19:19+08:00" content="2016-06-07">
-              2016-06-07
+            <time itemprop="dateCreated" datetime="2016-06-08T14:45:55+08:00" content="2016-06-08">
+              2016-06-08
             </time>
           </span>
 
@@ -342,8 +303,8 @@ dev-time: 2016.2-2016.4
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/产品存档/" itemprop="url" rel="index">
-                    <span itemprop="name">产品存档</span>
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
                   </a>
                 </span>
 
@@ -358,8 +319,8 @@ dev-time: 2016.2-2016.4
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/07/前端产品记-纸蜻蜓/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/07/前端产品记-纸蜻蜓/" itemprop="commentsCount"></span>
+                <a href="/2016/06/08/JS匿名函数和闭包-读书笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/08/JS匿名函数和闭包-读书笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -382,16 +343,18 @@ dev-time: 2016.2-2016.4
       
 
       
-        <h3 id="关于前端产品记"><a href="#关于前端产品记" class="headerlink" title="关于前端产品记"></a>关于前端产品记</h3><p>前端产品记这个系列，主要是用来记录我从学习前端开发开始的自己折腾的小东西或者在企业实习参与开发的产品。</p>
-<p>这些”产品”或许很 low，或许奇奇怪怪，但都是我一路走来的见证。也愿自已能够一直走下去。</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><ul>
-<li>name: 纸蜻蜓</li>
-<li>type: IOS APP </li>
-<li>dev-time: 2016.2-2016.4</li>
-</ul>
-<p>纸蜻蜓是我在阿里实习的时候参与开发的，主要是负责 IOS 客户端的部分页面。虽然只参与了从零到一期雏形形成的过程，但是昨天6.6看到它公测的消息还是很自豪，毕竟有自己的心血在。</p>
-<p><img src="/img/2016-06/qingtingtrip/1qingtingtrip.PNG"><br><a id="more"></a> </p>
-<p><img src="/img/2016-06/qingtingtrip/2qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/3qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/4qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/5qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/6qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/7qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/8qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/9qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/10qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/11qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/12qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/13qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/14qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/15qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/16qingtingtrip.PNG"><br><img src="/img/2016-06/qingtingtrip/17qingtingtrip.PNG"></p>
+        <h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><h5 id="匿名函数介绍"><a href="#匿名函数介绍" class="headerlink" title="匿名函数介绍"></a>匿名函数介绍</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明方式1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arg0,arg1</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg0 + arg1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明方式2</span></span><br><span class="line"><span class="keyword">var</span> myFun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 单纯匿名函数的执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my name is "</span>+name);</span><br><span class="line">    &#125;)(<span class="string">"jack"</span>);         <span class="comment">// "my name is jack"</span></span><br></pre></td></tr></table></figure>
+<p>如上所示，JS函数的声明有两种形式，直接定义和将函数赋值给一个变量。在第二种中，function(){}这种函数称之为匿名函数。之前我们提到过<code>函数名就是一个指向函数内存区域的指针</code>，所以单独声明 function(){}这种形式是没有指向这个函数的指正的，程序运行过这段代码即回收掉这段内存。但是可以用把它复制给一个变量，让这个变量充当这个指针。</p>
+<p>单纯 function(){}形式匿名函数的执行可以使用上述第三个例子的方式，(function(arg){})(argEg)直接给匿名函数传参让其执行。<br><a id="more"></a></p>
+<h5 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h5><p>在 ES 5标准中，是没有块级作用域的。但是我们可以使用匿名函数的特征，构造出跨级作用域。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有跨级作用域</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 匿名函数构造块级作用域</span></span><br><span class="line"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">5</span>;j++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(j);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="comment">// console.log(j);  j是(伪)块级作用域里定义的变量，外界不可访问</span></span><br></pre></td></tr></table></figure>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><h5 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h5><p>在 JS 中,一个函数可以访问这个函数内部定义的变量,也可以访问这个函数外部环境中定义的变量. 当这个函数A的直接外部环境是函数 B, B 的直接外部环境是函数 C…,则在 A 中使用一个变量的时候,其查找顺序是 A-&gt;B-&gt;…全局环境.这个查找顺序就叫做<code>作用域链</code>。</p>
+<p>作用域链的数据结构其实就是<strong>表和指针</strong>。A 把其作用链域放在一个表里,表的每一项都是指针,分别指向 A 中定义的变量、B 中但不是 A 里定义的变量…全局里定义的变量。</p>
+<h5 id="闭包概念"><a href="#闭包概念" class="headerlink" title="闭包概念"></a>闭包概念</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">two</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>向上述，一个函数中包含另一个函数，函数 two中使用函数 one 中定义的变量的情况就是闭包。<code>闭包</code>的定义为：有权访问另一个函数作用域中变量的函数。</p>
+<p>闭包的原因就是作用域链。</p>
+<p>闭包的有一个特性，即当调用了函数 two()，则函数 two()中引用的变量 a 会一直存在于内存中，和 two()的生命周期一样，即使之前在正常情况下 one()的内存要被消除，a 也不会被消除。这是因为在作用域链中，one()要被消除，则 one 指向变量 a 的指针会被消除，但是之前有调用 two(),two()的生命周期没有结束，而 two()的作用域链中有指针指向 a，所以 a 不会被垃圾回收机制回收掉。</p>
+<p>闭包的这个特性有很多应用场景，例如定义私有变量等；但是也存在缺点：占用大量内存。</p>
 
       
     </div>
@@ -412,9 +375,15 @@ dev-time: 2016.2-2016.4
       
         <div class="post-tags">
           
-            <a href="/tags/我参与的/" rel="tag">#我参与的</a>
+            <a href="/tags/JavaScript-高级程序设计/" rel="tag">#JavaScript 高级程序设计</a>
           
-            <a href="/tags/产品记/" rel="tag">#产品记</a>
+            <a href="/tags/读书笔记/" rel="tag">#读书笔记</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/匿名函数/" rel="tag">#匿名函数</a>
+          
+            <a href="/tags/闭包/" rel="tag">#闭包</a>
           
         </div>
       
@@ -423,17 +392,13 @@ dev-time: 2016.2-2016.4
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/04/JS的对象特性：封装、继承-读书笔记/" rel="next" title="JS的对象特性：封装、继承-读书笔记">
-                <i class="fa fa-chevron-left"></i> JS的对象特性：封装、继承-读书笔记
+              <a href="/2016/06/07/前端产品记-纸蜻蜓/" rel="next" title="前端产品记-纸蜻蜓">
+                <i class="fa fa-chevron-left"></i> 前端产品记-纸蜻蜓
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/08/JS匿名函数和闭包-读书笔记/" rel="prev" title="JS匿名函数和闭包-读书笔记">
-                JS匿名函数和闭包-读书笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -459,8 +424,8 @@ dev-time: 2016.2-2016.4
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/07/前端产品记-纸蜻蜓/"
-           data-title="前端产品记-纸蜻蜓" data-url="http://jinxm.github.io/2016/06/07/前端产品记-纸蜻蜓/">
+      <div class="ds-thread" data-thread-key="2016/06/08/JS匿名函数和闭包-读书笔记/"
+           data-title="JS匿名函数和闭包-读书笔记" data-url="http://jinxm.github.io/2016/06/08/JS匿名函数和闭包-读书笔记/">
       </div>
     
   </div>
@@ -571,7 +536,7 @@ dev-time: 2016.2-2016.4
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于前端产品记"><span class="nav-number">1.</span> <span class="nav-text">关于前端产品记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名函数"><span class="nav-number">1.</span> <span class="nav-text">匿名函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#匿名函数介绍"><span class="nav-number">1.0.1.</span> <span class="nav-text">匿名函数介绍</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#块级作用域"><span class="nav-number">1.0.2.</span> <span class="nav-text">块级作用域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">2.</span> <span class="nav-text">闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#作用域链"><span class="nav-number">2.0.1.</span> <span class="nav-text">作用域链</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#闭包概念"><span class="nav-number">2.0.2.</span> <span class="nav-text">闭包概念</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
