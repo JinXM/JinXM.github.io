@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="JavaScript,数组去重," />
 
 
 
@@ -80,31 +80,34 @@
 
 
 
-<meta name="description" content="博客搭建中，敬请期待…
-TODO-List
-
-图标的替换；
-添加评论和搜索模块；
-添加每日故事模块；">
+<meta name="description" content="问题描述
+有一个由字符串组成的数组，需要对其去重。
+解决思路
+常规的方法就不说了，这里主要介绍一个利用 JS对象下名称一样的 key只能有一个 的特性去重。
+12345// 思路var myObj = &amp;#123;&amp;#125;;myObj.a = &quot;first&quot;;myObj.a = &quot;second&quot;;console.log(myObj.a);   // &quot;second&quot;
+示例代码
+12345678">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客搭建计划">
-<meta property="og:url" content="http://jinxm.github.io/2016/04/15/博客搭建计划/index.html">
+<meta property="og:title" content="JS字符串数组去重-思考题">
+<meta property="og:url" content="http://jinxm.github.io/2016/06/17/JS字符串数组去重-思考题/index.html">
 <meta property="og:site_name" content="JinXM">
-<meta property="og:description" content="博客搭建中，敬请期待…
-TODO-List
-
-图标的替换；
-添加评论和搜索模块；
-添加每日故事模块；">
-<meta property="og:updated_time" content="2016-04-17T07:05:40.000Z">
+<meta property="og:description" content="问题描述
+有一个由字符串组成的数组，需要对其去重。
+解决思路
+常规的方法就不说了，这里主要介绍一个利用 JS对象下名称一样的 key只能有一个 的特性去重。
+12345// 思路var myObj = &amp;#123;&amp;#125;;myObj.a = &quot;first&quot;;myObj.a = &quot;second&quot;;console.log(myObj.a);   // &quot;second&quot;
+示例代码
+12345678">
+<meta property="og:updated_time" content="2016-06-17T07:02:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客搭建计划">
-<meta name="twitter:description" content="博客搭建中，敬请期待…
-TODO-List
-
-图标的替换；
-添加评论和搜索模块；
-添加每日故事模块；">
+<meta name="twitter:title" content="JS字符串数组去重-思考题">
+<meta name="twitter:description" content="问题描述
+有一个由字符串组成的数组，需要对其去重。
+解决思路
+常规的方法就不说了，这里主要介绍一个利用 JS对象下名称一样的 key只能有一个 的特性去重。
+12345// 思路var myObj = &amp;#123;&amp;#125;;myObj.a = &quot;first&quot;;myObj.a = &quot;second&quot;;console.log(myObj.a);   // &quot;second&quot;
+示例代码
+12345678">
 
 
 
@@ -122,7 +125,7 @@ TODO-List
   };
 </script>
 
-  <title> 博客搭建计划 | JinXM </title>
+  <title> JS字符串数组去重-思考题 | JinXM </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -292,7 +295,7 @@ TODO-List
             
             
               
-                博客搭建计划
+                JS字符串数组去重-思考题
               
             
           </h1>
@@ -304,8 +307,8 @@ TODO-List
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-15T22:16:37+08:00" content="2016-04-15">
-              2016-04-15
+            <time itemprop="dateCreated" datetime="2016-06-17T14:49:47+08:00" content="2016-06-17">
+              2016-06-17
             </time>
           </span>
 
@@ -318,8 +321,8 @@ TODO-List
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/补完计划/" itemprop="url" rel="index">
-                    <span itemprop="name">补完计划</span>
+                  <a href="/categories/思考题/" itemprop="url" rel="index">
+                    <span itemprop="name">思考题</span>
                   </a>
                 </span>
 
@@ -334,8 +337,8 @@ TODO-List
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/15/博客搭建计划/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/博客搭建计划/" itemprop="commentsCount"></span>
+                <a href="/2016/06/17/JS字符串数组去重-思考题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/17/JS字符串数组去重-思考题/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -358,13 +361,13 @@ TODO-List
       
 
       
-        <p>博客搭建中，敬请期待…</p>
-<p><strong>TODO-List</strong></p>
-<ol>
-<li>图标的替换；</li>
-<li>添加评论和搜索模块；</li>
-<li>添加每日故事模块；</li>
-</ol>
+        <p><code>问题描述</code></p>
+<p>有一个由字符串组成的数组，需要对其去重。</p>
+<p><code>解决思路</code></p>
+<p>常规的方法就不说了，这里主要介绍一个利用 <code>JS对象下名称一样的 key只能有一个</code> 的特性去重。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路</span></span><br><span class="line"><span class="keyword">var</span> myObj = &#123;&#125;;</span><br><span class="line">myObj.a = <span class="string">"first"</span>;</span><br><span class="line">myObj.a = <span class="string">"second"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(myObj.a);   <span class="comment">// "second"</span></span><br></pre></td></tr></table></figure>
+<p><code>示例代码</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"one"</span>,<span class="string">"two"</span>,<span class="string">"two"</span>,<span class="string">"six"</span>,<span class="string">"four"</span>,<span class="string">"one"</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clear</span>(<span class="params">myArr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> myObj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">var</span> newArr = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;myArr.length;i++)&#123;</span><br><span class="line">        myObj[<span class="string">""</span>+myArr[i]] = myArr[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(myObj);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> item <span class="keyword">in</span> myObj)&#123;</span><br><span class="line">        <span class="keyword">if</span>(myObj.hasOwnProperty(item))&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(item);</span><br><span class="line">            newArr.push(item)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> newArr;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> resultArr = clear(arr);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -385,7 +388,9 @@ TODO-List
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/数组去重/" rel="tag">#数组去重</a>
           
         </div>
       
@@ -394,17 +399,13 @@ TODO-List
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/12/Mac下配置iTerm2和ZSH/" rel="next" title="Mac下配置iTerm2和ZSH">
-                <i class="fa fa-chevron-left"></i> Mac下配置iTerm2和ZSH
+              <a href="/2016/06/16/JS-DOM基础-读书笔记/" rel="next" title="JS:DOM基础-读书笔记">
+                <i class="fa fa-chevron-left"></i> JS:DOM基础-读书笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/22/Head First Programming-读书笔记/" rel="prev" title="Head First Programming-读书笔记">
-                Head First Programming-读书笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -430,8 +431,8 @@ TODO-List
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/15/博客搭建计划/"
-           data-title="博客搭建计划" data-url="http://jinxm.github.io/2016/04/15/博客搭建计划/">
+      <div class="ds-thread" data-thread-key="2016/06/17/JS字符串数组去重-思考题/"
+           data-title="JS字符串数组去重-思考题" data-url="http://jinxm.github.io/2016/06/17/JS字符串数组去重-思考题/">
       </div>
     
   </div>

@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://jinxm.github.io/2016/06/17/JS%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D-%E6%80%9D%E8%80%83%E9%A2%98/</loc>
+    <lastmod>2016-06-17T07:02:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>JS字符串数组去重-思考题</title>
+        <pubTime>2016-06-17T06:49:47.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>数组去重</tag>
+         
+         
+           
+             
+              <breadCrumb title="思考题" url="http://jinxm.github.io/categories/%E6%80%9D%E8%80%83%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jinxm.github.io/2016/06/16/JS-DOM%E5%9F%BA%E7%A1%80-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-06-16T13:43:20.000Z</lastmod>
     <data>
@@ -11,9 +33,9 @@
         <title>JS:DOM基础-读书笔记</title>
         <pubTime>2016-06-16T11:14:51.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -37,9 +59,9 @@
         <title>JS匿名函数和闭包-读书笔记</title>
         <pubTime>2016-06-08T06:45:55.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -87,9 +109,9 @@
         <title>JS的对象特性：封装、继承-读书笔记</title>
         <pubTime>2016-06-04T15:30:28.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -141,9 +163,9 @@
         <title>JS对象：基本包装类型-读书笔记</title>
         <pubTime>2016-06-03T02:16:45.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -173,9 +195,9 @@
         <title>JS变量的作用域和垃圾回收机制-读书笔记</title>
         <pubTime>2016-06-02T13:21:56.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -201,9 +223,9 @@
         <title>JS对象:Array-读书笔记</title>
         <pubTime>2016-06-01T08:41:35.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -229,9 +251,9 @@
         <title>JS对象：函数-读书笔记</title>
         <pubTime>2016-06-02T14:12:27.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -258,9 +280,9 @@
         <title>JS数据类型：基本类型-读书笔记</title>
         <pubTime>2016-05-31T09:24:18.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -284,9 +306,9 @@
         <title>JS概述-读书笔记</title>
         <pubTime>2016-05-31T06:22:00.000Z</pubTime>
         
-        <tag>JavaScript 高级程序设计</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>JavaScript 高级程序设计</tag>
          
         <tag>JavaScript</tag>
          
@@ -373,9 +395,9 @@
         <title>Head First Programming-读书笔记</title>
         <pubTime>2016-04-22T09:11:05.000Z</pubTime>
         
-        <tag>读书笔记</tag>
-         
         <tag>Head First Programming</tag>
+         
+        <tag>读书笔记</tag>
          
          
            
