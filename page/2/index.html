@@ -80,15 +80,15 @@
 
 
 
-<meta name="description" content="FE \ IOSer \ Ali">
+<meta name="description" content="FE\IOSer\UESTC">
 <meta property="og:type" content="website">
 <meta property="og:title" content="JinXM">
 <meta property="og:url" content="http://jinxm.github.io/page/2/index.html">
 <meta property="og:site_name" content="JinXM">
-<meta property="og:description" content="FE \ IOSer \ Ali">
+<meta property="og:description" content="FE\IOSer\UESTC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JinXM">
-<meta name="twitter:description" content="FE \ IOSer \ Ali">
+<meta name="twitter:description" content="FE\IOSer\UESTC">
 
 
 
@@ -106,7 +106,7 @@
   };
 </script>
 
-  <title> JinXM - FE \ IOSer \ Ali </title>
+  <title> JinXM - FE\IOSer\UESTC </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,6 +257,131 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/02/JS变量的作用域和垃圾回收机制-读书笔记/" itemprop="url">
+                  JS变量的作用域和垃圾回收机制-读书笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-02T21:21:56+08:00" content="2016-06-02">
+              2016-06-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/02/JS变量的作用域和垃圾回收机制-读书笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/02/JS变量的作用域和垃圾回收机制-读书笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="笔记关键字"><a href="#笔记关键字" class="headerlink" title="笔记关键字"></a>笔记关键字</h3><p><code>执行环境</code>、<code>垃圾回收</code></p>
+<h3 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h3><p>每个变量都有一个自己的<code>执行环境</code>，即一个包含着可以访问的变量、函数的环境。</p>
+<p>通常，是以一个函数来定义一个执行环境的一个边界（最外部是一个全局的执行环境，可以看成所有 JS都在一个全局的函数内部执行）。外部变量无法访问函数内部定义的变量。PS：JS中，是没有块级作用域的，例如 for 循环内部定义变量可以被外部访问到的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> today = <span class="string">"2016-06-02"</span>;</span><br><span class="line">    <span class="comment">// console.log(day);  不能访问到 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">otherFoo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> day = <span class="string">"Thu"</span>;</span><br><span class="line">    <span class="comment">// console.log(today);  不能访问到 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// console.log(day);       同样不能访问到</span></span><br><span class="line"> <span class="comment">// console.log(today);     同样不能访问到</span></span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/02/JS变量的作用域和垃圾回收机制-读书笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -1001,132 +1126,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/12/Mac下配置iTerm2和ZSH/" itemprop="url">
-                  Mac下配置iTerm2和ZSH
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-12T14:48:13+08:00" content="2015-12-12">
-              2015-12-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/环境配置/" itemprop="url" rel="index">
-                    <span itemprop="name">环境配置</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/12/Mac下配置iTerm2和ZSH/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/12/Mac下配置iTerm2和ZSH/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>作为一只程序猿 , 在 Mac 或者 Linux 的环境下编程, 少不了和命令行接触. 而一个调教的好的命令行工具可以大大提升开发效率, 愉悦心情.</p>
-<p>首先要区分一个概念, <code>shell</code> 和 <code>终端模拟器</code>. </p>
-<ul>
-<li>shell 是指 用户和系统内核接触的一个桥梁(命令), 通常说的 shell 脚本什么就是指这个,主要的 shell 有<code>bash</code> 和 <code>zsh</code>. </li>
-<li>终端模拟器 是指一个操作终端的客户端,  Mac 和 Linux 自带的 terminal 就是一个终端模拟器.
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/12/Mac下配置iTerm2和ZSH/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1167,12 +1166,12 @@
                src="/images/JinXM.jpg"
                alt="JinXM" />
           <p class="site-author-name" itemprop="name">JinXM</p>
-          <p class="site-description motion-element" itemprop="description">FE \ IOSer \ Ali</p>
+          <p class="site-description motion-element" itemprop="description">FE\IOSer\UESTC</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1189,7 +1188,7 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>

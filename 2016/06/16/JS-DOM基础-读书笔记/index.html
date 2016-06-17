@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,前端学习,资源收集," />
+  <meta name="keywords" content="读书笔记,JavaScript 高级程序设计,JavaScript,DOM," />
 
 
 
@@ -80,16 +80,44 @@
 
 
 
-<meta name="description" content="写在前边这是一篇关于前端资源和学习建议的博文。主要包含两个部分，学习建议部分，主要讲的是笔者学习前端到现在的学习感悟(踩坑无数），可以作为前端入门参考，仅作参考;资源收集部分集中了一些优秀的前端资源，这些资源多数来自于我的游览器书签，多数是读过或了解过的，而不是 “先 mark 一下”的内容。">
+<meta name="description" content="DOM 概述1JavaScript = ECMAScript + DOM + BOM
+DOM 是 JS 操作 HTML 文档的 API 借口。主要功能有两个，一是将 HTML 文档结构化为一个有序的文档树，而是提供了一些列操作这棵树的接口。
+一个简单的结构化的 DOM 树如下：
+
+DOM 各节点之间的关系如下：
+
+DOM1 提供的常用的基础内容如下思维导图(但不仅仅只有)：
+
+DOM 操作1&amp;lt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="这是一篇前端资源收集博文">
-<meta property="og:url" content="http://jinxm.github.io/2016/06/03/这是一篇前端资源收集博文/index.html">
+<meta property="og:title" content="JS:DOM基础-读书笔记">
+<meta property="og:url" content="http://jinxm.github.io/2016/06/16/JS-DOM基础-读书笔记/index.html">
 <meta property="og:site_name" content="JinXM">
-<meta property="og:description" content="写在前边这是一篇关于前端资源和学习建议的博文。主要包含两个部分，学习建议部分，主要讲的是笔者学习前端到现在的学习感悟(踩坑无数），可以作为前端入门参考，仅作参考;资源收集部分集中了一些优秀的前端资源，这些资源多数来自于我的游览器书签，多数是读过或了解过的，而不是 “先 mark 一下”的内容。">
-<meta property="og:updated_time" content="2016-06-03T09:19:14.000Z">
+<meta property="og:description" content="DOM 概述1JavaScript = ECMAScript + DOM + BOM
+DOM 是 JS 操作 HTML 文档的 API 借口。主要功能有两个，一是将 HTML 文档结构化为一个有序的文档树，而是提供了一些列操作这棵树的接口。
+一个简单的结构化的 DOM 树如下：
+
+DOM 各节点之间的关系如下：
+
+DOM1 提供的常用的基础内容如下思维导图(但不仅仅只有)：
+
+DOM 操作1&amp;lt">
+<meta property="og:image" content="http://jinxm.github.io/img/2016-06/DOM-Modal.png">
+<meta property="og:image" content="http://jinxm.github.io/img/2016-06/DOM-relation.png">
+<meta property="og:image" content="http://jinxm.github.io/img/2016-06/DOM-Base.png">
+<meta property="og:updated_time" content="2016-06-16T13:43:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="这是一篇前端资源收集博文">
-<meta name="twitter:description" content="写在前边这是一篇关于前端资源和学习建议的博文。主要包含两个部分，学习建议部分，主要讲的是笔者学习前端到现在的学习感悟(踩坑无数），可以作为前端入门参考，仅作参考;资源收集部分集中了一些优秀的前端资源，这些资源多数来自于我的游览器书签，多数是读过或了解过的，而不是 “先 mark 一下”的内容。">
+<meta name="twitter:title" content="JS:DOM基础-读书笔记">
+<meta name="twitter:description" content="DOM 概述1JavaScript = ECMAScript + DOM + BOM
+DOM 是 JS 操作 HTML 文档的 API 借口。主要功能有两个，一是将 HTML 文档结构化为一个有序的文档树，而是提供了一些列操作这棵树的接口。
+一个简单的结构化的 DOM 树如下：
+
+DOM 各节点之间的关系如下：
+
+DOM1 提供的常用的基础内容如下思维导图(但不仅仅只有)：
+
+DOM 操作1&amp;lt">
+<meta name="twitter:image" content="http://jinxm.github.io/img/2016-06/DOM-Modal.png">
 
 
 
@@ -107,7 +135,7 @@
   };
 </script>
 
-  <title> 这是一篇前端资源收集博文 | JinXM </title>
+  <title> JS:DOM基础-读书笔记 | JinXM </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +305,7 @@
             
             
               
-                这是一篇前端资源收集博文
+                JS:DOM基础-读书笔记
               
             
           </h1>
@@ -289,8 +317,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-03T13:15:45+08:00" content="2016-06-03">
-              2016-06-03
+            <time itemprop="dateCreated" datetime="2016-06-16T19:14:51+08:00" content="2016-06-16">
+              2016-06-16
             </time>
           </span>
 
@@ -303,8 +331,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/滕王阁/" itemprop="url" rel="index">
-                    <span itemprop="name">滕王阁</span>
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
                   </a>
                 </span>
 
@@ -319,8 +347,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/03/这是一篇前端资源收集博文/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/03/这是一篇前端资源收集博文/" itemprop="commentsCount"></span>
+                <a href="/2016/06/16/JS-DOM基础-读书笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/JS-DOM基础-读书笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -343,63 +371,21 @@
       
 
       
-        <h3 id="写在前边"><a href="#写在前边" class="headerlink" title="写在前边"></a>写在前边</h3><p>这是一篇关于前端资源和学习建议的博文。主要包含两个部分，学习建议部分，主要讲的是笔者学习前端到现在的学习感悟(踩坑无数），可以作为前端入门参考，仅作参考;资源收集部分集中了一些优秀的前端资源，这些资源多数来自于我的游览器书签，多数是读过或了解过的，而不是 “先 mark 一下”的内容。</p>
-<a id="more"></a>
-<h3 id="学习建议"><a href="#学习建议" class="headerlink" title="学习建议"></a>学习建议</h3><h5 id="前端入门"><a href="#前端入门" class="headerlink" title="前端入门"></a>前端入门</h5><p>建议新手入门先花一周时间把 <a href="http://www.w3school.com.cn/" target="_blank" rel="external">W3cschool</a> 上的 HTML、CSS、JavaScript三部分的内容全面看一遍，相关代码都敲一敲，尽量把主要 API 都背下来~</p>
-<p>然后找几个简单的网页，模仿着写一遍~在写的过程中熟悉HTML、CSS、JS 是如何协调在一起工作的和其相关语法、API，并熟悉游览器中开发者工具的使用(火狐的 firebug、Chrome的开发者工具)。</p>
-<p>然后就是边阅读学习边动手写代码提高的过程了。进阶学习部分推荐 MDN 开发者社区上的 JS 教程和 JS高级程序设计，一定要系统的学习一遍 JS。</p>
-<h5 id="习惯"><a href="#习惯" class="headerlink" title="习惯"></a>习惯</h5><p>建议养成以下良好的习惯：</p>
-<ol>
-<li>盲打，掌握正确的指法；</li>
-<li>掌握尽量多的快捷键，减少使用鼠标的时间，这会提高你的打字速度；</li>
-<li>学习自动化，使用脚本、自动化工具等构建你的自动化工程；</li>
-<li>找一好的 JS 教程，例如 JS高级程序设计或者犀牛书，尽量把内容在理解后都背下来，这样就不用编写便查 API了；</li>
-<li>学英文，这样就可以直接看外文文献而不是二手资料了；</li>
-<li>坚持写博客；</li>
-<li>在 GitHub 上开启自己的业余项目；</li>
-<li>有自己的知识的输入-管理-输出系统，输入可以是看书、看博客、游览网页内容等形式，管理是一个知识的吸收整理过程，可以是思维导图+印象笔记这样一个系统，输出是最重要的，写博客和写程序都是一种输出。只有三者均衡都做的不错时，学到的东西才会越多。</li>
-</ol>
-<h3 id="前端资源"><a href="#前端资源" class="headerlink" title="前端资源"></a>前端资源</h3><h5 id="综合资源"><a href="#综合资源" class="headerlink" title="综合资源"></a>综合资源</h5><ol>
-<li><a href="http://www.w3school.com.cn/" target="_blank" rel="external">W3cschool</a>: 入门、API</li>
-<li><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="external">MDN</a>: 提高、高质量</li>
-<li><a href="https://dwqs.gitbooks.io/frontenddevhandbook/content/" target="_blank" rel="external">前端开发者手册</a>: 全面、系统</li>
-<li><a href="https://devdocs.io/" target="_blank" rel="external">DevDocs</a>: 全面的 API 查询网站</li>
-</ol>
-<h5 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h5><ol>
-<li><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="external">JavaScript 标准参考教程-阮一峰</a></li>
-<li>JavaScript高级程序设计: <code>系统</code>学习JavaScript的书籍，入门&amp;提高</li>
-<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门-阮一峰</a></li>
-</ol>
-<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><ol>
-<li><a href="http://css.doyoe.com/" target="_blank" rel="external">CSS 参考手册</a>:入门</li>
-<li>精通CSS-高级Web标准解决方案: <code>系统</code>学习 CSS的书籍，入门&amp;提高</li>
-</ol>
-<h5 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h5><ol>
-<li><a href="https://hexo.io/zh-cn/index.html" target="_blank" rel="external">Hexo</a></li>
-<li><a href="http://jekyllcn.com/" target="_blank" rel="external">Jekyll</a></li>
-<li><a href="https://pages.github.com/" target="_blank" rel="external">Github Pages</a></li>
-<li><a href="https://www.heroku.com/" target="_blank" rel="external">heroku</a></li>
-</ol>
-<h5 id="开发技术-amp-amp-开发工具-amp-amp-文档"><a href="#开发技术-amp-amp-开发工具-amp-amp-文档" class="headerlink" title="开发技术&amp;&amp;开发工具&amp;&amp;文档"></a>开发技术&amp;&amp;开发工具&amp;&amp;文档</h5><ol>
-<li><a href="http://bower.io/" target="_blank" rel="external">Bower</a>: 工具、客户端包管理器</li>
-<li><a href="http://nqdeng.github.io/7-days-nodejs/" target="_blank" rel="external">七天学会NodeJS</a></li>
-<li><a href="https://nodejs.org/api/" target="_blank" rel="external">NodeJS 官方文档</a></li>
-<li><a href="http://reactjs.cn/" target="_blank" rel="external">React 文档-中文</a></li>
-<li><a href="http://v3.bootcss.com/" target="_blank" rel="external">Bootstrap 文档</a></li>
-<li><a href="http://react-bootstrap.github.io/" target="_blank" rel="external">React-Bootstrap 文档</a></li>
-<li><a href="https://webpack.github.io/" target="_blank" rel="external">Webpack 文档</a>: 工具、依赖管理和打包压缩</li>
-<li><a href="https://github.com/petehunt/webpack-howto/blob/master/README-zh.md" target="_blank" rel="external">Webpack 快速入门</a></li>
-<li><a href="http://www.gruntjs.net/" target="_blank" rel="external">Grunt</a>: 工具、自动化构建工具</li>
-<li><a href="http://gulpjs.com/" target="_blank" rel="external">Gulp</a>: 工具、自动化构建工具</li>
-<li><a href="http://cn.redux.js.org/index.html" target="_blank" rel="external">Redux 中文文档</a></li>
-<li><a href="https://github.com/nswbmw/N-blog" target="_blank" rel="external">N-blog</a>: 用 Node+Express+MongoDB 搭建一个博客的教程，很详细</li>
-</ol>
-<h5 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h5><ol>
-<li><a href="http://linux.vbird.org/" target="_blank" rel="external">鸟哥的linux私房菜</a>: 了解 linux、脚本、命令行、vim</li>
-<li><a href="http://sourabhbajaj.com/mac-setup/index.html" target="_blank" rel="external">Mac OS X Setup Guide</a>: 拿到新 mac 如何设置</li>
-<li><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">oh-my-zsh</a></li>
-<li><a href="https://www.processon.com/" target="_blank" rel="external">processOn</a>: 一个很好用的在线作图的工具;</li>
-</ol>
+        <h3 id="DOM-概述"><a href="#DOM-概述" class="headerlink" title="DOM 概述"></a>DOM 概述</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JavaScript = ECMAScript + DOM + BOM</span><br></pre></td></tr></table></figure>
+<p>DOM 是 JS 操作 HTML 文档的 API 借口。主要功能有两个，一是将 HTML 文档结构化为一个有序的文档树，而是提供了一些列操作这棵树的接口。</p>
+<p>一个简单的结构化的 DOM 树如下：</p>
+<p><img src="/img/2016-06/DOM-Modal.png"></p>
+<p>DOM 各节点之间的关系如下：</p>
+<p><img src="/img/2016-06/DOM-relation.png"></p>
+<p>DOM1 提供的常用的基础内容如下思维导图(但不仅仅只有)：</p>
+<p><img src="/img/2016-06/DOM-Base.png"></p>
+<h3 id="DOM-操作"><a href="#DOM-操作" class="headerlink" title="DOM 操作"></a>DOM 操作</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"my"</span>&gt;</span>this is text<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>DOM 的结点有很多类型，最常见的有三种：元素节点、属性结点、文本结点，分别对应上述中的</p><p></p>、class=”my”、this is text。<p></p>
+<h5 id="节点获取"><a href="#节点获取" class="headerlink" title="节点获取"></a>节点获取</h5><p>节点的获取主要有三种: document.getElementById()、document.getElementsByTagName()、document.getElementsByName 。后两者获取到的是一个动态的元素的集合，所谓动态，就是指当 HTML 文档发送变化，变化会自动反映到集合中。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myId"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">name</span>=<span class="string">"attrName"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">name</span>=<span class="string">"attrName"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">name</span>=<span class="string">"attrName"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">name</span>=<span class="string">"attrName"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">name</span>=<span class="string">"attrName"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> container = <span class="built_in">document</span>.getElementById(<span class="string">"myId"</span>);</span><br><span class="line">    <span class="keyword">var</span> div = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"div"</span>);</span><br><span class="line">    <span class="keyword">var</span> myEles2 = <span class="built_in">document</span>.getElementsByName(<span class="string">"attrName"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 动态集合示例: 这个循环将一直持续下去</span></span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;div.length;i++)&#123;</span><br><span class="line">            <span class="keyword">var</span> newEle = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</span><br><span class="line">            container.appendChild(newEle);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">`</span><span class="string">``</span>JavaScript</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">`</span><span class="string">``</span>JavaScript</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">`</span><span class="string">``</span>JavaScript</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -420,11 +406,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
+            <a href="/tags/读书笔记/" rel="tag">#读书笔记</a>
           
-            <a href="/tags/前端学习/" rel="tag">#前端学习</a>
+            <a href="/tags/JavaScript-高级程序设计/" rel="tag">#JavaScript 高级程序设计</a>
           
-            <a href="/tags/资源收集/" rel="tag">#资源收集</a>
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/DOM/" rel="tag">#DOM</a>
           
         </div>
       
@@ -433,17 +421,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/03/JS对象：基本包装类型-读书笔记/" rel="next" title="JS对象：基本包装类型-读书笔记">
-                <i class="fa fa-chevron-left"></i> JS对象：基本包装类型-读书笔记
+              <a href="/2016/06/08/JS匿名函数和闭包-读书笔记/" rel="next" title="JS匿名函数和闭包-读书笔记">
+                <i class="fa fa-chevron-left"></i> JS匿名函数和闭包-读书笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/04/JS的对象特性：封装、继承-读书笔记/" rel="prev" title="JS的对象特性：封装、继承-读书笔记">
-                JS的对象特性：封装、继承-读书笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,8 +453,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/03/这是一篇前端资源收集博文/"
-           data-title="这是一篇前端资源收集博文" data-url="http://jinxm.github.io/2016/06/03/这是一篇前端资源收集博文/">
+      <div class="ds-thread" data-thread-key="2016/06/16/JS-DOM基础-读书笔记/"
+           data-title="JS:DOM基础-读书笔记" data-url="http://jinxm.github.io/2016/06/16/JS-DOM基础-读书笔记/">
       </div>
     
   </div>
@@ -581,7 +565,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前边"><span class="nav-number">1.</span> <span class="nav-text">写在前边</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习建议"><span class="nav-number">2.</span> <span class="nav-text">学习建议</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#前端入门"><span class="nav-number">2.0.1.</span> <span class="nav-text">前端入门</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#习惯"><span class="nav-number">2.0.2.</span> <span class="nav-text">习惯</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端资源"><span class="nav-number">3.</span> <span class="nav-text">前端资源</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#综合资源"><span class="nav-number">3.0.1.</span> <span class="nav-text">综合资源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript"><span class="nav-number">3.0.2.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS"><span class="nav-number">3.0.3.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博客搭建"><span class="nav-number">3.0.4.</span> <span class="nav-text">博客搭建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#开发技术-amp-amp-开发工具-amp-amp-文档"><span class="nav-number">3.0.5.</span> <span class="nav-text">开发技术&&开发工具&&文档</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其它"><span class="nav-number">3.0.6.</span> <span class="nav-text">其它</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-概述"><span class="nav-number">1.</span> <span class="nav-text">DOM 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-操作"><span class="nav-number">2.</span> <span class="nav-text">DOM 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#节点获取"><span class="nav-number">2.0.1.</span> <span class="nav-text">节点获取</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
