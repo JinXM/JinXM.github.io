@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://jinxm.github.io/2016/08/27/CSS%E9%80%89%E6%8B%A9%E5%99%A8-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-08-27T13:52:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>CSS选择器-读书笔记</title>
+        <pubTime>2016-08-27T13:51:24.000Z</pubTime>
+        
+        <tag>&lt;精通CSS&gt;</tag>
+         
+        <tag>读书笔记</tag>
+         
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="读书笔记" url="http://jinxm.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jinxm.github.io/2016/08/27/CSS%E6%A6%82%E8%BF%B0-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-08-27T13:50:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>CSS概述-读书笔记</title>
+        <pubTime>2016-08-27T13:45:46.000Z</pubTime>
+        
+        <tag>&lt;精通CSS&gt;</tag>
+         
+        <tag>读书笔记</tag>
+         
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="读书笔记" url="http://jinxm.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jinxm.github.io/2016/08/25/JS%E8%A1%A8%E5%8D%95/</loc>
     <lastmod>2016-08-25T15:01:48.000Z</lastmod>
     <data>
@@ -493,9 +541,9 @@
         <title>Head First Programming-读书笔记</title>
         <pubTime>2016-04-22T09:11:05.000Z</pubTime>
         
-        <tag>Head First Programming</tag>
-         
         <tag>读书笔记</tag>
+         
+        <tag>Head First Programming</tag>
          
          
            
