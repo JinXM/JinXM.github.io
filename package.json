@@ -1,0 +1,24 @@
+{
+  "name": "hexo-theme-lego",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A hexo theme demo~",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JinXM/JinXM.github.io.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme"
+  ],
+  "author": "JinXM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JinXM/JinXM.github.io/issues"
+  },
+  "homepage": "https://github.com/JinXM/JinXM.github.io#readme"
+}
