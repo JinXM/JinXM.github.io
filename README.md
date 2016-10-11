@@ -10,3 +10,13 @@
 - 搭建框架
 - 运行成功一个站点 Demo
 
+# 目录说明
+
+    ***
+.
+├── _config.yml     配置文件     
+├── languages       语言
+├── layout          布局模板
+├── scripts         JS文件
+└── source          资源文件
+    ***
