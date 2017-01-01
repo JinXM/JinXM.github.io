@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jinxm.github.io/about/index.html</loc>
+    
+    <lastmod>2017-01-01T03:51:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jinxm.github.io/2017/01/01/Mac%E4%B8%8A%E9%85%8D%E7%BD%AE%E4%B8%AA%E6%80%A7fortune%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2017-01-01T03:42:53.000Z</lastmod>
@@ -159,13 +166,6 @@
     <loc>http://jinxm.github.io/2015/11/25/%E6%88%91%E7%9A%84Sublime%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95/</loc>
     
     <lastmod>2016-05-07T06:54:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jinxm.github.io/about/index.html</loc>
-    
-    <lastmod>2016-04-26T03:14:25.000Z</lastmod>
     
   </url>
   
