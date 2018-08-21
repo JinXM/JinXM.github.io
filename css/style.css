@@ -12,7 +12,17 @@ body {
   margin: 0 auto;
 }
 .main {
-  margin-left: 15em;
+  min-width: 400px;
+}
+@media only screen and (min-width: 800px) {
+  .main {
+    margin-left: 15em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
 }
 .sidebar {
   position: relative;
@@ -282,7 +292,7 @@ body {
 }
 .post-content table td,
 .post-content table th {
-  border: 1px solid #dedede;
+  border: none;
   padding: 0 10px;
 }
 .post-content figure table {
@@ -304,6 +314,33 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
   background-image: url("http://7xnm1u.com1.z0.glb.clouddn.com/img/blog/background-cover.jpg");
+}
+@media only screen and (min-width: 800px) {
+  .posts .top-menu-desc {
+    display: none;
+  }
+}
+.posts .top-menu-desc {
+  text-align: center;
+  padding-top: 4em;
+}
+.posts .top-menu-desc .title {
+  margin-bottom: 0;
+}
+.posts .top-menu-desc .title a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
+}
+.posts .top-menu-desc .desc {
+  font-style: italic;
+  margin: 1em 0 0 0;
+  text-align: center;
+  font-size: 0.7em;
+  color: #ddd;
 }
 .posts .panel-cover--overlay {
   display: block;
@@ -488,7 +525,7 @@ body {
 }
 .posts .post-content table td,
 .posts .post-content table th {
-  border: 1px solid #dedede;
+  border: none;
   padding: 0 10px;
 }
 .posts .post-content figure table {
