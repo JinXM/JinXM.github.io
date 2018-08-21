@@ -1,3 +1,16 @@
+@media only screen and (max-width: 800px) {
+  .post {
+    padding: 30px 30px !important;
+  }
+  .post-content {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .post-meta {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
 .posts .posts-menu-container {
   position: relative;
 }
