@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span>&lt;记录一些生活琐碎&gt;</span>
+      </p>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">JS对象：基本包装类型-读书笔记</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2016-06-03</span>
+  </div>
+  <div class="post-content">
+    <h4 id="基本包装类型概述"><a href="#基本包装类型概述" class="headerlink" title="基本包装类型概述"></a>基本包装类型概述</h4><p>ECMAScript 5标准中，JS 有6种数据类型，Number、Boolean、String、undefined、null和 Object。Object是引用类型，其余的是基本类型，不具备对象特征(null 是空指针，可以看做 Object)。</p>
+<a id="more"></a>
+<p>但是在实际在读写 Number、String、Boolean 类型时，系统会动态为这三种类型包装上一层对象类型的壳，可以让我们像对象一样操作它们，在读写完后又会卸下这层壳（PS：JS中所有变量都是对象这种说法是不正确的）。这个加壳的过程如下：</p>
+<ol>
+<li>读写到 Number、String、Boolean这三个基本类型变量值时，系统自动为其创建一个相应的包装对象(就是一个包含特定方法属性的对象)，包装上去；</li>
+<li>使用包装对象提供的方法和属性进行操作，让人感觉是在使用对象一样；</li>
+<li>当读写语句执行完，系统自动卸载掉、销毁包装对象，恢复成基本类型。</li>
+</ol>
+<p>包装对象(即”壳”)首先是一个对象，包含所有对象都包含的 construcotr、hasOwnProperty()、isPrototypeOf()、prototypeIsEnumerable()、toLocalString()、toString()、valueOf() 七个方法基本方法。</p>
+<p>此外，每个类型的包装对象还提供了该类型专门的属性和方法。</p>
+<h4 id="Number-包装类型"><a href="#Number-包装类型" class="headerlink" title="Number 包装类型"></a>Number 包装类型</h4><p>Number 的包装对象提供了的属性和方法主要是处理数字格式的，适用于货币处理这些场景：</p>
+<ol>
+<li>toFixed(): 小数点后保留几位小数。</li>
+<li>toExponential: 格式化为指数表示法。</li>
+<li>toPrecision： 格式化为指定位数的格式。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sampleNum = <span class="number">2016.0603</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(sampleNum.toFixed(<span class="number">2</span>));          <span class="comment">// "2016.06", 保留两位小数</span></span><br><span class="line"><span class="built_in">console</span>.log(sampleNum.toExponential(<span class="number">3</span>));    <span class="comment">// "2.016e+3", 使用指数的三次方表示</span></span><br><span class="line"><span class="built_in">console</span>.log(sampleNum.toPrecision(<span class="number">5</span>));      <span class="comment">// "2016.1", 从左往右保留5位数值</span></span><br></pre></td></tr></table></figure>
+<h4 id="Boolean-包装类型"><a href="#Boolean-包装类型" class="headerlink" title="Boolean 包装类型"></a>Boolean 包装类型</h4><p>Boolean 的包装对象主要提供的对象和方法只有 Boolean()一个方法，这个方法将其他类型转换为 Boolean 值。</p>
+<h4 id="String-包装类型"><a href="#String-包装类型" class="headerlink" title="String 包装类型"></a>String 包装类型</h4><p>String 的包装对象提供了的属性和方法主要是用于处理字符串格式的，包含字符查找、字符串合并、截取、比较大小、大小写转换、模式匹配和 trim。</p>
+<p><img class="cs-img img-vertical-lg" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-String.png" alt="“JS" 高级程序设计”=""></p>
+<p><strong>字符查找</strong></p>
+<p>字符查找包括知道位置查找字符、知道字符(串)查找位置两种。</p>
+<p>知道位置查找字符主要是 charAt()、charCodeAt()两个方法，前者返回字符，后者返回字符的编码。</p>
+<p>知道字符(串)查找位置主要是 indexOf()、lastIndexOf()两个方法，输入需要查找的字符(串)，返回字符(串)在变量字符串中首个位置 index，前者是正向查找，后者是反向查找。这两个方法也可以用于数组中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isStr = <span class="string">"Life was like a box of chocolates, you never know what you’re gonna get."</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(isStr.charAt(<span class="number">5</span>));       <span class="comment">// "w"</span></span><br><span class="line"><span class="built_in">console</span>.log(isStr.charCodeAt(<span class="number">5</span>));   <span class="comment">// 119, w 的字符串编码是119</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(isStr.indexOf(<span class="string">"li"</span>));       <span class="comment">// 9</span></span><br><span class="line"><span class="built_in">console</span>.log(isStr.lastIndexOf(<span class="string">"li"</span>));   <span class="comment">// 9</span></span><br></pre></td></tr></table></figure>
+<p><strong>字符串合并</strong></p>
+<p>concat()方法可以用来合并字符串，也可以用来合并数组。但是在实际使用中，更多的是使用”+”运算符来拼接字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"nice "</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 打印："nice to meet you!",concat 拼接后返回一个新的字符串副本</span></span><br><span class="line"><span class="built_in">console</span>.log(str.concat(<span class="string">"to "</span>,<span class="string">"meet "</span>,<span class="string">"you!"</span>));</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">console</span>.log(str+<span class="string">"to "</span>+<span class="string">"meet "</span>+<span class="string">"you!"</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>字符串截取</strong></p>
+<p>slice()、substring()、substr()三个方法都提供了从原始字符串中截取一段字符串的功能。slice()同样还可以截取数组。</p>
+<ul>
+<li>slice(arg0,arg1): arg0表示开始截取位置的下标，arg1表示结束位置的后一个位置。(arg1-arg0)表示截取长度。<ul>
+<li>substring(arg0,arg1): 参数含义同 slice()。</li>
+<li>substr(arg0,arg1): arg0表示开始截取的位置，arg1表示截取的长度。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"I\'m going to make him an offer he can\'t refuse."</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 都将打印出 "going"</span></span><br><span class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">4</span>,<span class="number">9</span>));</span><br><span class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">4</span>,<span class="number">9</span>));</span><br><span class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">4</span>,<span class="number">5</span>));</span><br></pre></td></tr></table></figure>
+<p><strong>比较大小</strong></p>
+<p>String包装对象的localeCompare()方法可以比较两个字符串之间的大小。比较方法是从两个字符串的第一个字符开始比较，若是第一个不同则第一个编码比较大的大，若相同则比较后一个，以此类推。当前边部分相同，字符串比较长的为大者。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1 = <span class="string">"opq"</span>;</span><br><span class="line"></span><br><span class="line">str1.localeCompare(<span class="string">"opq"</span>);  <span class="comment">// 返回0， 表示两个字符串相等</span></span><br><span class="line">str1.localeCompare(<span class="string">"opp"</span>);  <span class="comment">// 返回1，str1比较大</span></span><br><span class="line">str1.localeCompare(<span class="string">"opz"</span>);  <span class="comment">// 返回-1，str1比较小</span></span><br></pre></td></tr></table></figure>
+<p><strong>大小写转换</strong></p>
+<p>String 包装对象的大小写转换方法是 toUpperCase()、toLowerCase()；但是针对不同语言环境，还有一对 toLocaleUpperCase()、toLocaleLowerCase()方法。这和 toString()和 toLocalString()的道理一样。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"It is Friday."</span>;</span><br><span class="line"></span><br><span class="line">str.toUpperCase();      <span class="comment">// "IT IS FRIDAY."</span></span><br><span class="line">str.toLowerCase();      <span class="comment">// "it is friday."</span></span><br><span class="line"></span><br><span class="line">str.toLocaleUpperCase();    <span class="comment">// "IT IS FRIDAY."</span></span><br><span class="line">str.toLocaleLowerCase();    <span class="comment">// "it is friday."</span></span><br></pre></td></tr></table></figure>
+<p><strong>匹配模式</strong></p>
+<p>匹配模式是使用正则来解析字符串。详见正则篇读书笔记。</p>
+<p>trim()方法<br>trim()方法是将字符串头部和尾部的空格去除，然后返回一个去除空格后的字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"  前后各有2各空格  "</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(str);           <span class="comment">// "  前后各有2各空格  "</span></span><br><span class="line"><span class="built_in">console</span>.log(str.trim());    <span class="comment">// "前后各有2各空格"</span></span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+    </main>
+  </body>
+</html>

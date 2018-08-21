@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span>&lt;记录一些生活琐碎&gt;</span>
+      </p>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">JS匿名函数和闭包-读书笔记</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2016-06-08</span>
+  </div>
+  <div class="post-content">
+    <h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p>匿名函数介绍</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明方式1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arg0,arg1</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg0 + arg1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明方式2</span></span><br><span class="line"><span class="keyword">var</span> myFun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 单纯匿名函数的执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my name is "</span>+name);</span><br><span class="line">    &#125;)(<span class="string">"jack"</span>);         <span class="comment">// "my name is jack"</span></span><br></pre></td></tr></table></figure>
+<p>如上所示，JS函数的声明有两种形式，直接定义和将函数赋值给一个变量。在第二种中，function(){}这种函数称之为匿名函数。之前我们提到过函数名就是一个指向函数内存区域的指针，所以单独声明 function(){}这种形式是没有指向这个函数的指正的，程序运行过这段代码即回收掉这段内存。但是可以用把它复制给一个变量，让这个变量充当这个指针。</p>
+<p>单纯 function(){}形式匿名函数的执行可以使用上述第三个例子的方式，(function(arg){})(argEg)直接给匿名函数传参让其执行。</p>
+<a id="more"></a>
+<p><strong>块级作用域</strong></p>
+<p>在 ES 5标准中，是没有块级作用域的。但是我们可以使用匿名函数的特征，构造出跨级作用域。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有跨级作用域</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 匿名函数构造块级作用域</span></span><br><span class="line"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">5</span>;j++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(j);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="comment">// console.log(j);  j是(伪)块级作用域里定义的变量，外界不可访问</span></span><br></pre></td></tr></table></figure>
+<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p><strong>作用域链</strong></p>
+<p>在 JS 中,一个函数可以访问这个函数内部定义的变量,也可以访问这个函数外部环境中定义的变量. 当这个函数A的直接外部环境是函数 B, B 的直接外部环境是函数 C…,则在 A 中使用一个变量的时候,其查找顺序是 A-&gt;B-&gt;…全局环境.这个查找顺序就叫做作用域链。</p>
+<p>作用域链的数据结构其实就是表和指针。A 把其作用链域放在一个表里,表的每一项都是指针,分别指向 A 中定义的变量、B 中但不是 A 里定义的变量…全局里定义的变量。</p>
+<p><strong>闭包概念</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">two</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>向上述，一个函数中包含另一个函数，函数 two中使用函数 one 中定义的变量的情况就是闭包。闭包的定义为：有权访问另一个函数作用域中变量的函数。</p>
+<p>闭包的原因就是作用域链。</p>
+<p>闭包的有一个特性，即当调用了函数 two()，则函数 two()中引用的变量 a 会一直存在于内存中，和 two()的生命周期一样，即使之前在正常情况下 one()的内存要被消除，a 也不会被消除。这是因为在作用域链中，one()要被消除，则 one 指向变量 a 的指针会被消除，但是之前有调用 two(),two()的生命周期没有结束，而 two()的作用域链中有指针指向 a，所以 a 不会被垃圾回收机制回收掉。</p>
+<p>闭包的这个特性有很多应用场景，例如定义私有变量等；但是也存在缺点：占用大量内存。</p>
+
+  </div>
+</article>
+    </main>
+  </body>
+</html>

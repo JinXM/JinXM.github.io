@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span>&lt;记录一些生活琐碎&gt;</span>
+      </p>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">JS对象：函数-读书笔记</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2016-06-02</span>
+  </div>
+  <div class="post-content">
+    <h4 id="Function-概述"><a href="#Function-概述" class="headerlink" title="Function 概述"></a>Function 概述</h4><p>函数Function 是 JS 预设好的一种对象类型，函数名即指向这个对象的一个指针，所以可以把函数名当做其它函数的参数。</p>
+<p>JS的函数是没有重载的。</p>
+<p>函数对象默认定义好、主要的属性和方法有如下：</p>
+<ul>
+<li>arguments 和 callee</li>
+<li>this</li>
+<li>call()、apply() 和 bind()</li>
+<li>prototype</li>
+</ul>
+<a id="more"></a>
+<h4 id="函数没有重载"><a href="#函数没有重载" class="headerlink" title="函数没有重载"></a>函数没有重载</h4><p>所谓重载，即已经定义了一个函数，又定义了一遍这个函数，两次定义时函数的名称不变，但是参数有所改变。这样使用时，可以根据参数的不同执行不同决定执行第一个定义还是第二个。</p>
+<p>没有重载的理由：如前所述，函数名是一个指向对象的指针，函数参数是对象内部的内容，存储在 arguments 属性中。但定义两次，函数名指针会先指向第一个定义的对象，然后指针又重新指向后一个定义的函数对象，最终指向最后定义的那个函数对象。</p>
+<p>不需要重载的理由：JS 函数定义时，参数会被存储在 arguments 属性中，这个 arguments 属性可以会在实际使用时动态接受参数，即函数在实际使用时的参数个数可以定义时的参数个数不一致。这就让函数运行时实际接受参数并不依赖于声明时的，所以不需要重载。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">arg1,arg2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">arguments</span>[<span class="number">0</span>] &amp;&amp; <span class="built_in">arguments</span>[<span class="number">1</span>])&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"参数："</span>+<span class="built_in">arguments</span>[<span class="number">0</span>]+<span class="built_in">arguments</span>[<span class="number">1</span>]);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">arg1,arg2,arg3</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">arguments</span>[<span class="number">0</span>] &amp;&amp; <span class="built_in">arguments</span>[<span class="number">1</span>] &amp;&amp; <span class="built_in">arguments</span>[<span class="number">2</span>])&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"参数："</span>+<span class="built_in">arguments</span>[<span class="number">0</span>]+<span class="built_in">arguments</span>[<span class="number">1</span>]+<span class="built_in">arguments</span>[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">foo(<span class="string">"one"</span>,<span class="string">"two"</span>,<span class="string">"three"</span>,<span class="string">"four"</span>);    <span class="comment">// "参数：onetwothree",foo 指针指向第二个定义的对象内存，并且实际运行时参数的个数可以和定义时不一致</span></span><br></pre></td></tr></table></figure>
+<h4 id="arguments-和-callee-属性"><a href="#arguments-和-callee-属性" class="headerlink" title="arguments 和 callee 属性"></a>arguments 和 callee 属性</h4><p>arguments 是一个类数组对象，内部存储着函数接受的对象，可以像数组一样 arguments[index]的读取参数。但 arguments 还包含一个 callee属性，这个属性是一个指向函数本身的指针，是和函数名指针一样指向同一块内存的指针。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function foo(arg1,arg2)&#123;</span><br><span class="line">    if(arguments[0] &amp;&amp; arguments[1])&#123;</span><br><span class="line">        console.log(&quot;两个参数：&quot;+arguments[0]+arguments[1]);</span><br><span class="line">        arguments.callee(&quot;一个参数&quot;);</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">         console.log(arguments[0]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">foo(&quot;one&quot;,&quot;two&quot;);   // &quot;两个参数：onetwo&quot;, &quot;一个参数&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="this-属性"><a href="#this-属性" class="headerlink" title="this 属性"></a>this 属性</h4><p>this是指向调用这个函数的对象(其实就是一个函数执行的环境对象)，如果是全局环境，则调用对象是 window。但是在构造函数里，this 指向的是函数的实例。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> windowProperty = <span class="string">"window property"</span>;</span><br><span class="line"><span class="keyword">var</span> name = <span class="string">"Bio"</span>;</span><br><span class="line"></span><br><span class="line">构造函数</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createFoo</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;   <span class="comment">// 这个 this 指向 createFoo 实例化后的实例对象</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.windowProperty);</span><br><span class="line">&#125;;</span><br><span class="line">foo();  <span class="comment">// "window property"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">    name: <span class="string">"Alucard"</span>,</span><br><span class="line">    isFun: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">myObj.isFun();  <span class="comment">// "Alucard"</span></span><br></pre></td></tr></table></figure>
+<h4 id="call-、apply-和-bind-方法"><a href="#call-、apply-和-bind-方法" class="headerlink" title="call()、apply() 和 bind()方法"></a>call()、apply() 和 bind()方法</h4><p>这三者主要的功能是改变函数的 this 指向，即设置定义好的函数在什么环境中执行。</p>
+<p>call()和 apply()功能完全一样，主要是改变函数的 this,仅仅第二个参数不同。bind()除了改变 this,还会创建函数的实例。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.name = <span class="string">"window-name"</span>;</span><br><span class="line"><span class="keyword">var</span> myObj = &#123;<span class="attr">name</span>: <span class="string">"myObj-name"</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// call() 和 apply(): '要调用的函数名.call(this,参数)',都是传入两个参数，第一个参数是被调用函数中 this 被改变成的 this，第二个是被调用函数的参数，call()是逐个写出，apply()是以(类)数组传入</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">foo1</span>(<span class="params">ar1,arg2</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arg1+arg2+<span class="keyword">this</span>.name+<span class="string">""</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">foo2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    foo1.call(<span class="keyword">this</span>,<span class="string">"this"</span>,<span class="string">"是 window:"</span>);</span><br><span class="line">    foo1.apply(myObj,[<span class="string">"this"</span>,<span class="string">"是 myObj:"</span>]);</span><br><span class="line"> &#125;</span><br><span class="line"> foo2();    <span class="comment">// "this是 window:window-name","this是 myObj:myObj-name"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//bind()</span></span><br><span class="line"><span class="keyword">var</span> fooInstance = foo1.bind(myObj);</span><br><span class="line">fooInstance(<span class="string">"使用"</span>,<span class="string">"bind："</span>);  <span class="comment">// "使用bind:myObj-name\"</span></span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span>&lt;记录一些生活琐碎&gt;</span>
+      </p>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">JS变量的作用域和垃圾回收机制-读书笔记</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2016-06-02</span>
+  </div>
+  <div class="post-content">
+    <h4 id="笔记关键字"><a href="#笔记关键字" class="headerlink" title="笔记关键字"></a>笔记关键字</h4><p>执行环境、垃圾回收</p>
+<h4 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h4><p>每个变量都有一个自己的执行环境，即一个包含着可以访问的变量、函数的环境。</p>
+<a id="more"></a>
+<p>通常，是以一个函数来定义一个执行环境的一个边界（最外部是一个全局的执行环境，可以看成所有 JS都在一个全局的函数内部执行）。外部变量无法访问函数内部定义的变量。PS：JS中，是没有块级作用域的，例如 for 循环内部定义变量可以被外部访问到的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> today = <span class="string">"2016-06-02"</span>;</span><br><span class="line">    <span class="comment">// console.log(day);  不能访问到 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">otherFoo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> day = <span class="string">"Thu"</span>;</span><br><span class="line">    <span class="comment">// console.log(today);  不能访问到 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// console.log(day);       同样不能访问到</span></span><br><span class="line"> <span class="comment">// console.log(today);     同样不能访问到</span></span><br></pre></td></tr></table></figure>
+<p>内层函数的变量可以访问外层的，外层的无法直接访问内层的。当访问一个变量时，会先查找内层，找不到时再在外层查找，一层一层向外查找。这就形成了作用链域。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局环境</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 定义变量</span></span><br><span class="line">    <span class="comment">// foo1环境</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">foo2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 定义变量</span></span><br><span class="line">        <span class="comment">// foo2环境</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">foo3</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="comment">// 定义变量</span></span><br><span class="line">            <span class="comment">// foo3环境</span></span><br><span class="line">            ...</span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">fooN</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="comment">// 定义变量</span></span><br><span class="line">                <span class="comment">// fooN环境</span></span><br><span class="line">                <span class="comment">// 首先会在fooN环境查找varValue变量，没有的找到就到 foo(N-1)环境中查找...</span></span><br><span class="line">                <span class="comment">// 直到找到...若是到全局环境还没查找，则是表示该变量没有声明</span></span><br><span class="line">                <span class="built_in">console</span>.log(varValue);  </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="JS-的垃圾回收机制"><a href="#JS-的垃圾回收机制" class="headerlink" title="JS 的垃圾回收机制"></a>JS 的垃圾回收机制</h4><p>JS垃圾回收机制的原则是：<code>当变量不再使用，则自动回收。</code></p>
+<p>有两种回收机制：标记清除和引用计数。具体使用哪种机制，由宿主环境决定，即在哪个游览器上运行 JS代码。目前主流使用的是标记清除。</p>
+<ul>
+<li>引用计数：当声明了一个变量，变量被引用了一次，则计数器+1。当计数器为0表示这个块内存已经没有被任何变量引用，即没有任何入口可以访问这块内存了，便释放掉。但是存在循环引用的问题，会导致该部分内存永远不会被释放。</li>
+<li>标记清除：标记清除分为两个步骤，当变量为声明时进行标记，当执行离开可访问改变量的执行环境时便抹去标记、释放内存，因为离开该执行环境后外部就不能直接访问该变量。</li>
+</ul>
+
+  </div>
+</article>
+    </main>
+  </body>
+</html>

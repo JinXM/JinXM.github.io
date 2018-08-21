@@ -778,7 +778,15 @@ pre .css ~ * .id {
   width: 85%;
   max-width: 450px;
 }
+.post-content img.img-horizontal-lg {
+  width: 85%;
+  max-width: 850px;
+}
 .post-content img.img-vertical {
   width: 100%;
   max-width: 500px;
+}
+.post-content img.img-vertical-lg {
+  width: 100%;
+  max-width: 1000px;
 }
