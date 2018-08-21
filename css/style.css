@@ -99,25 +99,21 @@ body {
 }
 @media only screen and (max-width: 800px) {
   .post {
-    padding: 30px 30px;
+    padding: 30px 30px !important;
   }
   .post-content {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
-}
-@media only screen and (mim-width: 801px) {
-  .post {
-    padding: 30px 50px;
-  }
-  .post-content {
-    padding-right: 7.6923%;
-    padding-left: 7.6923%;
+  .post-title {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 }
 .post {
   border-bottom: solid 6px #f4f4f4;
   background-color: #fff;
+  padding: 30px 50px;
 }
 .post:last-child {
   border-bottom: none;
@@ -153,6 +149,8 @@ body {
 }
 .post-content {
   line-height: 30px;
+  padding-right: 7.6923%;
+  padding-left: 7.6923%;
   font-size: 17px;
   text-align: justify;
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
@@ -318,6 +316,19 @@ body {
 .post-content figure table tbody tr:hover {
   background: none;
 }
+@media only screen and (max-width: 800px) {
+  .post {
+    padding: 30px 30px !important;
+  }
+  .post-content {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .post-meta {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
 .posts .posts-menu-container {
   position: relative;
 }
@@ -370,26 +381,9 @@ body {
   background-image: -webkit-linear-gradient(-410deg, rgba(68,68,68,0.6) 20%, rgba(0,0,0,0.9));
   background-image: linear-gradient(140deg, rgba(68,68,68,0.6) 20%, rgba(0,0,0,0.9));
 }
-@media only screen and (max-width: 800px) {
-  .posts .post {
-    padding: 30px 30px;
-  }
-  .posts .post-content {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-@media only screen and (mim-width: 801px) {
-  .posts .post {
-    padding: 30px 50px;
-  }
-  .posts .post-content {
-    padding-right: 7.6923%;
-    padding-left: 7.6923%;
-  }
-}
 .posts .post {
   border-bottom: solid 6px #f4f4f4;
+  padding: 30px 50px;
   background-color: #fff;
 }
 .posts .post:last-child {
@@ -419,6 +413,8 @@ body {
 .posts .post-content {
   line-height: 1.8em;
   font-size: 1rem;
+  padding-right: 7.6923%;
+  padding-left: 7.6923%;
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .posts .post-content p {
