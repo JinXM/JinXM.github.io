@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span>&lt;记录一些生活琐碎&gt;</span>
+      </p>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">蒙特卡罗方法</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2016-04-22</span>
+  </div>
+  <div class="post-content">
+    <h3 id="关于蒙特卡罗方法"><a href="#关于蒙特卡罗方法" class="headerlink" title="关于蒙特卡罗方法"></a>关于蒙特卡罗方法</h3><p>蒙特卡罗方法是一种计算机仿真方法，起源于“曼哈顿计划”，名字来源于著名的赌城 - 摩纳哥的 MonteCarlo。</p>
+<p>该方法主要是基于“随机数”来解决问题。</p>
+<h3 id="原理和实施过程"><a href="#原理和实施过程" class="headerlink" title="原理和实施过程"></a>原理和实施过程</h3><p><strong>原理</strong></p>
+<p>其原理是利用计算机产生大量符合规则的随机数 M，然后查看落在目标中的随机数个数 N,通过 N/M 这个值来评估所需要的结果。</p>
+<p><strong>实施过程</strong></p>
+<ul>
+<li>分析问题，构造或描述出一个可以使用随机数的数学模型</li>
+<li>利用计算机产生（大量）各种概率分布的随机数</li>
+<li>从这大量的随机数中统计模型的数字特征，得到模拟解</li>
+</ul>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>按照实际应用方向，有求面积、求积分、分析概率分布、物理方面的统计等等。但是抽象出来，都可以转换为长度（一维）、面积（二维）、体积（三维）…这些数学问题。而且随着维度的增加，不会出现计算难度（量）几何增长的问题。</p>
+<p>例如均匀分布的概率就可以转为二维坐标系中求面积的问题，非均匀分布的概率可以转换为三维坐标系中求体积的问题。</p>
+<p><strong>一个示例</strong></p>
+<p>问：计算两条抛物线 y=x² ，x=y² 所围成的图形的面积？</p>
+<p>首先我们先使用计算机绘制出这条抛物线的图像</p>
+<p><img class="cs-img img-vertical" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/MonteCarlo.png" title="抛物线几何图"></p>
+<p>两条抛物线的交点分别是[0,0],[1,1]，可以构成一个矩形.</p>
+<p>所以我们使用计算机的（伪）随机函数在这个矩形随机均匀产生100000个点。然后统计（y &lt;= sqrt(x) &amp; y &gt;= x^2）的点得个数 N. 然后多组仿真的模拟结果大概是0.333左右。</p><p></p>
+<p>而使用定积分∫[0,1]（√x - x²)dx 计算的结果是1/3，与仿真结果很接近。</p>
+
+  </div>
+</article>
+    </main>
+  </body>
+</html>
