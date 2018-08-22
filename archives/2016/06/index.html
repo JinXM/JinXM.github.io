@@ -31,139 +31,43 @@
   </section>
 </div>
     <main class="main">
-    <section class="posts">
-  <div class="posts-menu-container">
-    <div class="top-menu">
-    <div class="panel-cover--overlay">
-        <div class="top-menu-desc">
-          <h1 class="title">
-            <a href="http://jinxm.github.io/">Alucard</a>
-          </h1>
-          <p class="desc">
-            <span>Earth, human, 90s</span>
-            <br>
-            <span>&lt;记录一些生活琐碎&gt;</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/17/JS字符串数组去重-思考题/">JS字符串数组去重-思考题</a>
-      </div>
-      <div class="post-content">
-        <p><strong>问题描述</strong></p>
-<p>有一个由字符串组成的数组，需要对其去重。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-17</span>
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/08/JS匿名函数和闭包-读书笔记/">JS匿名函数和闭包-读书笔记</a>
-      </div>
-      <div class="post-content">
-        <h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p>匿名函数介绍</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明方式1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arg0,arg1</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arg0 + arg1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明方式2</span></span><br><span class="line"><span class="keyword">var</span> myFun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 单纯匿名函数的执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my name is "</span>+name);</span><br><span class="line">    &#125;)(<span class="string">"jack"</span>);         <span class="comment">// "my name is jack"</span></span><br></pre></td></tr></table></figure>
-<p>如上所示，JS函数的声明有两种形式，直接定义和将函数赋值给一个变量。在第二种中，function(){}这种函数称之为匿名函数。之前我们提到过函数名就是一个指向函数内存区域的指针，所以单独声明 function(){}这种形式是没有指向这个函数的指正的，程序运行过这段代码即回收掉这段内存。但是可以用把它复制给一个变量，让这个变量充当这个指针。</p>
-<p>单纯 function(){}形式匿名函数的执行可以使用上述第三个例子的方式，(function(arg){})(argEg)直接给匿名函数传参让其执行。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-08</span>
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/07/纸蜻蜓/">纸蜻蜓</a>
-      </div>
-      <div class="post-content">
-        <p>纸蜻蜓是我在阿里实习时参与的最后一个项目。</p>
-<p>蜻蜓是一个可以帮助用户智能规划旅程的产品，用户只需要告诉他旅行的目的地、预算范围、时间、以及一些体验要求，蜻蜓就能够在短短几秒到几十秒内，帮你规划出一条完整的安排。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-07</span>
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/04/JS的对象特性：封装、继承-读书笔记/">JS的对象特性：封装、继承-读书笔记</a>
-      </div>
-      <div class="post-content">
-        <h4 id="构造函数、实例、prototype"><a href="#构造函数、实例、prototype" class="headerlink" title="构造函数、实例、prototype"></a>构造函数、实例、prototype</h4><p>在介绍封装和集成之前，需要了解 JS 对象的三个概念： 构造函数、实例 和 prototype。</p>
-<p>以生产某个型号A的机器人为例。生产机器人我们首先需要一个设计好的模具(构造函数，java 里叫做类)，才能够按照这个模具成产出一个一个机器人(实例)，你可以给其取名 a、b、c、d(对象变量名，实际是指针)。另外，你可以根据匹配磨具生产出唯一的一套配件外设(prototype,即原型)。当你买了一个机器人 a 的时候(创造了一个对象 a)，你可以说对象有模具中的功能，也有提配件供外设提供的功能。</p>
-<p>在 JS 中，要实例化某个对象，先要声明一个构造函数(模版，类),实例化一个实例(对象)就是按照模版中的代码在新开辟一块内存，然后让你的变量名指向这块内存。prototype(原型)是所有实例和构造函数共享的一套方法和属性，有一块自己独立内存，构造函数的内存和实例的内存中都有一个指针指向 prototype的内存。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-04</span>
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/03/JS对象：基本包装类型-读书笔记/">JS对象：基本包装类型-读书笔记</a>
-      </div>
-      <div class="post-content">
-        <h4 id="基本包装类型概述"><a href="#基本包装类型概述" class="headerlink" title="基本包装类型概述"></a>基本包装类型概述</h4><p>ECMAScript 5标准中，JS 有6种数据类型，Number、Boolean、String、undefined、null和 Object。Object是引用类型，其余的是基本类型，不具备对象特征(null 是空指针，可以看做 Object)。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-03</span>
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/02/JS对象：函数-读书笔记/">JS对象：函数-读书笔记</a>
-      </div>
-      <div class="post-content">
-        <h4 id="Function-概述"><a href="#Function-概述" class="headerlink" title="Function 概述"></a>Function 概述</h4><p>函数Function 是 JS 预设好的一种对象类型，函数名即指向这个对象的一个指针，所以可以把函数名当做其它函数的参数。</p>
-<p>JS的函数是没有重载的。</p>
-<p>函数对象默认定义好、主要的属性和方法有如下：</p>
-<ul>
-<li>arguments 和 callee</li>
-<li>this</li>
-<li>call()、apply() 和 bind()</li>
-<li>prototype</li>
-</ul>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-02</span>
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/02/JS变量的作用域和垃圾回收机制-读书笔记/">JS变量的作用域和垃圾回收机制-读书笔记</a>
-      </div>
-      <div class="post-content">
-        <h4 id="笔记关键字"><a href="#笔记关键字" class="headerlink" title="笔记关键字"></a>笔记关键字</h4><p>执行环境、垃圾回收</p>
-<h4 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h4><p>每个变量都有一个自己的执行环境，即一个包含着可以访问的变量、函数的环境。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-02</span>
-      </div>
-    </article>
-  
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/01/JS对象-Array-读书笔记/">JS对象-Array-读书笔记</a>
-      </div>
-      <div class="post-content">
-        <p>Array 是JS定义好的一个基本对象，其主要属性和方法如下思维导图所示：</p>
-<p><img class="cs-img img-vertical-lg" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-Array.png" alt="“JS" 高级程序设计”=""></p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-01</span>
-      </div>
-    </article>
-  
-</section>
-
+    <section class="archive">
+  <ul class="post-archive">
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/17/JS字符串数组去重-思考题/">JS字符串数组去重-思考题</a>
+      </li>
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/08/JS匿名函数和闭包-读书笔记/">JS匿名函数和闭包-读书笔记</a>
+      </li>
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/07/纸蜻蜓/">纸蜻蜓</a>
+      </li>
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/04/JS的对象特性：封装、继承-读书笔记/">JS的对象特性：封装、继承-读书笔记</a>
+      </li>
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/03/JS对象：基本包装类型-读书笔记/">JS对象：基本包装类型-读书笔记</a>
+      </li>
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/02/JS对象：函数-读书笔记/">JS对象：函数-读书笔记</a>
+      </li>
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/02/JS变量的作用域和垃圾回收机制-读书笔记/">JS变量的作用域和垃圾回收机制-读书笔记</a>
+      </li>
+    
+      <li class="post-item">
+        <a class="post-title" href="/2016/06/01/JS对象-Array-读书笔记/">JS对象-Array-读书笔记</a>
+      </li>
+    
+  </ul>
+ </section>
     </main>
     <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
 
