@@ -67,6 +67,16 @@ body {
   text-align: center;
   font-size: 0.7em;
 }
+.sidebar .sidebar-container .sidebar-header .categories {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 0.7em;
+  font-style: oblique;
+}
+.sidebar .sidebar-container .sidebar-header .categories a {
+  color: #d1f1e9;
+  text-decoration: none;
+}
 .page-nav {
   background: #fff;
   text-align: center;
@@ -367,6 +377,16 @@ body {
   text-align: center;
   font-size: 0.7em;
   color: #ddd;
+}
+.posts .top-menu-desc .categories {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 0.7em;
+  color: #ddd;
+}
+.posts .top-menu-desc .categories a {
+  color: #ddd;
+  text-decoration: none;
 }
 .posts .panel-cover--overlay {
   display: block;
