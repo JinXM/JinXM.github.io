@@ -55,7 +55,7 @@
 <p><strong>一个示例</strong></p>
 <p>问：计算两条抛物线 y=x² ，x=y² 所围成的图形的面积？</p>
 <p>首先我们先使用计算机绘制出这条抛物线的图像</p>
-<p><img class="cs-img img-vertical" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/MonteCarlo.png" title="抛物线几何图"></p>
+<p><a href="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/MonteCarlo.png" data-fancybox="images" data-caption="抛物线几何图" target="_blank" rel="noopener"><br>    <img class="cs-img img-vertical" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/MonteCarlo.png" title="抛物线几何图"><br></a></p>
 <p>两条抛物线的交点分别是[0,0],[1,1]，可以构成一个矩形.</p>
 <p>所以我们使用计算机的（伪）随机函数在这个矩形随机均匀产生100000个点。然后统计（y &lt;= sqrt(x) &amp; y &gt;= x^2）的点得个数 N. 然后多组仿真的模拟结果大概是0.333左右。</p><p></p>
 <p>而使用定积分∫[0,1]（√x - x²)dx 计算的结果是1/3，与仿真结果很接近。</p>
@@ -64,6 +64,13 @@
 </article>
     </main>
     <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+
+<!-- fancybox support -->
+
+    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css"/>
+    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
+
+
 
 <script src="/js/script.js"></script>
   </body>
