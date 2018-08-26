@@ -1,0 +1,11 @@
+.photos-page .img-content {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.photos-page .img-content .lazyload-img {
+  max-width: 250px;
+  padding: 1px;
+}
