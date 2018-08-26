@@ -17,25 +17,14 @@
   list-style-type: none;
   display: flex;
   display: -webkit-flex; /* Safari */
-  flex-wrap: wrap;
-  clear: both;
-  width: 100%;
   flex-direction: row;
-  align-items: flex-end;
+  flex-wrap: wrap;
   justify-content: flex-start;
-}
-.photos-page .img-content .photo-year .photo-container ul li {
-  width: 25%;
-  height: 0;
-  padding-bottom: 25%;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-.photos-page .img-content .photo-year .photo-container ul li a {
-  position: relative;
+  align-items: flex-end;
 }
 .photos-page .img-content .photo-year .photo-container ul li a img.vsco-photo {
   width: 100%;
-  vertical-align: bottom;
+  max-width: 250px;
+  margin-left: 2px;
+  margin-right: 2px;
 }

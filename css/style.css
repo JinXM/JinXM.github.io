@@ -810,6 +810,11 @@ pre .css ~ * .id {
   width: 100%;
   max-width: 1000px;
 }
+@media only screen and (max-width: 800px) {
+  .photos-page .photo-container li {
+    width: 33% !important;
+  }
+}
 .photos-page {
   margin: 30px;
 }
@@ -817,8 +822,8 @@ pre .css ~ * .id {
   font-size: 1em;
   color: #555;
   font-weight: 500;
-  margin-bottom: 10px;
-  margin-top: 25px;
+  margin-bottom: 0.3em;
+  margin-top: 1.2em;
 }
 .photos-page .img-content .photo-year .photo-container ul {
   list-style-type: none;
