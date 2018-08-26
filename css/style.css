@@ -810,14 +810,13 @@ pre .css ~ * .id {
   width: 100%;
   max-width: 1000px;
 }
-.photos-page .img-content {
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-end;
+.photos-page {
+  margin: 30px;
 }
-.photos-page .img-content .lazyload-img {
-  max-width: 250px;
-  padding: 1px;
+.photos-page .img-content {
+  display: flex;
+  flex-wrap: wrap;
+  clear: both;
+  width: 100%;
+  text-align: left;
 }
