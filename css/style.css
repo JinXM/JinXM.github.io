@@ -813,10 +813,36 @@ pre .css ~ * .id {
 .photos-page {
   margin: 30px;
 }
-.photos-page .img-content {
+.photos-page .img-content .photo-year .photo-year-title {
+  font-size: 1em;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+.photos-page .img-content .photo-year .photo-container ul {
+  list-style-type: none;
   display: flex;
+  display: -webkit-flex; /* Safari */
   flex-wrap: wrap;
   clear: both;
   width: 100%;
-  text-align: left;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.photos-page .img-content .photo-year .photo-container ul li {
+  width: 25%;
+  height: 0;
+  padding-bottom: 25%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.photos-page .img-content .photo-year .photo-container ul li a {
+  position: relative;
+}
+.photos-page .img-content .photo-year .photo-container ul li a img.vsco-photo {
+  width: 100%;
+  vertical-align: bottom;
 }
