@@ -4,7 +4,35 @@ $(document).ready(function(){
   console.log("<记录一些生活琐碎>");
 
   wrapImageWithFancyBox();
+  var cal = new CalHeatMap();
+  cal.init({
+    data: "datas.json"
+  });
 })
+
+/**
+ * Calendar Heat Map
+ */
+function setCalendarHeatMap() {
+
+  var cal = new CalHeatMap();
+  cal.init({
+      //from 2017,0,1
+      // start: new Date(2018, 08, 27),
+      // data: datas,
+      // domain: "month",
+      // subDomain: "day",s
+      // // subDomain: "x_day",
+      // range: 12,
+      // tooltip: true,
+      // cellsize: 15,
+      // cellpadding: 3,
+      // domainGutter: 15,
+      // cellSize: 10,
+      // displayLegend: false
+  });
+};
+
 
 /**
  * Wrap images with fancybox support.

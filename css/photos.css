@@ -25,6 +25,7 @@
 .photos-page .img-content .photo-year .photo-container ul li a img.vsco-photo {
   width: 100%;
   max-width: 250px;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.3em;
 }
