@@ -835,8 +835,7 @@ pre .css ~ * .id {
   align-items: flex-end;
 }
 .photos-page .img-content .photo-year .photo-container ul li a img.vsco-photo {
-  width: 100%;
+  width: 97%;
   max-width: 250px;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-bottom: 0.3em;
 }
