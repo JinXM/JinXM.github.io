@@ -810,6 +810,11 @@ pre .css ~ * .id {
   width: 100%;
   max-width: 1000px;
 }
+.post-content img.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media only screen and (max-width: 800px) {
   .photos-page .photo-container li {
     width: 33% !important;
