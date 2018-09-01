@@ -815,6 +815,13 @@ pre .css ~ * .id {
   margin-left: auto;
   margin-right: auto;
 }
+.post-content img.story-photos {
+  width: 100%;
+  max-width: 600px;
+}
+.post-content img.grey-photo-border {
+  border: 1em solid #c8c8c8;
+}
 @media only screen and (max-width: 800px) {
   .photos-page .photo-container li {
     width: 33% !important;
@@ -843,4 +850,11 @@ pre .css ~ * .id {
   width: 97%;
   max-width: 250px;
   margin-bottom: 0.3em;
+}
+.pic-story-page .center-text {
+  text-align: center;
+}
+.pic-story-page .center-small-title {
+  color: #c8c8c8;
+  font-weight: 700;
 }
