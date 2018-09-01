@@ -819,6 +819,10 @@ pre .css ~ * .id {
   width: 88%;
   max-width: 600px;
 }
+.post-content img.full-story-photos {
+  width: 100%;
+  max-width: 600px;
+}
 .post-content img.grey-photo-border {
   border: 1em solid #c8c8c8;
 }

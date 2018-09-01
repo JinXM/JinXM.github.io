@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span><记录一些生活琐碎></span>
+      </p>
+
+      <div class="categories">
+        <a href="/categories/daily">生活</a>
+        <span>|</span>
+        <a href="/categories/cs">技术</a>
+      </div>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">年常搬家</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2018-06-18</span>
+  </div>
+  <div class="post-content">
+    <p><a href="/image/2018/06-16/book.JPG" data-fancybox="images" data-caption="搬家整理出来一箱一箱的书"><br>    <img class="full-story-photos center-img" src="/image/2018/06-16/book.JPG" alt="搬家整理出来一箱一箱的书"><br></a></p>
+<p>我又双叒叕搬家啦!</p>
+<p>从大学实习期间算起的话，这应该是我第七次搬家了。最近两三年，基本是一年一搬的节奏，可谓是“年常”搬家了。</p>
+<a id="more"></a>
+<p class="center-img" style="text-align: center; font-weight: 700;">之一</p>
+
+<p>搬家的原因有很多。</p>
+<p>第一次在外边实习的时候，住的是公司给推荐的外边的房子，虽然价格可以但是地处偏僻环境和安全实在太差，所以住了两个月就和同学一起搬走了。</p>
+<p>后来很多次的搬家，基本都是属于工作环境的变动。比如实习期的结束，比如部门从一个办公室换到另外一个地方的办公室。</p>
+<p>再后来工作稳定了，影响我搬家的便是合同和室友了。上海这边的租房合同基本是年签(一年一签)，所以每当合同到期的时候，房东回想着给你涨房租，涨多了，搬！自己想住条件好一点的房子，搬！室友离职/想住好一点的房子/回老家，找不到合适的室友，搬！单纯想换个地方住，搬…而我最近几年的搬家，都是因为室友“走”了。</p>
+<p class="center-img" style="text-align: center; font-weight: 700;">之二</p>
+
+<p>搬家/找房子多了，自然对搬家体会很深。结论先写在前边，搬家半条命o(╥﹏╥)o</p>
+<p>新人是最好骗的。刚从学校出来，没有任何一点“人生经验”  too young too simple too naive；来到一个新的城市人生地不熟，钱少还没落脚的地方，获取到的信息也极不对称…真是房屋中介的最爱呀！</p>
+<p>第一次找房真的会特别心累。钱少想找个便宜的，但又怕被坑处处揪着心；经验少被中介带着蒙头转向觉得“不租这个房子就不租到这么好的房子了…”；还没找到落脚的地方，内心焦虑的要命。</p>
+<p>好不容易找到了房子，终于要开始搬东西了。从家里学校里寄过来一堆东西，东拿西拿简直要命，却棉被却鞋架却一堆生活用品，第一次觉得淘宝快递是救命的！</p>
+<p>搬进来住了，却发现便宜没好货，房东中介真心黑。慢慢发现房子的各种暗坑，和室友的各种生活习惯上的小矛盾，诸如此类。于是就心念着下次要找个好点的房子。</p>
+<p class="center-img" style="text-align: center; font-weight: 700;">之三</p>
+
+<p>后来慢慢搬的多了，就知道的需要避开的坑多了，搬家也就从花一条命变成了半条命。</p>
+<blockquote>
+<p>/ 不要租一二层，不然潮湿、阴暗、噪音和不安全感会让你暴躁。<br>/ 整租的话，室友最好找同事或者校友，生活习惯很重要。<br>/ 卧室不要在卫生间旁边，不然夜里你想早点休息却发现室友稀里哗啦的洗澡然后再让洗衣机转半个小时，你就会后悔的。<br>/ 除非你对自己的东西很有自信，确信一直不会太多，否则最好不要租特别小的卧室，不然后边你会发现屋子会拥乱到让你抑郁（狭小的房间更易致郁）。<br>/ 找房子最好提前半个月。充足的时间，多看看一些房子，心理有个底。<br>/ 大房东、二房东和中介公司各有优缺点，具体看地方的口碑，可以先找同事多了解了解。<br>/ 签合同要把事项写清楚，入住前把东西检查清楚，免得被甩锅。<br>/ 租房是有旺季和淡季的，一般旺季是三四月、六七八月学生的毕业季。淡季一般是年前一两个月，大量离职返乡空出很多房，但此时租房的人又不多。<br>/ 搬家打包东西，可以买一些牛皮纸箱来装。该扔的还是要扔，不舍得扔又用不大到的，找个便宜的快递寄回家吧…东西多的，只能说”买买买一时爽，搬家一条命”…<br>/ 东西搬运，可以找货拉拉这类搬家的车辆，会省不少时间和体力（续命…<br>/ 人多力量大，能有小伙伴帮忙，那是极好的，当然你要请吃饭啰哈哈哈哈<br>/ 房间要看看之前租出多久了，如果是首租，一定要谨慎，甲醛等检测一定要确认。不过安全起见最好还是不要租首租或刚装修过的屋子。</p>
+</blockquote>
+<p class="center-img" style="text-align: center; font-weight: 700;">之四</p>
+
+<p>这次搬家，应该是我搬得最顺的一次。</p>
+<p>原来是和同事合租的整租，但是因为一个小伙伴要离职去其他城市工作，而且合同也到期了二房东嚷着要涨房租。于是我和剩下的小伙伴们合计找一个新的房子吧。</p>
+<p>是提前两周去找房的，看了大概一个周末，但都没有比较满意的。后来小伙伴们都觉得各自单租会比较容易找到合适的，于是在一顿火锅散伙饭后，大家就各找个的了。</p>
+<p>我原来住的是次卧、朝南、房间大小中等，所以这次想找一个价格和条件类似的。因为之前去周边小区看了一些二房东的房子，心理也大概有个底。当时想到现在是大家集中换房子的时间，所以就特意问了一些刚换租的小伙伴，因为这个，自己 Get 到了大量有用的信息。</p>
+<p>最终是选了一个小伙伴的推荐，周内只用了一个晚上就找到了一个还算满意的房子：价格比之前的大概贵300元/月，但是带一个大阳台，卧室面积比之前的大一些，装修硬件稍好一些，朝南主卧，高层。</p>
+<p>检查房屋和仔细签完合同之后，接下来就是准备转移家当这个体力活了。</p>
+<p>我的 Plan 是:</p>
+<ol>
+<li>整理东西。因为是计划周末搬，所以利用周内的晚上，每天收拾一点，少量多次。</li>
+<li>扔/寄。在整理的过程，做一次比较全面的断舍离。将一些以后基本用不到或者特别低频率的东西都扔掉，一些真不舍得扔掉的东西就寄回家。我扔了很多个大垃圾袋的东西，然后寄了两大麻袋的东西回去！</li>
+<li>打包。之前准备了一些大大小小的牛皮纸箱子，将东西装箱封口，用记号笔标记1/n、2/n、3/n…n/n。</li>
+<li>搬家-搬出。动手搬家的时候，<code>忽悠</code>了牛牛童鞋帮我看东西。因为东西要先全部搬下楼放到地面，而自己忙于上下楼搬东西，怕丢东西所以需要一个人帮忙看着地面的物品。</li>
+<li>搬家-转移。中间的货物转运，网上叫了搬家车辆帮忙，因为新家比较近东西也不多，车子一趟就运完了，花费60元左右。</li>
+<li>搬家-搬入。新家虽然在高层，但是有电梯，反而搬东西比较方便，用了大概半个小时。所以整个动手搬家，从下午4点开始，到6点就搬完了，只花了2个小时！</li>
+<li>东西布置。这个其实是一个比较累的过程，第二天几乎花了一天才弄完ˆ╥﹏╥…</li>
+</ol>
+<p></p>
+
+<p>此上，我的第七次搬家圆满结束！</p>
+<script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+  </div>
+</article>
+    </main>
+    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+
+<!-- fancybox support -->
+
+    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
+
+
+<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
+
+<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script src="/js/photos.js"></script>
+<script src="/js/rg90d.js"></script>
+  <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
