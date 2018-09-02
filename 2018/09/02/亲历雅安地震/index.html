@@ -1,0 +1,82 @@
+<!DOCTYPE html><html><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span><记录一些生活琐碎></span>
+      </p>
+
+      <div class="categories">
+        <a href="/categories/daily">生活</a>
+        <span>|</span>
+        <a href="/categories/cs">技术</a>
+      </div>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">亲历雅安地震</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2018-09-02</span>
+  </div>
+  <div class="post-content">
+    <p>最近在上班的时候，同排工位的小伙伴又开始了他的抖腿神技。于是乎，我那被垫的高高的显示器开始了有规律的抖动。</p>
+<p>对于我，却有一瞬间错觉，感觉是整个地面在抖——地震了！</p>
+<p>对于一个沿海丘陵地带长大的孩子，能有这个条件放射，完全归功于吾在天府之国读书的那几年。而对地震的初印象，则是那次雅安大地震建立的。</p>
+<a id="more"></a>
+<p>4月20号，由春入夏的时期，。而那段时间的成都，却已提前进入闷热。</p>
+<p>那时候大家都是刚进大学没多久的人，还沉迷于高考解脱出来的“自由”之中。当时学校上学日，晚上11点多是会自动断电的，但是周五晚上是会通宵供电。被断电和课程封印了一周的 CS(Computer Science) 男生宿舍，终于在周五晚上尽情的释放自我(游戏、二次元、通宵…)</p>
+<p>就这样，顺理成章的变成了<code>周五晚睡+周六懒觉</code>的日常模式(这个也有地方时原因，成都因为纬度关系，日出日落基本比沿海要晚一个多小时)。</p>
+<p>那是一个周六的早上，宿舍小伙伴们都沉浸在睡梦之中。我隐约感觉到床铺有点摇晃，心理在想上铺又在摇床了…过了一会床铺又有点摇，我想怎么还在摇有点想摇床反击了，后来一想不对呀，上铺是个留级生沉迷于网吧基本不回宿舍睡觉的…</p>
+<p>还没等我往下想，隔壁铺的重庆胖子用四川话大喊了一声”地震啦！”，唰的就从床上蹦下夺门往外跑…然后我们宿舍剩下的几个，也就肾上腺素一大量分泌，跟着跑出去了。</p>
+<p>当时从床上“跳”下逃命，真是一气呵成，没有任何多余的动作！跳下床后，就光着脚往外跑了，出宿舍发现当时整个楼层都在狂奔逃命（真·末日即视感）！我们的宿舍楼是一个 U 型楼，男女同楼，中间隔开，出口分别在 U 字的两侧顶端，而我们宿舍在 U 字底部横着的那块，而且在5楼，所以逃命线路是相当长的。在楼层内因为道路较宽，所以奔跑速度比较快也容易”超车“，但是到楼梯就开始拥塞了，生命线快速燃烧着！</p>
+<p>终于跑出宿舍楼了，2分30秒左右！心率快到爆炸，停下来才发现没穿鞋子脚好疼，不过跑的时候完全没有任何害怕，全身只有一个指令”跑“。</p>
+<p>对于一个从来没有经历过地震的人来说，其实是无法想象”大地震“是件多么可怕的事情，正如没有下水呛过水的人不明白溺水两个字的恐惧。当时的我，完全不知道这是一场7级大地震，后边并伴随着上百次5-6级的余震，在一个大家还是在睡梦中的8点发生，震源接近人口居住区，意味着什么！</p>
+<p>大家在宿舍楼下的空地呆了半个多小时观望，期间有各种余震，震感明显。因为好多男生都是海尔兄弟的造型跑出来的（成都，一座不适合裸睡的城市）。所以大概半个小时候后，就有一些勇敢的海尔跑步回寝室穿衣服去了。而我，自然是胆小怕死的那类，不过幸好自己从来不裸睡，不过还是舍命回去拿了重要的手机出来。</p>
+<p>拿手机是为了给家里人报平安，不过悲伤的是，地震后好几个小时通讯断了！！！电话、短信、网络都连接不上！！！大概每5分钟看一次手机有没有信号，有信号的第一件事就是告诉亲人和朋友 ”成都地震了，我很平安。“ 。</p>
+<p>后来一些的时候，似乎没有震感了，不过辅导员告知说今天最好不要回室内。所以我便出去溜达了，经过操场和公园的时候，看到好多人搭了帐篷大概是准备在这里过夜了。</p>
+<p>快中午的时候，接到了公管会（学生公寓管理委员会，当时我加入的学校组织）老师的消息，聚了公管会的成员中午在xxx 地点见面。</p>
+<p>见面的时候，先是被老师一顿批。大概意思就是发生了地震这么严重的的事情，作为公管会的学生干部，应该自发做好公寓的安全检查等等之类的工作，但是快到中午了都没有人去组织汇报… 随后，便是安排了大家去做宿舍楼的安全检查工作。</p>
+<p>检查工作是2个人一组，一组大概检查2-3栋宿舍楼。检查的内容包括灾后水电安全、墙体损坏记录、以及一些其他异常情况的检查。现在似乎想不起来当时是和谁一组了，只零星记得当时花了一整个下午去做检查，然后总共发现大概4-5处墙体出现了小裂缝…</p>
+<p>其实从下午开始成都就已经没有什么震感了（毕竟离震源还是有一定距离的），所以晚上大家居然都齐刷刷的回宿舍了！我当然也是回了的，毕竟没有帐篷（其实还是设想过睡操场的露天草坪的…），也因为老师们给我吃了颗定心丸(科学就是勇气)。成都是属于冲击平原，地下结构多泥沙，具有很好的缓震作用，所以虽然自古川蜀多地震，但是成都百年来从来没出过事，乃谓”天府之国”（当然也被老师怼了，说我们5楼逃到楼下这么长的线路，更合理的事逃到7楼的天台）。</p>
+<p>这是我的地震初体验，有些奇妙，有些新鲜，印象深刻。</p>
+<p>但是对于受灾的人来说，这是大灾难。后来毕业的时候，自己一个人跑去地震博物馆参观，对地震的另一面突然变得难以言语的哽咽，而心里只能是祝福地震后这么多年后依然还活着的当时的人们，愿上天待你们更好一点。</p>
+<script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+  </div>
+</article>
+    </main>
+    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+
+<!-- fancybox support -->
+
+    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
+
+
+<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
+
+<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
+
+<script src="/js/script.js"></script>
+<script src="/js/photos.js"></script>
+<script src="/js/rg90d.js"></script>
+  <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
