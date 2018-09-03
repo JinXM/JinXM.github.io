@@ -119,6 +119,10 @@ body {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
+  .author-info {
+    display: inline-block !important;
+    margin-left: 0.5em;
+  }
 }
 .post {
   border-bottom: solid 6px #f4f4f4;
@@ -156,6 +160,9 @@ body {
 }
 .post-meta .post-time {
   color: #999;
+}
+.post-meta .author-info {
+  display: none;
 }
 .post-content {
   line-height: 30px;
