@@ -833,6 +833,9 @@ pre .css ~ * .id {
 .post-content img.grey-photo-border {
   border: 1em solid #c8c8c8;
 }
+.post-content img.img-with-bottom {
+  margin-bottom: -70px;
+}
 @media only screen and (max-width: 800px) {
   .photos-page .photo-container li {
     width: 33% !important;
