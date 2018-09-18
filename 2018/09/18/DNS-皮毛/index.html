@@ -1,0 +1,134 @@
+<!DOCTYPE html><html><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Alucard</title>
+  <link rel="stylesheet" href="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+  <body>
+    <div class="sidebar">
+  <section class="sidebar-container">
+    <header class="sidebar-header">
+      <span class="img">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
+      </span>
+      <h1 class="title">
+        <a href="http://jinxm.github.io/">Alucard</a>
+      </h1>
+      <p class="desc">
+        <span>Earth, human, 90s</span>
+        <br>
+        <span><记录一些生活琐碎></span>
+      </p>
+
+      <div class="categories">
+        <a href="/categories/daily">生活</a>
+        <span>|</span>
+        <a href="/categories/cs">技术</a>
+      </div>
+    </header>
+  </section>
+</div>
+    <main class="main">
+    <article class="post article-post">
+  <div class="post-title">
+    <h2 class="title">DNS 皮毛</h2>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2018-09-18</span>
+    <span class="post-time author-info">Alucard</span>
+  </div>
+  <div class="post-content">
+    <p>这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。</p>
+<h3 id="一、什么是-DNS"><a href="#一、什么是-DNS" class="headerlink" title="一、什么是 DNS"></a>一、什么是 DNS</h3><blockquote>
+<p> DNS = Domain Name System </p>
+</blockquote>
+<p>我们平时访问网页，通常都是输入一个网站的<code>域名</code>（eg: <a href="https://google.com" target="_blank" rel="noopener">https://google.com</a> ），然后游览器会返回相应的网页给我们。</p>
+<p>游览器拿到我们输入的<code>域名</code>，然后通过<code>网络</code>，最终找到相应的<code>服务器</code>拿到了我们要的网页，再返回给游览器。</p>
+<p>在万维网中，服务器地址通常是用 IP 进行表示的。那么，我们的输入的<code>域名</code>，是怎么变成服务器的 IP 地址呢？</p>
+<p>这个转换的过程，就是DNS 要做的。</p>
+<a id="more"></a>
+<h3 id="二、演变"><a href="#二、演变" class="headerlink" title="二、演变"></a>二、演变</h3><p><strong>雏形</strong></p>
+<p>互联网早期，只有几百台主机。所以当时的 DNS 系统，就是一个简单的 HOSTS.TXT文件，然后坐了两件事：记录和同步。</p>
+<p>HOSTS.TXT 里简单的记录了主机域名和 IP 地址的对应关系。这个文件存放在一台主机上，然后分发到整个网络。当大家通过域名访问的时候，都会HOSTS.TXT获取到域名对应的 IP 地址，然后再去访问实际的主机。</p>
+<p>如果 HOSTS.TXT 内对应关系发生变化了，更新手段也是很原始，通过电子邮件通知网络的备份，让备份重新拉去 HOSTS.TXT 进行更新。</p>
+<p><strong>DNS</strong></p>
+<p>后来互联网主机数量局增，维护和更新策略都发生了变化。<br>现代的 DNS 系统被设计成了自动更新和维护。</p>
+<h3 id="三、DNS服务器结构"><a href="#三、DNS服务器结构" class="headerlink" title="三、DNS服务器结构"></a>三、DNS服务器结构</h3><p>域名的结构是…d.c.b.a 这个形式。比如<a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a> 这个域名，<code>.com</code>是顶级域名，<code>.google.com</code>是<code>.com</code>的下一级子域名，<code>.www.google.com</code>又是<code>.google.com</code>下一层级的子域名，以此类推。</p>
+<p>DNS的域名服务器是一个倒树形，根节点是<code>根域名服务器</code>，下边的第一层树，负责各个顶级域名（eg: .com、.org、.net等等），再下层则是上一层的子域名。</p>
+<h3 id="四、一个简单的DNS请求过程"><a href="#四、一个简单的DNS请求过程" class="headerlink" title="四、一个简单的DNS请求过程"></a>四、一个简单的DNS请求过程</h3><p>比如我需要请求<code>google.com</code>这个页面，在输入url 后，回车。</p>
+<ol>
+<li>首先会查找游览器本身的DNS缓存，存在则直接返回，不存在则进入步骤2；</li>
+<li>去附近的 DNS 缓存服务器查询（是怎么知道这个 DNS 缓存服务器地址呢，这个一般是由运营商配置地址的，存在则直接返回，不存在则进入步骤3；</li>
+<li>去<code>根域名服务器</code>查到，一层一层向下查询（分为递归和迭代），直到查到域名所对应的记录为止，然后返回。</li>
+<li>返回途中，DNS缓存更新，游览器拿到 IP 地址进行访问。</li>
+</ol>
+<h3 id="五、DNS-记录都记写什么"><a href="#五、DNS-记录都记写什么" class="headerlink" title="五、DNS 记录都记写什么"></a>五、DNS 记录都记写什么</h3><p>之前说到从 DNS缓存或者 DNS服务器里查询相应记录，那<code>记录</code>到底都记了些什么呢？</p>
+<p>记录是一条一条的，每条记录分成4个字段：Name、Value、Type、TTL 四个字段。</p>
+<p>TTL（Time To Live），一个时间字段。用于标记这条记录的存活期，但超过存活期，记录就需要被更新。</p>
+<p>Type 是记录的类型，决定了 Name 和 Value 的组成。</p>
+<p>Type的常用类型有：</p>
+<p><code>A记录，Address</code><br>A 记录就是地址记录，Name 是域名，Value 是 IP 地址。因为有的域名或有多个服务器提供服务，所以会存在一个域名对应多个 IP 地址的情况。</p>
+<p>一对多的例子：</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isalucard.com</td>
+<td>192.30.252.154</td>
+</tr>
+<tr>
+<td>isalucard.com</td>
+<td>185.199.109.153</td>
+</tr>
+</tbody>
+</table>
+<p><code>CNAME 记录</code><br>CNAME是别名记录的意思。依然可以存在一个域名对应多个 IP 的 A 记录，那当然也可以为一个 IP 地址设置多个域名。比如我把博客部署在了<code>192.30.252.154</code>这台服务器上，配置了一个默认的域名<code>jinxm.github.io</code>，但是我嫌弃这个域名不好看，于是我就给他增加了一个别名<code>isalucard.com</code>。所以，<code>192.30.252.154</code>这个 IP 就对呀了两个域名。</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jinxm.github.io</td>
+<td>192.30.252.154</td>
+</tr>
+<tr>
+<td>isalucard.com</td>
+<td>jinxm.github.io</td>
+</tr>
+</tbody>
+</table>
+<p><code>NS 记录，Name Server</code></p>
+<p>域名服务器记录，用以记录这个域名由哪个域名服务器来解析，一对多关系。</p>
+<p>eg: com 域名的解析服务器<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// dig ns com 命令查询</span><br><span class="line">com.            156404  IN  NS  c.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  b.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  i.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  e.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  f.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  d.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  m.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  g.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  a.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  l.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  h.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  j.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  k.gtld-servers.net.</span><br></pre></td></tr></tbody></table></figure><p></p>
+<script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+  </div>
+</article>
+    </main>
+    -<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+-
+-<!-- fancybox support -->
+-
+-    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+-    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
+-
+-
+-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
+-
+-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
+-
+-<script src="/js/script.js"></script>
+-<script src="/js/photos.js"></script>
+-<script src="/js/rg90d.js"></script>
+
+  <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

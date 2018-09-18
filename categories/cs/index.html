@@ -55,6 +55,25 @@
   
     <article class="post">
       <div class="post-title">
+        <a class="post-title-link" href="/2018/09/18/DNS-皮毛/">DNS 皮毛</a>
+      </div>
+      <div class="post-content">
+        <p>这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。</p>
+<h3 id="一、什么是-DNS"><a href="#一、什么是-DNS" class="headerlink" title="一、什么是 DNS"></a>一、什么是 DNS</h3><blockquote>
+<p> DNS = Domain Name System </p>
+</blockquote>
+<p>我们平时访问网页，通常都是输入一个网站的<code>域名</code>（eg: <a href="https://google.com" target="_blank" rel="noopener">https://google.com</a> ），然后游览器会返回相应的网页给我们。</p>
+<p>游览器拿到我们输入的<code>域名</code>，然后通过<code>网络</code>，最终找到相应的<code>服务器</code>拿到了我们要的网页，再返回给游览器。</p>
+<p>在万维网中，服务器地址通常是用 IP 进行表示的。那么，我们的输入的<code>域名</code>，是怎么变成服务器的 IP 地址呢？</p>
+<p>这个转换的过程，就是DNS 要做的。</p>
+      </div>
+      <div class="post-meta">
+        <span class="post-time">2018-09-18</span>
+      </div>
+    </article>
+  
+    <article class="post">
+      <div class="post-title">
         <a class="post-title-link" href="/2018/09/11/flv-js框架解读（1）/">flv.js框架解读（1）</a>
       </div>
       <div class="post-content">
@@ -188,18 +207,6 @@
       </div>
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/03/JS对象：基本包装类型-读书笔记/">JS对象：基本包装类型-读书笔记</a>
-      </div>
-      <div class="post-content">
-        <h4 id="基本包装类型概述"><a href="#基本包装类型概述" class="headerlink" title="基本包装类型概述"></a>基本包装类型概述</h4><p>ECMAScript 5标准中，JS 有6种数据类型，Number、Boolean、String、undefined、null和 Object。Object是引用类型，其余的是基本类型，不具备对象特征(null 是空指针，可以看做 Object)。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-03</span>
-      </div>
-    </article>
-  
 </section>
 
   <nav class="page-nav">
@@ -207,20 +214,21 @@
   </nav>
 
     </main>
-    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+    -<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+-
+-<!-- fancybox support -->
+-
+-    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+-    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
+-
+-
+-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
+-
+-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
+-
+-<script src="/js/script.js"></script>
+-<script src="/js/photos.js"></script>
+-<script src="/js/rg90d.js"></script>
 
-<!-- fancybox support -->
-
-    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
-
-
-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
-
-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
-
-<script src="/js/script.js"></script>
-<script src="/js/photos.js"></script>
-<script src="/js/rg90d.js"></script>
   <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

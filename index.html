@@ -55,6 +55,25 @@
   
     <article class="post">
       <div class="post-title">
+        <a class="post-title-link" href="/2018/09/18/DNS-皮毛/">DNS 皮毛</a>
+      </div>
+      <div class="post-content">
+        <p>这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。</p>
+<h3 id="一、什么是-DNS"><a href="#一、什么是-DNS" class="headerlink" title="一、什么是 DNS"></a>一、什么是 DNS</h3><blockquote>
+<p> DNS = Domain Name System </p>
+</blockquote>
+<p>我们平时访问网页，通常都是输入一个网站的<code>域名</code>（eg: <a href="https://google.com" target="_blank" rel="noopener">https://google.com</a> ），然后游览器会返回相应的网页给我们。</p>
+<p>游览器拿到我们输入的<code>域名</code>，然后通过<code>网络</code>，最终找到相应的<code>服务器</code>拿到了我们要的网页，再返回给游览器。</p>
+<p>在万维网中，服务器地址通常是用 IP 进行表示的。那么，我们的输入的<code>域名</code>，是怎么变成服务器的 IP 地址呢？</p>
+<p>这个转换的过程，就是DNS 要做的。</p>
+      </div>
+      <div class="post-meta">
+        <span class="post-time">2018-09-18</span>
+      </div>
+    </article>
+  
+    <article class="post">
+      <div class="post-title">
         <a class="post-title-link" href="/2018/09/11/学球回忆录4：单脚起跳杀球和吊球/">学球回忆录4：单脚起跳杀球和吊球</a>
       </div>
       <div class="post-content">
@@ -246,30 +265,6 @@
       </div>
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2018/08/30/程序员装逼-▼へ▼メ-指南/">程序员装逼(▼へ▼メ)指南</a>
-      </div>
-      <div class="post-content">
-        <p>其实程序员，是实际应用中和科研结合特别紧密的一个行业。</p>
-<p>所以，程序员的外(zhuang)化(bi)工程就和知识管理(PKM)模型特别像。</p>
-<p>PKM = Personal Knowledge Management</p>
-<p>PKM 有三个步骤：</p>
-<ol>
-<li>知识的获取；</li>
-<li>知识的内建；</li>
-<li>知识的输出；</li>
-</ol>
-<p>专业知识和软实力知识的学习，是后期内建和输出的基础。学习的过程包括知识、感受的获取，然后理解，初步建立记忆体系。</p>
-<p>内建，在初期的理解消化之后，多数是在实践中的进行应用、提炼总结获取的高价值知识、观念。</p>
-<p>知识的输出形式则是多样的，日常工作技能的输出、写书写博当网红、国内新技术的布道…只要你前两步做的足够强大，输出的形式只有你想不到的。</p>
-<p>这里以一个毕业工作2-3年，成长速度普通的小码农作为标本，探讨一些有效可行的外(zhuang)化(bi)手法。</p>
-      </div>
-      <div class="post-meta">
-        <span class="post-time">2018-08-30</span>
-      </div>
-    </article>
-  
 </section>
 
   <nav class="page-nav">
@@ -277,20 +272,21 @@
   </nav>
 
     </main>
-    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+    -<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
+-
+-<!-- fancybox support -->
+-
+-    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+-    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
+-
+-
+-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
+-
+-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
+-
+-<script src="/js/script.js"></script>
+-<script src="/js/photos.js"></script>
+-<script src="/js/rg90d.js"></script>
 
-<!-- fancybox support -->
-
-    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
-    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
-
-
-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
-
-<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
-
-<script src="/js/script.js"></script>
-<script src="/js/photos.js"></script>
-<script src="/js/rg90d.js"></script>
   <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
