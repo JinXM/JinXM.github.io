@@ -875,6 +875,13 @@ pre .css ~ * .id {
   color: #c8c8c8;
   font-weight: 700;
 }
+.colors-page {
+  background-color: #000;
+  border: 1px solid #333;
+  padding: 0 20px;
+}
 .colors-page .color-card {
   text-align: center;
+  color: #fff;
+  padding-bottom: 22px;
 }
