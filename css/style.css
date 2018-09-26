@@ -885,3 +885,10 @@ pre .css ~ * .id {
   color: #fff;
   padding-bottom: 22px;
 }
+.div-1-4 {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 5px;
+}
