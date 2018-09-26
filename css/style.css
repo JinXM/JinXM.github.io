@@ -836,6 +836,9 @@ pre .css ~ * .id {
 .post-content img.img-with-bottom {
   margin-bottom: -70px;
 }
+.center-text {
+  text-align: center;
+}
 @media only screen and (max-width: 800px) {
   .photos-page .photo-container li {
     width: 33% !important;
@@ -871,4 +874,7 @@ pre .css ~ * .id {
 .pic-story-page .center-small-title {
   color: #c8c8c8;
   font-weight: 700;
+}
+.colors-page .color-card {
+  text-align: center;
 }
