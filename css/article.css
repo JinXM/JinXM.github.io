@@ -1,0 +1,144 @@
+.article {
+  padding-bottom: 42px;
+}
+.article .article-date {
+  float: left;
+  display: block;
+}
+.article .article-tag-list {
+  float: left;
+  margin-left: 32px;
+}
+.article .article-more-link {
+  margin-bottom: 30px;
+}
+.article-header {
+  font-size: 26px;
+}
+.article-header h1 a {
+  color: #333;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.article-header h1 a:hover {
+  color: #7cc04b;
+}
+.article-meta {
+  padding-top: 8px;
+  font-size: 14px;
+}
+.article-date {
+  color: #999;
+}
+.article-date:hover {
+  color: #333;
+}
+.article-tag-list {
+  color: #999;
+  list-style-type: none;
+  overflow: hidden;
+}
+.article-tag-link {
+  margin: 0 6px;
+  color: #999;
+}
+.article-tag-link:hover {
+  color: #7cc04b;
+}
+.article-more-link {
+  text-align: right;
+}
+.article-more-link a {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #999;
+  font-size: 14px;
+  line-height: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.article-more-link a:hover {
+  color: #7cc04b;
+  background-color: #f7f7f7;
+  border-color: #dedede;
+  text-decoration: none;
+}
+.toc {
+  padding: 20px;
+  line-height: 20px;
+  list-style-type: none;
+}
+.toc ol {
+  padding: 10px;
+  padding-left: 26px;
+  list-style-type: none;
+}
+.toc-item {
+  padding: 4px 0;
+}
+.toc-item.active > .toc-link {
+  color: #2b2b2b;
+}
+.toc-item.active > .toc-link:before {
+  opacity: 1\9;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.toc-link {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  color: #585858;
+}
+.toc-link:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 2px;
+  height: 100%;
+  line-height: 0;
+  font-size: 0;
+  background-color: #333;
+  opacity: 0\9;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.toc-number {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .article-meta {
+    font-size: 13px;
+  }
+  .article-tag-link {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .article {
+    padding-bottom: 0;
+  }
+  .article .article-date {
+    float: none;
+  }
+  .article .article-tag-list {
+    float: none;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .article-more-link a {
+    padding: 4px 12px;
+    font-size: 13px;
+  }
+}

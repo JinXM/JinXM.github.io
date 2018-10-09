@@ -1,63 +1,55 @@
 <!DOCTYPE html><html><head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Alucard</title>
-  <link rel="stylesheet" href="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
   <body>
-    <div class="sidebar">
-  <section class="sidebar-container">
-    <header class="sidebar-header">
-      <span class="img">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
-      </span>
-      <h1 class="title">
-        <a href="http://jinxm.github.io/">Alucard</a>
-      </h1>
-      <p class="desc">
-        <span>Earth, human, 90s</span>
-        <br>
-        <span><记录一些生活琐碎></span>
-      </p>
-
-      <div class="categories">
-        <a href="/categories/daily">生活</a>
-        <span>|</span>
-        <a href="/categories/cs">技术</a>
-      </div>
-    </header>
-  </section>
-</div>
     <main class="main">
-    <section class="posts">
-  <div class="posts-menu-container">
-    <div class="top-menu">
-    <div class="panel-cover--overlay">
-        <div class="top-menu-desc">
-          <h1 class="title">
-            <a href="/">Alucard</a>
-          </h1>
-          <p class="desc">
-            <span>Earth, human, 90s</span>
-            <br>
-            <span><记录一些生活琐碎></span>
-          </p>
-          <div class="categories">
-            <a href="/categories/daily">生活</a>
-            <span>|</span>
-            <a href="/categories/cs">技术</a>
-          </div>
-        </div>
+      <div class="index-page">
+  <header class="header-components">
+  <div class="header-container">
+    <nav class="clearfix nav-content">
+      <div class="pull-left">
+        <h1>
+          <a href="/" class="title">Alucard</a>
+        </h1>
       </div>
+
+      <div class="pull-right nav">
+        <ul>
+          <li><a href="/">BLOG</a></li>
+          <li><a href="/">LAB</a></li>
+          <li><a href="/">ABOUT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="header-content">
+      <h1>Alucard</h1>
+      <p><记录一些生活琐碎></p>
     </div>
   </div>
+</header>
+
+  <div class="content">
+    <section class="posts-page">
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2018/05/30/梅雨季节/">梅雨季节</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">05月30日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2018/05/30/梅雨季节/">梅雨季节</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <p><a href="/image/2018/05/myjj1.JPG" data-fancybox="images" data-caption="梅雨季节"><br>    <img class="full-story-photos center-img" src="/image/2018/05/myjj1.JPG" alt="梅雨季节"><br></a></p>
 <p>今年上海的雨季，似乎来得特别早。</p>
 <p>四月初的时候，雨水便开始淅淅沥沥的落下来。</p>
@@ -65,28 +57,36 @@
 <p>至五月，这雨就已经下的毫不留情了。</p>
 <p>从早下到晚，整座城市都变得很潮湿。幸好现代的建筑，防潮都做的很好，若是从前，地面上、墙上必定是受这“回南天”的影响，凝满了水珠，衣物棉被也染的一身“梅”气。</p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2018-05-30</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2018/05/27/我的追球/">我的追球</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">05月27日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2018/05/27/我的追球/">我的追球</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <p>我的追球，持续更新…</p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2018-05-27</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2018/02/07/人类真的好烂漫/">人类真的好烂漫</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">02月07日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2018/02/07/人类真的好烂漫/">人类真的好烂漫</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <blockquote>
 <p>SpaceX’s Falcon Heavy rocket launched successfully on Tuesday, making history as the world’s most powerful rocket and putting a provierbial feather in Elon Musk’s cap.<br>— — foxnews 2017.02.06</p>
 </blockquote>
@@ -97,121 +97,148 @@
 <p><a href="/image/2018/02-07/i.JPG" data-fancybox="images" data-caption="送往宇宙的飞行器零件上的标记：地球星人类文明制造"><br>    <img class="full-story-photos center-img" src="/image/2018/02-07/i.JPG" alt="送往宇宙的飞行器零件上的标记：地球星人类文明制造"><br></a></p>
 <p>有人说，那些做着疯子一般想象的人类呀，他们是要靠梦想活下来的。</p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2018-02-07</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2017/05/07/记与清华的一场交流赛/">记与清华的一场交流赛</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">05月07日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2017/05/07/记与清华的一场交流赛/">记与清华的一场交流赛</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <p><a href="http://7xnm1u.com1.z0.glb.clouddn.com/photos/2017/2017-05-07.JPG" data-fancybox="images" data-caption="'电子科大&清华大学 上海羽毛球俱乐部交流赛'" target="_blank" rel="noopener"><br>    <img class="img-vertical-lg center-img" src="http://7xnm1u.com1.z0.glb.clouddn.com/photos/2017/2017-05-07.JPG" alt="电子科大&清华大学 上海羽毛球俱乐部交流赛"><br></a></p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2017-05-07</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/09/17/Shanghai-Natural-History-Museum/">Shanghai Natural History Museum</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月17日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2016/09/17/Shanghai-Natural-History-Museum/">Shanghai Natural History Museum</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <div class="pic-story-page"><br><br><br>    <p class="center-text" style="font-size: 0.85em;"><br>        <strong class="center-small-title">2016.09</strong><br>        <strong class="center-small-title">上海自然博物馆</strong><br>        <strong></strong><br>        <strong class="center-small-title">iPhone 6S 拍摄</strong><br>    </p><br><br><br><br>    <hr><br>    <p class="center-text"><br>        <strong class="center-small-title">- 01 -</strong><br>    </p><br><br>    <a href="/image/2016/09-17/Shanghai_Natural_History_Museum1.JPG" data-fancybox="images" data-caption="Shanghai Natural History Museum"><br>        <img class="story-photos center-img grey-photo-border" src="/image/2016/09-17/Shanghai_Natural_History_Museum1.JPG" alt="Shanghai Natural History Museum"><br>    </a><br><br>    <a href="/image/2016/09-17/Shanghai_Natural_History_Museum2.JPG" data-fancybox="images" data-caption="Shanghai Natural History Museum"><br>        <img class="story-photos center-img grey-photo-border" src="/image/2016/09-17/Shanghai_Natural_History_Museum2.JPG" alt="Shanghai Natural History Museum"><br>    </a><br><br>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2016-09-17</span>
-      </div>
+
     </div></article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/08/25/JS表单/">JS表单</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">08月25日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2016/08/25/JS表单/">JS表单</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <p><a href="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-Form.png" data-fancybox="images" data-caption="JS表单" target="_blank" rel="noopener"><br>    <img class="cs-img img-vertical-lg" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-Form.png" alt="“JS" 高级程序设计”=""><br></a></p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2016-08-25</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/08/22/JS-BOM/">JS:BOM</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">08月22日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2016/08/22/JS-BOM/">JS:BOM</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <p><a href="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-BOM.png" data-fancybox="images" data-caption="JS-BOM" target="_blank" rel="noopener"><br>    <img class="cs-img img-vertical-lg" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-BOM.png" alt="“JS" 高级程序设计”=""><br></a></p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2016-08-22</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/08/22/JS事件/">JS事件</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">08月22日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2016/08/22/JS事件/">JS事件</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <p><a href="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-Event.png" data-fancybox="images" data-caption="JS事件" target="_blank" rel="noopener"><br>    <img class="cs-img img-vertical-lg" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/JS-Event.png" alt="“JS" 高级程序设计”=""><br></a></p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2016-08-22</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/17/JS字符串数组去重-思考题/">JS字符串数组去重-思考题</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">06月17日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2016/06/17/JS字符串数组去重-思考题/">JS字符串数组去重-思考题</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <p><strong>问题描述</strong></p>
 <p>有一个由字符串组成的数组，需要对其去重。</p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-17</span>
-      </div>
+
     </article>
   
-    <article class="post">
-      <div class="post-title">
-        <a class="post-title-link" href="/2016/06/08/JS匿名函数和闭包-读书笔记/">JS匿名函数和闭包-读书笔记</a>
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">06月08日</span>
       </div>
-      <div class="post-content">
+
+      <div class="l-post-header">
+        <a href="/2016/06/08/JS匿名函数和闭包-读书笔记/">JS匿名函数和闭包-读书笔记</a>
+      </div>
+
+      <div class="l-post-body post-content">
         <h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p>匿名函数介绍</p>
 <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明方式1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arg0,arg1</span>)</span>{</span><br><span class="line">    <span class="keyword">return</span> arg0 + arg1;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明方式2</span></span><br><span class="line"><span class="keyword">var</span> myFun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 单纯匿名函数的执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my name is "</span>+name);</span><br><span class="line">    })(<span class="string">"jack"</span>);         <span class="comment">// "my name is jack"</span></span><br></pre></td></tr></tbody></table></figure>
 <p>如上所示，JS函数的声明有两种形式，直接定义和将函数赋值给一个变量。在第二种中，function(){}这种函数称之为匿名函数。之前我们提到过函数名就是一个指向函数内存区域的指针，所以单独声明 function(){}这种形式是没有指向这个函数的指正的，程序运行过这段代码即回收掉这段内存。但是可以用把它复制给一个变量，让这个变量充当这个指针。</p>
 <p>单纯 function(){}形式匿名函数的执行可以使用上述第三个例子的方式，(function(arg){})(argEg)直接给匿名函数传参让其执行。</p>
       </div>
-      <div class="post-meta">
-        <span class="post-time">2016-06-08</span>
-      </div>
+
     </article>
   
-</section>
-
-  <nav class="page-nav">
+  
+  <nav class="paginator-page clearfix">
     <a class="extend prev" rel="prev" href="/page/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next</a>
   </nav>
 
-    </main>
-    -<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
--
--<!-- fancybox support -->
--
--    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
--    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
--
--
--<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
--
--<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
--
--<script src="/js/script.js"></script>
--<script src="/js/photos.js"></script>
--<script src="/js/rg90d.js"></script>
+</section>
+  </div>
 
+</div>
+
+      <footer class="footer-page">
+	<div id="footer-info">
+		<div>
+			Copyright
+			© 2018
+			<a href="/" class="footer-link">
+				Alucard
+			</a>
+		</div>
+		<div>
+		</div>
+	</div>
+</footer>
+    </main>
   <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

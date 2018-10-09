@@ -1,102 +1,294 @@
 <!DOCTYPE html><html><head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Alucard</title>
-  <link rel="stylesheet" href="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
   <body>
-    <div class="sidebar">
-  <section class="sidebar-container">
-    <header class="sidebar-header">
-      <span class="img">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/logo-1to1-min.JPG" alt="">
-      </span>
-      <h1 class="title">
-        <a href="http://jinxm.github.io/">Alucard</a>
-      </h1>
-      <p class="desc">
-        <span>Earth, human, 90s</span>
-        <br>
-        <span><记录一些生活琐碎></span>
-      </p>
-
-      <div class="categories">
-        <a href="/categories/daily">生活</a>
-        <span>|</span>
-        <a href="/categories/cs">技术</a>
-      </div>
-    </header>
-  </section>
-</div>
     <main class="main">
-    <section class="archive">
-  <ul class="post-archive">
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/28/关于羽毛球的一些真·人生经验/">关于羽毛球的一些真·人生经验</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/26/中国色记录/">中国色记录</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/25/EVA-配色/">EVA 配色</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/19/一年时间可以做什么-flag/">一年时间可以做什么[flag]</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/18/DNS-皮毛/">DNS 皮毛</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/11/学球回忆录4：单脚起跳杀球和吊球/">学球回忆录4：单脚起跳杀球和吊球</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/11/flv-js框架解读（1）/">flv.js框架解读（1）</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/05/学球回忆录3：高远球/">学球回忆录3：高远球</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/05/学球回忆录2：网前攻防/">学球回忆录2：网前攻防</a>
-      </li>
-    
-      <li class="post-item">
-        <a class="post-title" href="/2018/09/04/学球回忆录1：双打发接发/">学球回忆录1：双打发接发</a>
-      </li>
-    
-  </ul>
- </section>
+      <section class="posts-page">
+  
+    <article class="post-item">
 
-  <nav class="page-nav">
+      <div class="post-meta-date">
+        <span class="post-time">09月28日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/28/关于羽毛球的一些真·人生经验/">关于羽毛球的一些真·人生经验</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <h4 id="技术篇"><a href="#技术篇" class="headerlink" title="技术篇"></a>技术篇</h4><ol>
+<li>找个靠谱的教练，认真系统的学习一段时间，是业余真正的捷径；</li>
+<li>多打单打，会比双打更容易提高个人能力；</li>
+<li>打好基础，知道自己打出去的球会到什么位置，才能讲预判下一拍和战术；</li>
+<li>刻意练习很重要，每一个技术动作都需要花时间、花心思、花精力去“练球”，才能掌握的好；</li>
+<li>基础技术动作 —> 身体素质 —> 球路 —> 战术，升级道路大概是这样的；</li>
+<li>良好的身体素质，是速度、力量、少失误的保障，所以需要你额外做很多无球的专项训练；</li>
+</ol>
+<h4 id="伤病篇"><a href="#伤病篇" class="headerlink" title="伤病篇"></a>伤病篇</h4><ol>
+<li>运动前动态拉伸（热身），运动后放松（静态拉伸），是减少意外伤病最好的办法；</li>
+<li>业余80%的膝盖伤病，都来自于膝盖力量不足，靠墙静蹲是一个锻炼的好动作；</li>
+<li>运动前，请认真评估自己的状态，疲劳、醉酒后打球，大概是拿生命在运动吧；</li>
+<li>受伤后，请认真养伤，莫贪一时之乐；</li>
+<li>适量、适度运动；</li>
+</ol>
+<h4 id="装备篇："><a href="#装备篇：" class="headerlink" title="装备篇："></a>装备篇：</h4><ol>
+<li>装备不一定要买最好的，“合适”才重要；</li>
+<li>为了膝盖和脚，鞋子要买好的，尺码和宽楦要合适；</li>
+<li>合适的毛巾袜和鞋垫占脚感体验很重要的一部分；</li>
+<li>觉得球拍不好打？换根线、换个磅数试试；</li>
+<li>压缩护腿对于大跑动量的人，确实有好处；</li>
+<li>汗多手胶滑，试试护腕；</li>
+</ol>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月26日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/26/中国色记录/">中国色记录</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <div class="color-card" style="background: #000;text-align: center;padding-bottom: 15px;background: linear-gradient(to right, red, orange, yellow, green, blue);"><br>    <span style="text-align: center;display: inline-block;">每一个好看的颜色都有他的中国名字!</span><br>    <span><br>         中国传统颜色记录<br>    </span><br></div>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月25日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/25/EVA-配色/">EVA 配色</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <p><a href="/image/2018/09-25/header.jpg" data-fancybox="images" data-caption="EVA"><br>    <img class="full-story-photos center-img" src="/image/2018/09-25/header.jpg" alt="EVA"><br></a></p>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月19日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/19/一年时间可以做什么-flag/">一年时间可以做什么[flag]</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <p>是9月份了，若是从前的自己，现在应该伏案写着新学期计划了。自己是贪心的人，所以曾写的浮夸的新学期计划从不曾实现过。</p>
+<p>可是我已经很多年不写学期计划了，也对考试漠不关心了。</p>
+<p>在过去一年里，我push 自己做了一些事情，大概是一半成功一半失败，但是终有收货。</p>
+<p>于是，我突然觉得，只要自己愿意走出舒适区，我还是能做掉一些事情的。</p>
+<p>嗯，没错，我要开始给接下来一年立<code>flag</code>了！</p>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月18日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/18/DNS-皮毛/">DNS 皮毛</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <p>这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。</p>
+<h3 id="一、什么是-DNS"><a href="#一、什么是-DNS" class="headerlink" title="一、什么是 DNS"></a>一、什么是 DNS</h3><blockquote>
+<p> DNS = Domain Name System </p>
+</blockquote>
+<p>我们平时访问网页，通常都是输入一个网站的<code>域名</code>（eg: <a href="https://google.com" target="_blank" rel="noopener">https://google.com</a> ），然后游览器会返回相应的网页给我们。</p>
+<p>游览器拿到我们输入的<code>域名</code>，然后通过<code>网络</code>，最终找到相应的<code>服务器</code>拿到了我们要的网页，再返回给游览器。</p>
+<p>在万维网中，服务器地址通常是用 IP 进行表示的。那么，我们的输入的<code>域名</code>，是怎么变成服务器的 IP 地址呢？</p>
+<p>这个转换的过程，就是DNS 要做的。</p>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月11日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/11/学球回忆录4：单脚起跳杀球和吊球/">学球回忆录4：单脚起跳杀球和吊球</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <p><a href="/image/2018/badminton-learn-note/102.jpg" data-fancybox="images" data-caption=""><br>    <img class="full-story-photos center-img" src="/image/2018/badminton-learn-note/102.jpg" alt=""><br></a></p>
+<p>杀球和吊球都是建立在良好的高球基础之上的。</p>
+<h5 id="杀球"><a href="#杀球" class="headerlink" title="杀球"></a>杀球</h5><ul>
+<li>杀球：和高远球一样，小臂发力，摒住到腰下边。杀球后，是直线下去，再向左泄力。</li>
+<li>杀球问题：侧身太多，再加上倒拍，就侧身超过180度了，所以本身加倒拍应该不超过180度；找准击球点和位置之后，就不要跌小碎步了，不然容易错过最佳击球点;</li>
+<li>侧身后，重心在右脚上，右脚屈膝蓄能，左脚微微抬起。架拍，起跳转体，杀球。</li>
+<li>击球点要高，位置偏前。</li>
+<li>杀球要压得住球，注意落点和线路。</li>
+</ul>
+<h5 id="吊球"><a href="#吊球" class="headerlink" title="吊球"></a>吊球</h5><ul>
+<li>正手吊直线和斜线。拍头要立起来，切多一点，接近90度，要跳起来。切的薄，切的速度快，球的速度就快，也贴网。</li>
+<li>击球使用偏拍头的位置。</li>
+</ul>
+<h5 id="练习方法"><a href="#练习方法" class="headerlink" title="练习方法"></a>练习方法</h5><p>杀球：和高球一样多球喂球，球与球之间间隔不要太快，注重质量。<br>吊球：一个吊球，一人挑球。分位置进行多组。</p>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月11日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/11/flv-js框架解读（1）/">flv.js框架解读（1）</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <h4 id="知识储备"><a href="#知识储备" class="headerlink" title="知识储备"></a>知识储备</h4><p>流媒体方面的知识</p>
+<ul>
+<li>flv格式</li>
+<li>mp4、fmp4格式</li>
+</ul>
+<p>前端方面的知识</p>
+<ul>
+<li>H5的video、audio标签</li>
+<li>ES6</li>
+<li>MSE</li>
+</ul>
+<h4 id="核心实现"><a href="#核心实现" class="headerlink" title="核心实现"></a>核心实现</h4><ul>
+<li>video标签</li>
+<li>MSE</li>
+</ul>
+<p>FLV（Flash Video）是 Adobe 推出的一种视频格式，既可以用flash 播放，又可以用其他非flash 播放器播放。</p>
+<p>video标签是 H5的一个新媒体标签，即视频播放标签。但是video标签不支持直接播放flv 的视频。</p>
+<p>MSE（Media Source Extensions），即流媒体扩展 API。 提供了实现无插件且基于 Web 的流媒体的功能。使用 MSE，媒体串流能够通过 JavaScript 创建，并且能通过使用 audio 和 video 元素进行播放。</p>
+<p>所以flv.js核心做的事情是：<code>将获取到的flv 流媒体，经过格式转换，然后通过MSE 接口，喂给video标签</code>。</p>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月05日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/05/学球回忆录3：高远球/">学球回忆录3：高远球</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <p>高远球是最难的内容，也是练习的最多的部分。</p>
+<p>基本从第二节课开始到结束，绝大部分时候都是高远球的练习。</p>
+<h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><ol>
+<li>高远，45度侧身站位，转右脚，不需要太多引拍调整，直接翻拍小臂内旋发力，头前屏住，收起架拍。</li>
+<li>主要爆发力，是依靠小臂的内旋，手腕需要摒住。</li>
+<li>击完球的瞬间，只需要轻微向前自然抖一下，卸掉力就可以了，然后自然让拍子在身前架住。</li>
+<li>脚上的动作主要是交叉步。重心在右脚上，屈膝引拍，击球的瞬间，右脚起跳、转体，击球。</li>
+<li>为什么会丢掉击球点(高、前)：架好拍瞄准后，击球时不需要再提前增加侧身和多余的倒拍，那样只能让你本来已经判断好的击球点丢失掉。</li>
+<li>侧身不需要过多，45度左右为佳。</li>
+</ol>
+<h5 id="练习方法"><a href="#练习方法" class="headerlink" title="练习方法"></a>练习方法</h5><p>2组定点高远多球练习。不用加上脚上动作，定点击球，左右区各20个为一组，2组。</p>
+<p>2组起跳高远球（起跳是为了抢高点和用上蹬跳转身的力量）。练习数量同上。</p>
+<p>交叉起跳的练习。站在底线两根线上练习，一脚踩一根线，右脚在后。重心在右脚上，左脚抬起 —> 转身，交换脚的位置，左脚落地，右脚抬空 —> 右脚落地，交换脚位置，复原至起始位置，重复练习。</p>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月05日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/05/学球回忆录2：网前攻防/">学球回忆录2：网前攻防</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <p>第二个内容就是网前攻防。</p>
+<p>所谓网前攻防，就是一个人在网前连续下压封网，另外一人则是下手球的被动摆脱。</p>
+<p>主要提高的是网前基本封网能力，以及下手被动球的摆脱能力。</p>
+<h5 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h5><ol>
+<li>网前攻防。攻站在前发球线左右，先小步下压，再跟进下压。防，中场偏后，一拍多一个手柄长度离双打后第二个根发球线，以左脚为轴心防守。手指发力拿来顶，不需要翻腕。</li>
+<li>扑球，要压上网前去；防，当反手被压制时，可以拐个对角。</li>
+<li>关于防守。位置被攻调动开后，要快速回位，恢复两脚基本平行的站位。</li>
+<li>关于进攻。要有预判意识，预判对方下一拍可能的位置，甚至可以提前移动去抓球。</li>
+</ol>
+<h5 id="练习方法"><a href="#练习方法" class="headerlink" title="练习方法"></a>练习方法</h5><p>基本的练习：1:1，一个封网，一人防守。15min 一换。</p>
+<p>进阶练习：2:1，1人封网，2人防守。10min 一换。    </p>
+<p>1对2要点。扑球人要有预判，了解对方两个人回球难易位置，对下一个球有预判。防守两脚平行站位，根据不同位置进行蹬跨和回位。防守方战术方面，两个人回直线2次左右调动对方单侧站位，然后快速拐对角进行被动球摆脱。</p>
+      </div>
+
+    </article>
+  
+    <article class="post-item">
+
+      <div class="post-meta-date">
+        <span class="post-time">09月04日</span>
+      </div>
+
+      <div class="l-post-header">
+        <a href="/2018/09/04/学球回忆录1：双打发接发/">学球回忆录1：双打发接发</a>
+      </div>
+
+      <div class="l-post-body post-content">
+        <p>第一节课，讲的是双打发接发技术。</p>
+<p>首先在理论上建立了发球区的概（tao）念（lu），分为左右发/接发球区（也叫单双发球区，左单右双），每个区又分为1-6个点位。</p>
+<p><a href="/image/2018/badminton-learn-note/101.jpeg" data-fancybox="images" data-caption="“发球区”"><br>    <img class="full-story-photos center-img" src="/image/2018/badminton-learn-note/101.jpeg" alt="“发球区”"><br></a></p>
+<h5 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h5><ol>
+<li>发小球：大臂同肩平，近身一点高一点，握球球头水平，动作小发力集中。1号角切球头1/3，双区2号角推过去，单区2号角转拍压肘。</li>
+<li>偷后场：偷后场，可以偷5号和6号角，发力短促，弧度适中。</li>
+<li>接偷后场：两个小并步，大概移动距离2个球拍长度，最后一步，直线转身杀球，如果是6号外角，则不转身突击杀球。</li>
+<li>观察技巧：可以判断对方发球的侧身程度，预判是否要发2号外角。</li>
+</ol>
+<h5 id="练习方法"><a href="#练习方法" class="headerlink" title="练习方法"></a>练习方法</h5><p>多球练习。</p>
+<p>左右区，每次每个点发球一箱。</p>
+<p>结对练习，可拍下发球动作、球过网线的慢动作视频。进行质量、动作评估，利于提高。</p>
+      </div>
+
+    </article>
+  
+  
+  <nav class="paginator-page clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/archives/2018/09/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/09/page/2/">Next</a>
   </nav>
 
-
+</section>
+      <footer class="footer-page">
+	<div id="footer-info">
+		<div>
+			Copyright
+			© 2018
+			<a href="/" class="footer-link">
+				Alucard
+			</a>
+		</div>
+		<div>
+		</div>
+	</div>
+</footer>
     </main>
-    -<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/jquery/jquery.min.js"></script>
--
--<!-- fancybox support -->
--
--    <link href="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
--    <script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/fancybox-3.3.5/jquery.fancybox.min.js"></script>
--
--
--<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/d3/d3.min.js"></script>
--
--<script src="http://7xnm1u.com1.z0.glb.clouddn.com/js/cal-heatmap/cal-heatmap.min.js"></script>
--
--<script src="/js/script.js"></script>
--<script src="/js/photos.js"></script>
--<script src="/js/rg90d.js"></script>
-
   <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

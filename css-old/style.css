@@ -1,0 +1,312 @@
+body {
+  background-color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.main {
+  min-width: 350px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+.header-page {
+  height: 35em;
+  margin-bottom: 0;
+}
+.header-page .header-container {
+  background: url("img/banner.jpg") #39424b center no-repeat;
+  height: 35em;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.header-page .header-container .nav-content {
+  padding: 0 20px 20px;
+  color: #fff;
+}
+.header-page .header-container .nav-content .logo h1 {
+  font-size: 25px;
+}
+.header-page .header-container .nav-content .logo a.title {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
+  color: #fff;
+}
+.header-page .header-container .nav-content .logo a.title:hover {
+  color: #fff;
+}
+.header-page .header-container .nav-content .nav ul {
+  padding-top: 30px;
+}
+.header-page .header-container .nav-content .nav li {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 0 20px;
+}
+.header-page .header-container .nav-content .nav a {
+  color: #fff;
+  text-decoration: none;
+}
+.header-page .header-container .nav-content .nav a:hover {
+  color: #c8ccd1;
+}
+.header-page .header-container .header-content {
+  color: #fff;
+  text-align: center;
+  margin-top: 6em;
+}
+.header-page .header-container .header-content h1 {
+  font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
+  font-size: 4em;
+}
+.header-page .header-container .header-content p {
+  font-style: italic;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 200;
+}
+.content {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  padding-top: 3.5em;
+}
+.posts-page {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.posts-page .post-item {
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  border-bottom: 2px solid #eee;
+  padding: 1em 15px;
+  margin-bottom: 1em;
+}
+.posts-page .post-item .post-title {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+.posts-page .post-item .post-title .post-title-link {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.posts-page .post-item .post-title .post-title-link:hover {
+  color: #000;
+}
+.post {
+  border-bottom: solid 6px #f4f4f4;
+  background-color: #fff;
+  padding: 30px 50px;
+}
+.post:last-child {
+  border-bottom: none;
+}
+.post-title {
+  font-size: 1.45em;
+  line-height: 1.5em;
+}
+.post-title .post-title-link {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+}
+.post-title .post-title-link:hover {
+  color: #000;
+}
+.article-post .post-title {
+  color: #555 !important;
+}
+.article-post .post-content {
+  margin-top: 15px;
+}
+.post-meta {
+  font-size: 13px;
+  margin-top: 1em;
+}
+.post-meta .post-time {
+  color: #999;
+}
+.post-meta .author-info {
+  display: none;
+}
+.post-content {
+  line-height: 30px;
+  font-size: 17px;
+  text-align: justify;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.post-content a {
+  background: transparent;
+  text-decoration: none;
+  color: #08c;
+}
+.post-content img {
+  max-width: 100%;
+}
+.post-content p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  color: #555;
+  margin: 0 0 25px 0;
+}
+.post-content p code,
+.post-content li code {
+  padding: 1px 3px;
+  margin: 0 3px;
+  background: #ddd;
+  border: 1px solid #ccc;
+  font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+.post-content blockquote {
+  background: #ddd;
+  border-left: 5px solid #ccc;
+  padding: 15px 20px;
+  margin-top: 10px;
+  border-left: 5px solid #657b83;
+  background: #f6f6f6;
+}
+.post-content blockquote p {
+  margin: 1em 0;
+}
+.post-content em {
+  font-style: italic;
+}
+.post-content ul li:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  background: #aaa;
+  display: inline-block;
+  margin-right: 10px;
+  float: left;
+  margin-top: 10px;
+}
+.post-content ol {
+  counter-reset: item;
+}
+.post-content ol li:before {
+  counter-increment: item;
+  content: counter(item) ".";
+  margin-right: 10px;
+}
+.post-content ul,
+.post-content ol {
+  font-size: 16px;
+  margin: 10px 0px;
+  color: #555;
+}
+.post-content li {
+  list-style: none;
+}
+.post-content li ul,
+.post-content li ol {
+  margin-left: 30px;
+}
+.post-content li ul li:before,
+.post-content li ol li:before {
+  content: "";
+  background: #dedede;
+}
+.post-content h1 {
+  margin-top: 30px;
+}
+.post-content h2 {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #574c4c;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #574c4c;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+.post-content video {
+  max-width: 100%;
+}
+.post-content strong {
+  font-weight: bold;
+}
+.post-content .caption {
+  display: block;
+  font-size: 0.8em;
+  color: #aaa;
+}
+.post-content hr {
+  height: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+}
+.post-content pre {
+  line-height: 1.5;
+  margin-top: 10px;
+  padding: 5px 15px;
+  overflow-x: auto;
+  color: #657b83;
+  border: 1px solid #ccc;
+  text-shadow: 0 1px #444;
+  font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+}
+.post-content pre code {
+  font-size: 14px;
+}
+.post-content table {
+  width: 100%;
+  border: 1px solid #dedede;
+  margin: 15px 0;
+  border-collapse: collapse;
+}
+.post-content table tr,
+.post-content table td {
+  height: 35px;
+}
+.post-content table thead tr {
+  background: #f8f8f8;
+}
+.post-content table tbody tr:hover {
+  background: #efefef;
+}
+.post-content table td,
+.post-content table th {
+  border: none;
+  padding: 0 10px;
+}
+.post-content figure table {
+  border: none;
+  width: auto;
+  margin: 0;
+}
+.post-content figure table tbody tr:hover {
+  background: none;
+}
