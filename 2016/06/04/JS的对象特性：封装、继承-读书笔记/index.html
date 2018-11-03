@@ -1,25 +1,442 @@
-<!DOCTYPE html><html><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
 
-  <title>Alucard</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+
+
+<html class="theme-next pisces" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Sigmar One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/social-share.js/1.0.9/css/share.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.0.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=0.0.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=0.0.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=0.0.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CS," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="构造函数、实例、prototype在介绍封装和集成之前，需要了解 JS 对象的三个概念： 构造函数、实例 和 prototype。 以生产某个型号A的机器人为例。生产机器人我们首先需要一个设计好的模具(构造函数，java 里叫做类)，才能够按照这个模具成产出一个一个机器人(实例)，你可以给其取名 a、b、c、d(对象变量名，实际是指针)。另外，你可以根据匹配磨具生产出唯一的一套配件外设(proto">
+<meta name="keywords" content="CS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS的对象特性：封装、继承-读书笔记">
+<meta property="og:url" content="http://yoursite.com/2016/06/04/JS的对象特性：封装、继承-读书笔记/index.html">
+<meta property="og:site_name" content="Alucard">
+<meta property="og:description" content="构造函数、实例、prototype在介绍封装和集成之前，需要了解 JS 对象的三个概念： 构造函数、实例 和 prototype。 以生产某个型号A的机器人为例。生产机器人我们首先需要一个设计好的模具(构造函数，java 里叫做类)，才能够按照这个模具成产出一个一个机器人(实例)，你可以给其取名 a、b、c、d(对象变量名，实际是指针)。另外，你可以根据匹配磨具生产出唯一的一套配件外设(proto">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/fenzhuang.png">
+<meta property="og:image" content="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/prototype.png">
+<meta property="og:updated_time" content="2018-08-25T07:33:00.916Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS的对象特性：封装、继承-读书笔记">
+<meta name="twitter:description" content="构造函数、实例、prototype在介绍封装和集成之前，需要了解 JS 对象的三个概念： 构造函数、实例 和 prototype。 以生产某个型号A的机器人为例。生产机器人我们首先需要一个设计好的模具(构造函数，java 里叫做类)，才能够按照这个模具成产出一个一个机器人(实例)，你可以给其取名 a、b、c、d(对象变量名，实际是指针)。另外，你可以根据匹配磨具生产出唯一的一套配件外设(proto">
+<meta name="twitter:image" content="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/fenzhuang.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '0.0.4',
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    since: '11/17/2016 18:30',
+    onlineAPI: '',
+    site: {
+      title: 'Alucard',
+      subtitle: 'Earth, human, 90s',
+      author: 'Alucard'
+    },
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    leancloud: {
+      enable: false,
+      appID: '',
+      appKey: ''
+    },
+    favicon: {
+      visibilitychange: true,
+      narmal: '/images/favicon.ico',
+      hidden: '/images/failure.ico',
+      show_text: '原来你也在这里 |',
+      hide_text: '很久没有听闻你的消息'
+    }
+  };
+</script>
+
+
+
+  
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/04/JS的对象特性：封装、继承-读书笔记/"/>
+
+
+
+
+
+  <title>JS的对象特性：封装、继承-读书笔记 | Alucard</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48084758-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
 </head>
-  <body>
-    <main class="main">
-      <article class="post-article">
-  <div class="post-title">
-    <h2 class="title">JS的对象特性：封装、继承-读书笔记</h2>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+      <li class="menu-item search">
+          <form class="search-form">
+            <input name="keyword" type="text" class="search-input" placeholder="站内搜索">
+            <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+          </form>
+      </li>
+      <li class="menu-item online"><span id="online-count">?</span>人在线</li>
+    </ul>
+  
+
+  
+</nav>
+
+<div class="site-brand-wrapper" style="background-image: url(/images/header-alucard.jpg)">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <div class="brand">
+        <span class="logo-line-before"><i></i></span>
+        <div class="site-title">
+          <div id="animate" class="animate">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+          <div id="guide" class="guide">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+        </div>
+        <span class="logo-line-after"><i></i></span>
+      </div>
+    </div>
+      
+        <p class="site-subtitle">Earth, human, 90s</p>
+      
   </div>
-   <div class="post-meta">
-    <span class="post-time">2016-06-04</span>
-    <span class="post-time author-info">Alucard</span>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
-  <div class="post-content">
-    <h4 id="构造函数、实例、prototype"><a href="#构造函数、实例、prototype" class="headerlink" title="构造函数、实例、prototype"></a>构造函数、实例、prototype</h4><p>在介绍封装和集成之前，需要了解 JS 对象的三个概念： 构造函数、实例 和 prototype。</p>
+</div>
+<div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-master-avatar" itemprop="image" src="/images/alucard.JPG" alt="Alucard" />
+    <h2 class="site-master-description" itemprop="description">
+        <记录一些生活琐碎>
+    </h2>
+</div>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">06月</div>
+			<div class="post-day">04</div>
+	</div>
+  
+  <div class="post-badge">
+    
+      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/cs/" itemprop="url" rel="index">
+          <span itemprop="name">cs</span>
+        </a>
+      </span>
+    
+  </div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/04/JS的对象特性：封装、继承-读书笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alucard">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/alucard.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alucard">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JS的对象特性：封装、继承-读书笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-04T21:16:30+08:00">
+                2016-06-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">•</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cs/" itemprop="url" rel="index">
+                    <span itemprop="name">cs</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="构造函数、实例、prototype"><a href="#构造函数、实例、prototype" class="headerlink" title="构造函数、实例、prototype"></a>构造函数、实例、prototype</h4><p>在介绍封装和集成之前，需要了解 JS 对象的三个概念： 构造函数、实例 和 prototype。</p>
 <p>以生产某个型号A的机器人为例。生产机器人我们首先需要一个设计好的模具(构造函数，java 里叫做类)，才能够按照这个模具成产出一个一个机器人(实例)，你可以给其取名 a、b、c、d(对象变量名，实际是指针)。另外，你可以根据匹配磨具生产出唯一的一套配件外设(prototype,即原型)。当你买了一个机器人 a 的时候(创造了一个对象 a)，你可以说对象有模具中的功能，也有提配件供外设提供的功能。</p>
 <p>在 JS 中，要实例化某个对象，先要声明一个构造函数(模版，类),实例化一个实例(对象)就是按照模版中的代码在新开辟一块内存，然后让你的变量名指向这块内存。prototype(原型)是所有实例和构造函数共享的一套方法和属性，有一块自己独立内存，构造函数的内存和实例的内存中都有一个指针指向 prototype的内存。</p>
 <a id="more"></a>
@@ -33,61 +450,397 @@
 <p>总体如下图所示(图片截于 JavaScript高级程序设计):</p>
 <p><a href="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/fenzhuang.png" data-fancybox="images" data-caption="JavaScript封装-图片来自JavaScript高级程序设计" target="_blank" rel="noopener"><br>    <img class="cs-img img-vertical-lg" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/fenzhuang.png" alt="“JS" 高级程序设计”=""><br></a></p>
 <h4 id="JS-对象的封装"><a href="#JS-对象的封装" class="headerlink" title="JS 对象的封装"></a>JS 对象的封装</h4><p>一、普通方法</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新建 Object 的实例，然后添加属性和方法。特点是毫无封装性可言，代码不可复用。</span></span><br><span class="line"><span class="keyword">var</span> newObj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">newObj.name = <span class="string">"Kitty"</span>;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新建 Object 的实例，然后添加属性和方法。特点是毫无封装性可言，代码不可复用。</span></span><br><span class="line"><span class="keyword">var</span> newObj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">newObj.name = <span class="string">"Kitty"</span>;</span><br></pre></td></tr></table></figure>
 <p>二、对象字面量方法</p>
 <p>书写方便、直观，但是代码不可复用。(重要)对象字面量方法会重写对象所有的属性和方法，包括一些自动生成的属性。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newObj = {</span><br><span class="line">    name: <span class="string">"Kiwi"</span>,</span><br><span class="line">    age: <span class="number">7</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newObj = &#123;</span><br><span class="line">    name: <span class="string">"Kiwi"</span>,</span><br><span class="line">    age: <span class="number">7</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>三、工厂模式</p>
 <p>在函数内部定义对象，然后 return 对象。相对方法一，封装变的直观，而且代码可以复用。(方法1的升级)。</p>
 <p>存在问题，这样生成的对象都是 Object的，在对象类型上没有区分。<br>例如我创建了对象 Animal 和 Plant,我希望可以能够在对象类型上进行区分。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createObj</span>(<span class="params">name,age</span>)</span>{</span><br><span class="line">    <span class="keyword">var</span> newObj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    newObj.name = name;</span><br><span class="line">    newObj.age = age;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObj = createObj(<span class="string">"peter"</span>,<span class="number">33</span>);</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createObj</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> newObj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    newObj.name = name;</span><br><span class="line">    newObj.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObj = createObj(<span class="string">"peter"</span>,<span class="number">33</span>);</span><br></pre></td></tr></table></figure>
 <p>四、构造函数</p>
 <p>构造函数是是3工厂模式的升级,解决了无法区分类型的问题。</p>
 <p>构造函数封装对象的特点是：代码可以复用、封装直观、可以区分对象类型，<br>(重要)用构造函数实例化后的对象，是<code>值复制</code>。<br>缺点是，当存在另外一个微生物的构造函数Organisms()时，Organisms()中也有 eat 的函数，而且内部一模一样，这时候我们就要写两遍这个函数。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name,food</span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.food = food;</span><br><span class="line">    <span class="keyword">this</span>.eat = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name+<span class="string">" eat "</span>+<span class="keyword">this</span>.food;</span><br><span class="line">    };</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Plant</span>(<span class="params">name,area</span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.area = area;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Animal(<span class="string">"cat"</span>,<span class="string">"fish"</span>);</span><br><span class="line"><span class="keyword">var</span> rose = <span class="keyword">new</span> Plant(<span class="string">"rose"</span>,<span class="string">"all world"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal);     <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(rose <span class="keyword">instanceof</span> Plant);     <span class="comment">// true</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name,food</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.food = food;</span><br><span class="line">    <span class="keyword">this</span>.eat = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name+<span class="string">" eat "</span>+<span class="keyword">this</span>.food;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Plant</span>(<span class="params">name,area</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.area = area;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cat = <span class="keyword">new</span> Animal(<span class="string">"cat"</span>,<span class="string">"fish"</span>);</span><br><span class="line"><span class="keyword">var</span> rose = <span class="keyword">new</span> Plant(<span class="string">"rose"</span>,<span class="string">"all world"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(cat <span class="keyword">instanceof</span> Animal);     <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(rose <span class="keyword">instanceof</span> Plant);     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <p>五、原型模式</p>
 <p>前边已经介绍过了原型 prototype 的概念，这里使用原型对对象做封装。实例化后的对象都可以访问原型中的方法和属性，但是不能重写。如果实例中添加了一个和原型中的名字相同的属性，将会覆盖原型中的该属性。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Plant</span>(<span class="params"></span>)</span>{</span><br><span class="line"></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Plant.prototype.name = <span class="string">"plant"</span>;</span><br><span class="line">Plant.prototype.area = <span class="string">"China"</span>;</span><br><span class="line">Plant.prototype.arr = [<span class="string">'one'</span>,<span class="string">'two'</span>];</span><br><span class="line">Plant.prototype.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.area);</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObj = <span class="keyword">new</span> Plant();</span><br><span class="line"><span class="keyword">var</span> yourObj = <span class="keyword">new</span> Plant();</span><br><span class="line"></span><br><span class="line">myObj.area === yourObj.area;    <span class="comment">// true , 都指向原型中的 area 属性</span></span><br><span class="line"></span><br><span class="line">myObj.say();    <span class="comment">// "China"      // 打印的是原型中的 area 的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// myObj实例单独声明添加了一个 area 属性，方法是1中方法。新添加的属性在 myObj 中会覆盖原型中的 area</span></span><br><span class="line"><span class="comment">// 但是因为arr 数组是引用类型，是可以修改的</span></span><br><span class="line">myObj.area = <span class="string">"USA"</span>;             <span class="comment">// 因为不能重写，这里是等于给 </span></span><br><span class="line">myObj.arr.push(<span class="string">"three"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">myObj.say();    <span class="comment">// "USA" ,打印的是 myObj 实例中单独的 area 属性</span></span><br><span class="line">yourObj.say();  <span class="comment">// "China", yourObj 依然打印原型中的 area 属性</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(myObj.arr[<span class="number">2</span>]);      <span class="comment">// "three"</span></span><br><span class="line"><span class="built_in">console</span>.log(yourObj.arr[<span class="number">2</span>]);    <span class="comment">// "three"</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Plant</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Plant.prototype.name = <span class="string">"plant"</span>;</span><br><span class="line">Plant.prototype.area = <span class="string">"China"</span>;</span><br><span class="line">Plant.prototype.arr = [<span class="string">'one'</span>,<span class="string">'two'</span>];</span><br><span class="line">Plant.prototype.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.area);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObj = <span class="keyword">new</span> Plant();</span><br><span class="line"><span class="keyword">var</span> yourObj = <span class="keyword">new</span> Plant();</span><br><span class="line"></span><br><span class="line">myObj.area === yourObj.area;    <span class="comment">// true , 都指向原型中的 area 属性</span></span><br><span class="line"></span><br><span class="line">myObj.say();    <span class="comment">// "China"      // 打印的是原型中的 area 的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// myObj实例单独声明添加了一个 area 属性，方法是1中方法。新添加的属性在 myObj 中会覆盖原型中的 area</span></span><br><span class="line"><span class="comment">// 但是因为arr 数组是引用类型，是可以修改的</span></span><br><span class="line">myObj.area = <span class="string">"USA"</span>;             <span class="comment">// 因为不能重写，这里是等于给 </span></span><br><span class="line">myObj.arr.push(<span class="string">"three"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">myObj.say();    <span class="comment">// "USA" ,打印的是 myObj 实例中单独的 area 属性</span></span><br><span class="line">yourObj.say();  <span class="comment">// "China", yourObj 依然打印原型中的 area 属性</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(myObj.arr[<span class="number">2</span>]);      <span class="comment">// "three"</span></span><br><span class="line"><span class="built_in">console</span>.log(yourObj.arr[<span class="number">2</span>]);    <span class="comment">// "three"</span></span><br></pre></td></tr></table></figure>
 <p>上述代码在 Chrome 控制台中的展示如下：</p>
 <p><a href="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/prototype.png" data-fancybox="images" data-caption="Chrome控制台输出" target="_blank" rel="noopener"><br>    <img class="cs-img img-vertical-lg" src="http://7xnm1u.com1.z0.glb.clouddn.com/log/v1/JS-book/prototype.png" alt="“JS" 高级程序设计”=""><br></a></p>
 <p>原型模式在对象的方法方面，给予了很好的封装，即使是基本类型，也可以通过覆盖的形式产生私有变量。但是也存在问题，就是原型中如果存在引用类型，如数组类型，不能够覆盖，而且一个实例修改就会修改所有实例。</p>
 <p>六、构造函数和原型模式的组合</p>
 <p>可以配合构造函数和原型模式一起使用，弥补对方的缺点。</p>
 <p>将除了函数外的引用类型和基本类型放到构造函数中声明，方法放置到原型中声明。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Coder</span>(<span class="params">sex,name,age,skill</span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.sex = sex;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.skill =skill;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">Coder.prototype.showSkill = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my skill is "</span>+skill);</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Coder</span>(<span class="params">sex,name,age,skill</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sex = sex;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.skill =skill;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Coder.prototype.showSkill = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"my skill is "</span>+skill);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h4 id="JS的继承"><a href="#JS的继承" class="headerlink" title="JS的继承"></a>JS的继承</h4><p>继承有两种：接口继承和实现继承。因为 JS 不支持接口，所以 JS 的继承都是实现继承。</p>
 <p>JS 的继承主要有三种方法：原型链继承、构造函数继承、原型链和构造函数的组合继承。</p>
 <p>但是首先需要了解几个概念。</p>
 <p><strong>原型链</strong></p>
 <p>在之前的介绍中，一个对象实例的 prototype 属性指针是指向这个实例的原型的。在使用的时候，实例先在自身查找属性和变量，不存在的话就通过 prototype 指针到原型上查找。</p>
-<p>但是，当我们把一个实例 A 的 prototype 指针修改指向到另一个类型的对象实例 B，而 B 又指向他的原型。这样，我们的查找从原先的 实例 -> 原型 变成了 实例A -> 实例B -> 实例B的原型,这条链就2节变成了3节。当然，我们也可以根据实际需求，让 B 的 prototype 属性指针指向实例 C,让 C 指向实例 D … 让这条链根据需求可长可短。这条链就叫做 原型链。</p>
+<p>但是，当我们把一个实例 A 的 prototype 指针修改指向到另一个类型的对象实例 B，而 B 又指向他的原型。这样，我们的查找从原先的 实例 -&gt; 原型 变成了 实例A -&gt; 实例B -&gt; 实例B的原型,这条链就2节变成了3节。当然，我们也可以根据实际需求，让 B 的 prototype 属性指针指向实例 C,让 C 指向实例 D … 让这条链根据需求可长可短。这条链就叫做 原型链。</p>
 <p><strong>使用原型链继承</strong></p>
 <p>使用原型链继承正如上述的原型链的概念，在链的头部的实例 A 继承了链后的所有属性和方法。</p>
 <p>原型继承存在一个问题：父类构造函数中私有变量会变成子类中所有实例的共有变量。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类构造函数和父类的原型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fatherClass</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"father"</span>;</span><br><span class="line">};</span><br><span class="line">fatherClass.prototype.showFatherName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类的构造函数和将子类的 prototype 指针指向一个父类的实例</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sonClass</span>(<span class="params">sign</span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.sign = sign;</span><br><span class="line">}</span><br><span class="line">sonClass.prototype = <span class="keyword">new</span> fatherClass();</span><br><span class="line"></span><br><span class="line">sonClass.prototype.addAtt = <span class="string">"在原型实例中添加的数据"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实例化子类的一个实例</span></span><br><span class="line"><span class="keyword">var</span> son = <span class="keyword">new</span> sonClass(<span class="string">"son"</span>);</span><br><span class="line">son.showFatherName();       <span class="comment">// "father"</span></span><br><span class="line"><span class="built_in">console</span>.log(son.addAtt);    <span class="comment">// "在原型实例中添加的数据"</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类构造函数和父类的原型</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fatherClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"father"</span>;</span><br><span class="line">&#125;;</span><br><span class="line">fatherClass.prototype.showFatherName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类的构造函数和将子类的 prototype 指针指向一个父类的实例</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sonClass</span>(<span class="params">sign</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sign = sign;</span><br><span class="line">&#125;</span><br><span class="line">sonClass.prototype = <span class="keyword">new</span> fatherClass();</span><br><span class="line"></span><br><span class="line">sonClass.prototype.addAtt = <span class="string">"在原型实例中添加的数据"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实例化子类的一个实例</span></span><br><span class="line"><span class="keyword">var</span> son = <span class="keyword">new</span> sonClass(<span class="string">"son"</span>);</span><br><span class="line">son.showFatherName();       <span class="comment">// "father"</span></span><br><span class="line"><span class="built_in">console</span>.log(son.addAtt);    <span class="comment">// "在原型实例中添加的数据"</span></span><br></pre></td></tr></table></figure>
 <p><strong>使用构造函数继承</strong></p>
 <p>使用构造函数继承的策略很简单，就是在子类的构造函数中调用需要继承的父类的构造函数。由于构造函数需要在特定环境中执行，所以需要使用到 call()、apply()这两个函数来改变执行环境 this。</p>
 <p>构造函数继承存在的问题是：只能继承父类构造函数中的方法和属性，无法继承父类中的原型。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fatherClass</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.fatherArr = [<span class="string">'nice'</span>,<span class="string">'to'</span>,<span class="string">'meet'</span>];</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sonClass</span>(<span class="params"></span>)</span>{</span><br><span class="line">    fatherClass.call(<span class="keyword">this</span>);</span><br><span class="line">    <span class="comment">// 或 fatherClass.apply(this);</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myClass = <span class="keyword">new</span> sonClass();</span><br><span class="line">myClass.fatherArr.pop();</span><br><span class="line">cosnole.log(myClass.fatherArr.length);  <span class="comment">// 2</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fatherClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.fatherArr = [<span class="string">'nice'</span>,<span class="string">'to'</span>,<span class="string">'meet'</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sonClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    fatherClass.call(<span class="keyword">this</span>);</span><br><span class="line">    <span class="comment">// 或 fatherClass.apply(this);</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myClass = <span class="keyword">new</span> sonClass();</span><br><span class="line">myClass.fatherArr.pop();</span><br><span class="line">cosnole.log(myClass.fatherArr.length);  <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
 <p><strong>原型链和构造函数组合继承</strong></p>
 <p>组合继承是结合原型链和构造函数继承的有点，使用原型链继承父类的原型，使用构造函数继承构造函数内的变量和属性。</p>
 <p>使用原型链继承，会继承父类原型和构造函数中的所有属性和方法；而使用构造函数，会将父类构造函数的方法调用到子类的构造函数中，由于实例是先查找构造函数中，在查找原型链中的属性和方法，所以使用原型链继承的那一部分父类构造函数的属性方法会被使用构造函数继承的覆盖掉，从而避免了单纯使用原型链继承而导致父类构造函数的属性方法被共享的问题，但同时又保障了父类构造函数属性方法的继承。</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fatherClass</span>(<span class="params"></span>)</span>{</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"jack"</span>;</span><br><span class="line">}</span><br><span class="line">fatherClass.prototype.age = <span class="string">"37"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sonClass</span>(<span class="params"></span>)</span>{</span><br><span class="line">    fatherClass.call(<span class="keyword">this</span>);</span><br><span class="line">    <span class="keyword">this</span>.sex = <span class="string">"man"</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">sonClass.prototype = <span class="keyword">new</span> fatherClass();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myClass = <span class="keyword">new</span> sonClass();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(myClass.name+<span class="string">","</span>+myClass.sex+<span class="string">"myClass.age"</span>);    <span class="comment">// "jack,man,37"</span></span><br></pre></td></tr></tbody></table></figure><script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fatherClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"jack"</span>;</span><br><span class="line">&#125;</span><br><span class="line">fatherClass.prototype.age = <span class="string">"37"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sonClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    fatherClass.call(<span class="keyword">this</span>);</span><br><span class="line">    <span class="keyword">this</span>.sex = <span class="string">"man"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sonClass.prototype = <span class="keyword">new</span> fatherClass();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myClass = <span class="keyword">new</span> sonClass();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(myClass.name+<span class="string">","</span>+myClass.sex+<span class="string">"myClass.age"</span>);    <span class="comment">// "jack,man,37"</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div class="post-share">分享到：</div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Alucard WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Alucard Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
   </div>
-</article>
-      <footer class="footer-page">
-	<div id="footer-info">
-		<div>
-			Copyright
-			© 2018
-			<a href="/" class="footer-link">
-				Alucard
-			</a>
-		</div>
-		<div>
-		</div>
-	</div>
-</footer>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CS/" rel="tag"># CS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/03/JS对象：基本包装类型-读书笔记/" rel="next" title="JS对象：基本包装类型-读书笔记">
+                <i class="fa fa-chevron-left"></i> JS对象：基本包装类型-读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/07/纸蜻蜓/" rel="prev" title="纸蜻蜓">
+                纸蜻蜓 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <div class="disqus-loading">
+          <strong>Disqus 加载中...</strong>
+          <p>如果长时间无法加载，请针对 disq.us | disquscdn.com | disqus.com 启用代理</p>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        if (disqus_config) {
+          var disqus_config = function () {
+            this.page.url = 'http://yoursite.com/2016/06/04/JS的对象特性：封装、继承-读书笔记/';
+            this.page.identifier = '2016/06/04/JS的对象特性：封装、继承-读书笔记/';
+            this.page.title = 'JS的对象特性：封装、继承-读书笔记';
+          };
+          if (window.DISQUS) {
+            $('.disqus-loading').remove();
+            window.DISQUS.reset({
+              reload: true,
+              config: function () {
+                this.page.url = 'http://yoursite.com/2016/06/04/JS的对象特性：封装、继承-读书笔记/';
+                this.page.identifier = '2016/06/04/JS的对象特性：封装、继承-读书笔记/';
+                this.page.title = 'JS的对象特性：封装、继承-读书笔记';
+              }
+            });
+          }
+        }
+        else {
+          var disqus_config = function () {
+            this.page.url = 'http://yoursite.com/2016/06/04/JS的对象特性：封装、继承-读书笔记/';
+            this.page.identifier = '2016/06/04/JS的对象特性：封装、继承-读书笔记/';
+            this.page.title = 'JS的对象特性：封装、继承-读书笔记';
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://diygod-me.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/card.jpg"
+                alt="Alucard" />
+            
+              <p class="site-author-name" itemprop="name">Alucard</p>
+              <p class="site-description motion-element" itemprop="description">此人文字皆是胡言乱语</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+            
+
+          </nav>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-zero.png" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数、实例、prototype"><span class="nav-number">1.</span> <span class="nav-text">构造函数、实例、prototype</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS-对象的封装"><span class="nav-number">2.</span> <span class="nav-text">JS 对象的封装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS的继承"><span class="nav-number">3.</span> <span class="nav-text">JS的继承</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
     </main>
-  <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
-<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+
+    <footer id="footer" class="footer">
+      <div class="footer-image"></div>
+      <div class="footer-inner">
+        
+<p>
+    今天是地球历<span> 2018年11月03日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+</p>
+<p><记录一些生活的琐碎></p>
+
+<p>© <span itemprop="copyrightYear">2018</span> Alucard.
+    由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
+    Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a>
+</p>
+<p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">Alucard</span>. </p>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    <canvas id="evanyou"></canvas>
+    <!-- <canvas id="live2d" width="150" height="400" class="live2d"></canvas> -->
+
+    
+
+  </div>
+
+  <script type="text/javascript" src="/js/sagiri.min.js?v=0.0.4"></script>
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

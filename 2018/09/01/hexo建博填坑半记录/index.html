@@ -1,31 +1,445 @@
-<!DOCTYPE html><html><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
 
-  <title>Alucard</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+
+
+<html class="theme-next pisces" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Sigmar One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/social-share.js/1.0.9/css/share.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.0.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=0.0.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=0.0.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=0.0.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CS," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="貌似自己每年都要对博客这个坑踩一回，其实也就 UI 视觉什么的缝缝补补，作为每年练手 CSS 的样本（虽然总是越改越丑… 工作久了，越来越觉得不应该是“写博客”而应该是“写博客”，毕竟是内容为王的东西。 所以打算填完这个版本的坑后，以后就不打算改什么样式了（老了，改不动了…">
+<meta name="keywords" content="CS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo搭建博客填坑半记录">
+<meta property="og:url" content="http://yoursite.com/2018/09/01/hexo建博填坑半记录/index.html">
+<meta property="og:site_name" content="Alucard">
+<meta property="og:description" content="貌似自己每年都要对博客这个坑踩一回，其实也就 UI 视觉什么的缝缝补补，作为每年练手 CSS 的样本（虽然总是越改越丑… 工作久了，越来越觉得不应该是“写博客”而应该是“写博客”，毕竟是内容为王的东西。 所以打算填完这个版本的坑后，以后就不打算改什么样式了（老了，改不动了…">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-02T03:23:34.140Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo搭建博客填坑半记录">
+<meta name="twitter:description" content="貌似自己每年都要对博客这个坑踩一回，其实也就 UI 视觉什么的缝缝补补，作为每年练手 CSS 的样本（虽然总是越改越丑… 工作久了，越来越觉得不应该是“写博客”而应该是“写博客”，毕竟是内容为王的东西。 所以打算填完这个版本的坑后，以后就不打算改什么样式了（老了，改不动了…">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '0.0.4',
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    since: '11/17/2016 18:30',
+    onlineAPI: '',
+    site: {
+      title: 'Alucard',
+      subtitle: 'Earth, human, 90s',
+      author: 'Alucard'
+    },
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    leancloud: {
+      enable: false,
+      appID: '',
+      appKey: ''
+    },
+    favicon: {
+      visibilitychange: true,
+      narmal: '/images/favicon.ico',
+      hidden: '/images/failure.ico',
+      show_text: '原来你也在这里 |',
+      hide_text: '很久没有听闻你的消息'
+    }
+  };
+</script>
+
+
+
+  
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/01/hexo建博填坑半记录/"/>
+
+
+
+
+
+  <title>hexo搭建博客填坑半记录 | Alucard</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48084758-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
 </head>
-  <body>
-    <main class="main">
-      <article class="post-article">
-  <div class="post-title">
-    <h2 class="title">hexo搭建博客填坑半记录</h2>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+      <li class="menu-item search">
+          <form class="search-form">
+            <input name="keyword" type="text" class="search-input" placeholder="站内搜索">
+            <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+          </form>
+      </li>
+      <li class="menu-item online"><span id="online-count">?</span>人在线</li>
+    </ul>
+  
+
+  
+</nav>
+
+<div class="site-brand-wrapper" style="background-image: url(/images/header-alucard.jpg)">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <div class="brand">
+        <span class="logo-line-before"><i></i></span>
+        <div class="site-title">
+          <div id="animate" class="animate">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+          <div id="guide" class="guide">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+        </div>
+        <span class="logo-line-after"><i></i></span>
+      </div>
+    </div>
+      
+        <p class="site-subtitle">Earth, human, 90s</p>
+      
   </div>
-   <div class="post-meta">
-    <span class="post-time">2018-09-01</span>
-    <span class="post-time author-info">Alucard</span>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
-  <div class="post-content">
-    <p>貌似自己每年都要对博客这个坑踩一回，其实也就 UI 视觉什么的缝缝补补，作为每年练手 CSS 的样本（虽然总是越改越丑…</p>
+</div>
+<div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-master-avatar" itemprop="image" src="/images/alucard.JPG" alt="Alucard" />
+    <h2 class="site-master-description" itemprop="description">
+        <记录一些生活琐碎>
+    </h2>
+</div>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">09月</div>
+			<div class="post-day">01</div>
+	</div>
+  
+  <div class="post-badge">
+    
+      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/cs/" itemprop="url" rel="index">
+          <span itemprop="name">cs</span>
+        </a>
+      </span>
+    
+  </div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/01/hexo建博填坑半记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alucard">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/alucard.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alucard">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hexo搭建博客填坑半记录</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-01T10:06:40+08:00">
+                2018-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">•</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/cs/" itemprop="url" rel="index">
+                    <span itemprop="name">cs</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>貌似自己每年都要对博客这个坑踩一回，其实也就 UI 视觉什么的缝缝补补，作为每年练手 CSS 的样本（虽然总是越改越丑…</p>
 <p>工作久了，越来越觉得不应该是“写博客”而应该是“写博客”，毕竟是内容为王的东西。</p>
 <p>所以打算填完这个版本的坑后，以后就不打算改什么样式了（老了，改不动了…</p>
 <a id="more"></a>
 <p>这个版本，主要是做了一下优化或者说设计：</p>
 <ol>
-<li>PC 端屏幕 Width 大于 Height，所以采用 <code>左侧 sidebar</code> + <code>右侧main</code>的布局，尽量是阅读主题的main 比例接近于正方形甚至 Height > Width。这么做的原因是，让阅读部分的 main 更接近于传统纸质阅读书籍的比例。</li>
+<li>PC 端屏幕 Width 大于 Height，所以采用 <code>左侧 sidebar</code> + <code>右侧main</code>的布局，尽量是阅读主题的main 比例接近于正方形甚至 Height &gt; Width。这么做的原因是，让阅读部分的 main 更接近于传统纸质阅读书籍的比例。</li>
 <li>移动端，主要考虑到微信圈的分享。所以样式会尽量接近于公众号的样式。然后文章内阅读，只在文章底部放一个站点链接，不再顶部展示任何导航信息，让文章的阅读体验更纯粹。</li>
 <li>在字体样式上做了一些琢磨，不再是以字体好看为目的，而是以适合轻负担阅读的字体作为目的。文章的类型分为2类，生活博和技术博。生活博基本全是表述性文字，更注重于文字本身含义的美感和表达出来的情感；技术博会有大量代码、专业词汇、表格列表之类的，需要更丰富和密集的表达。所以对于两种类型的博客，文字样式上做了一些细微的区别，以更好的展示两者的特点。</li>
 <li>会有一些单独的页面，比如图片展示、Plan 打卡之类的，用于特殊需求的展示。</li>
@@ -51,7 +465,7 @@
 </ul>
 <p>v4.2版本</p>
 <ul>
-<li style="list-style: none"><input type="checkbox" checked> 增加图片展示(参考qq 空间、贴吧, 可能需要写一个图片压缩&上传的 client)</li>
+<li style="list-style: none"><input type="checkbox" checked> 增加图片展示(参考qq 空间、贴吧, 可能需要写一个图片压缩&amp;上传的 client)</li>
 <li style="list-style: none"><input type="checkbox" checked> 区分日常博和技术博</li>
 <li style="list-style: none"><input type="checkbox" checked> 增加顶部 tab 的 icon</li>
 <li style="list-style: none"><input type="checkbox" checked> 增加图片点击查看100%大图的功能</li>
@@ -73,22 +487,333 @@
 <li style="list-style: none"><input type="checkbox"> 图床更换(备案是个麻烦事…)</li>
 <li style="list-style: none"><input type="checkbox"> 版本v1.4迭代上线</li>
 </ul>
-<script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div class="post-share">分享到：</div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Alucard WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Alucard Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
   </div>
-</article>
-      <footer class="footer-page">
-	<div id="footer-info">
-		<div>
-			Copyright
-			© 2018
-			<a href="/" class="footer-link">
-				Alucard
-			</a>
-		</div>
-		<div>
-		</div>
-	</div>
-</footer>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CS/" rel="tag"># CS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/30/程序员装逼-▼へ▼メ-指南/" rel="next" title="程序员装逼(▼へ▼メ)指南">
+                <i class="fa fa-chevron-left"></i> 程序员装逼(▼へ▼メ)指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/02/亲历雅安地震/" rel="prev" title="亲历雅安地震">
+                亲历雅安地震 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <div class="disqus-loading">
+          <strong>Disqus 加载中...</strong>
+          <p>如果长时间无法加载，请针对 disq.us | disquscdn.com | disqus.com 启用代理</p>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        if (disqus_config) {
+          var disqus_config = function () {
+            this.page.url = 'http://yoursite.com/2018/09/01/hexo建博填坑半记录/';
+            this.page.identifier = '2018/09/01/hexo建博填坑半记录/';
+            this.page.title = 'hexo搭建博客填坑半记录';
+          };
+          if (window.DISQUS) {
+            $('.disqus-loading').remove();
+            window.DISQUS.reset({
+              reload: true,
+              config: function () {
+                this.page.url = 'http://yoursite.com/2018/09/01/hexo建博填坑半记录/';
+                this.page.identifier = '2018/09/01/hexo建博填坑半记录/';
+                this.page.title = 'hexo搭建博客填坑半记录';
+              }
+            });
+          }
+        }
+        else {
+          var disqus_config = function () {
+            this.page.url = 'http://yoursite.com/2018/09/01/hexo建博填坑半记录/';
+            this.page.identifier = '2018/09/01/hexo建博填坑半记录/';
+            this.page.title = 'hexo搭建博客填坑半记录';
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://diygod-me.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/card.jpg"
+                alt="Alucard" />
+            
+              <p class="site-author-name" itemprop="name">Alucard</p>
+              <p class="site-description motion-element" itemprop="description">此人文字皆是胡言乱语</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+            
+
+          </nav>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-zero.png" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
     </main>
-  <script>!function(o){var i=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function c(t,e){var n=new Image,o=t.getAttribute("data-original");n.onload=function(){t.src=o,e&&e()},n.src=o}function n(){for(var t=0;t<i.length;t++)e=i[t],void 0,0<=(n=e.getBoundingClientRect()).top&&0<=n.left&&n.top<=(o.innerHeight||document.documentElement.clientHeight)&&c(i[t],function(){i.splice(t,t)});var e,n;console.log("trigger")}n(),o.addEventListener("scroll",function(){var t,e;t=n,e=o,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script>
-<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+
+    <footer id="footer" class="footer">
+      <div class="footer-image"></div>
+      <div class="footer-inner">
+        
+<p>
+    今天是地球历<span> 2018年11月03日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+</p>
+<p><记录一些生活的琐碎></p>
+
+<p>© <span itemprop="copyrightYear">2018</span> Alucard.
+    由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
+    Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a>
+</p>
+<p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">Alucard</span>. </p>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    <canvas id="evanyou"></canvas>
+    <!-- <canvas id="live2d" width="150" height="400" class="live2d"></canvas> -->
+
+    
+
+  </div>
+
+  <script type="text/javascript" src="/js/sagiri.min.js?v=0.0.4"></script>
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
