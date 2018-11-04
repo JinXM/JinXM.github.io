@@ -153,8 +153,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     },
     leancloud: {
       enable: false,
@@ -243,13 +243,6 @@
       
 
       
-      <li class="menu-item search">
-          <form class="search-form">
-            <input name="keyword" type="text" class="search-input" placeholder="站内搜索">
-            <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
-          </form>
-      </li>
-      <li class="menu-item online"><span id="online-count">?</span>人在线</li>
     </ul>
   
 
@@ -454,40 +447,6 @@
 
     
 
-    
-      <div class="post-share">分享到：</div>
-    
-
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="Alucard WeChat Pay"/>
-        <p>WeChat Pay</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.png" alt="Alucard Alipay"/>
-        <p>Alipay</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
 
     
 
@@ -537,90 +496,6 @@
 
 
           </div>
-          
-
-
-          
-
-  
-    <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <div class="disqus-loading">
-          <strong>Disqus 加载中...</strong>
-          <p>如果长时间无法加载，请针对 disq.us | disquscdn.com | disqus.com 启用代理</p>
-        </div>
-      </div>
-    </div>
-
-  
-
-
-
-
-
-  
-
-    
-      <script type="text/javascript">
-        if (disqus_config) {
-          var disqus_config = function () {
-            this.page.url = 'http://yoursite.com/2018/10/04/关于单打的一些球路（持续更新…）/';
-            this.page.identifier = '2018/10/04/关于单打的一些球路（持续更新…）/';
-            this.page.title = '关于单打的一些球路（持续更新…）';
-          };
-          if (window.DISQUS) {
-            $('.disqus-loading').remove();
-            window.DISQUS.reset({
-              reload: true,
-              config: function () {
-                this.page.url = 'http://yoursite.com/2018/10/04/关于单打的一些球路（持续更新…）/';
-                this.page.identifier = '2018/10/04/关于单打的一些球路（持续更新…）/';
-                this.page.title = '关于单打的一些球路（持续更新…）';
-              }
-            });
-          }
-        }
-        else {
-          var disqus_config = function () {
-            this.page.url = 'http://yoursite.com/2018/10/04/关于单打的一些球路（持续更新…）/';
-            this.page.identifier = '2018/10/04/关于单打的一些球路（持续更新…）/';
-            this.page.title = '关于单打的一些球路（持续更新…）';
-          };
-          var d = document, s = d.createElement('script');
-          s.src = 'https://diygod-me.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', '' + +new Date());
-          (d.head || d.body).appendChild(s);
-        }
-      </script>
-    
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         
           
@@ -744,7 +619,7 @@
       <div class="footer-inner">
         
 <p>
-    今天是地球历<span> 2018年11月03日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+    今天是地球历<span> 2018年11月04日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
 </p>
 <p><记录一些生活的琐碎></p>
 
@@ -767,7 +642,7 @@
     </footer>
 
 
-    <canvas id="evanyou"></canvas>
+    <canvas id="evanyou2"></canvas>
     <!-- <canvas id="live2d" width="150" height="400" class="live2d"></canvas> -->
 
     
