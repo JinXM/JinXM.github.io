@@ -1993,7 +1993,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3cffff;
+  background: #a3b3ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -5870,4 +5870,29 @@ button[data-balloon] {
   display: inline-block;
   margin: 5px;
   border-radius: 5px;
+}
+.colors-page {
+  background-color: #000;
+  border: 1px solid #333;
+  padding: 0 20px;
+}
+.colors-page .color-card {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 22px;
+}
+.pic-story-page .center-text {
+  text-align: center;
+}
+.pic-story-page .center-small-title {
+  color: #c8c8c8;
+  font-weight: 700;
+}
+img.grey-photo-border {
+  border: 1em solid #c8c8c8 !important;
+  padding: 0 !important;
+}
+img.story-photos {
+  width: 88% !important;
+  max-width: 600px !important;
 }
