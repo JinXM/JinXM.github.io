@@ -804,6 +804,20 @@ pre .javascript .function {
   max-width: 150px;
   max-height: 150px;
 }
+.exturl {
+  background-color: transparent;
+  cursor: pointer;
+  border-bottom: 1px solid #999;
+}
+.exturl .fa {
+  font-size: 14px;
+}
+.exturl:active,
+.exturl:hover {
+  outline: 0;
+  color: #222;
+  border-bottom-color: #222;
+}
 .post-body .note {
   position: relative;
   padding: 15px;
@@ -1979,7 +1993,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e8ff11;
+  background: #3cffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2996,7 +3010,7 @@ body {
   }
 }
 .main {
-  padding-bottom: 180px;
+  padding-bottom: 80px;
 }
 .main:before,
 .main:after {
@@ -5850,3 +5864,10 @@ button[data-balloon] {
     white-space: normal;
     width: 100%; }
 
+.div-1-4 {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 5px;
+}
