@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Sigmar One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/social-share.js/1.0.9/css/share.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.0.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=0.0.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=0.0.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=0.0.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Alucard,blog" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Function 概述函数Function 是 JS 预设好的一种对象类型，函数名即指向这个对象的一个指针，所以可以把函数名当做其它函数的参数。 JS的函数是没有重载的。 函数对象默认定义好、主要的属性和方法有如下：  arguments 和 callee this call()、apply() 和 bind() prototype">
+<meta name="keywords" content="blog, site, alucard">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS对象：函数-读书笔记">
+<meta property="og:url" content="http://yoursite.com/2016/06/02/JS对象：函数-读书笔记/index.html">
+<meta property="og:site_name" content="Alucard">
+<meta property="og:description" content="Function 概述函数Function 是 JS 预设好的一种对象类型，函数名即指向这个对象的一个指针，所以可以把函数名当做其它函数的参数。 JS的函数是没有重载的。 函数对象默认定义好、主要的属性和方法有如下：  arguments 和 callee this call()、apply() 和 bind() prototype">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-08T06:44:10.143Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS对象：函数-读书笔记">
+<meta name="twitter:description" content="Function 概述函数Function 是 JS 预设好的一种对象类型，函数名即指向这个对象的一个指针，所以可以把函数名当做其它函数的参数。 JS的函数是没有重载的。 函数对象默认定义好、主要的属性和方法有如下：  arguments 和 callee this call()、apply() 和 bind() prototype">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '0.0.4',
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    since: '11/17/2016 18:30',
+    onlineAPI: '',
+    site: {
+      title: 'Alucard',
+      subtitle: 'Earth, human, 90s',
+      author: 'Alucard'
+    },
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    },
+    leancloud: {
+      enable: false,
+      appID: '',
+      appKey: ''
+    },
+    favicon: {
+      visibilitychange: true,
+      narmal: '/images/favicon.ico',
+      hidden: '/images/failure.ico',
+      show_text: '原来你也在这里 |',
+      hide_text: '很久没有听闻你的消息'
+    }
+  };
+</script>
+
+
+
+  
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/02/JS对象：函数-读书笔记/"/>
+
+
+
+
+
+  <title>JS对象：函数-读书笔记 | Alucard</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48084758-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<div class="site-brand-wrapper" style="background-image: url(/images/header-alucard.jpg)">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <div class="brand">
+        <span class="logo-line-before"><i></i></span>
+        <div class="site-title">
+          <div id="animate" class="animate">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+          <div id="guide" class="guide">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+        </div>
+        <span class="logo-line-after"><i></i></span>
+      </div>
+    </div>
+      
+        <p class="site-subtitle">Earth, human, 90s</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+<div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-master-avatar" itemprop="image" src="/images/alucard.JPG" alt="Alucard" />
+    <h2 class="site-master-description" itemprop="description">
+        <记录一些生活琐碎>
+    </h2>
+</div>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">06月</div>
+			<div class="post-day">02</div>
+	</div>
+  
+  <div class="post-badge">
+    
+      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/JavaScript-Note/" itemprop="url" rel="index">
+          <span itemprop="name">JavaScript Note</span>
+        </a>
+      </span>
+    
+  </div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/02/JS对象：函数-读书笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alucard">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/alucard.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alucard">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JS对象：函数-读书笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-02T21:15:35+08:00">
+                2016-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">•</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript-Note/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript Note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="Function-概述"><a href="#Function-概述" class="headerlink" title="Function 概述"></a>Function 概述</h4><p>函数Function 是 JS 预设好的一种对象类型，函数名即指向这个对象的一个指针，所以可以把函数名当做其它函数的参数。</p>
+<p>JS的函数是没有重载的。</p>
+<p>函数对象默认定义好、主要的属性和方法有如下：</p>
+<ul>
+<li>arguments 和 callee</li>
+<li>this</li>
+<li>call()、apply() 和 bind()</li>
+<li>prototype</li>
+</ul>
+<a id="more"></a>
+<h4 id="函数没有重载"><a href="#函数没有重载" class="headerlink" title="函数没有重载"></a>函数没有重载</h4><p>所谓重载，即已经定义了一个函数，又定义了一遍这个函数，两次定义时函数的名称不变，但是参数有所改变。这样使用时，可以根据参数的不同执行不同决定执行第一个定义还是第二个。</p>
+<p>没有重载的理由：如前所述，函数名是一个指向对象的指针，函数参数是对象内部的内容，存储在 arguments 属性中。但定义两次，函数名指针会先指向第一个定义的对象，然后指针又重新指向后一个定义的函数对象，最终指向最后定义的那个函数对象。</p>
+<p>不需要重载的理由：JS 函数定义时，参数会被存储在 arguments 属性中，这个 arguments 属性可以会在实际使用时动态接受参数，即函数在实际使用时的参数个数可以定义时的参数个数不一致。这就让函数运行时实际接受参数并不依赖于声明时的，所以不需要重载。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">arg1,arg2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">arguments</span>[<span class="number">0</span>] &amp;&amp; <span class="built_in">arguments</span>[<span class="number">1</span>])&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"参数："</span>+<span class="built_in">arguments</span>[<span class="number">0</span>]+<span class="built_in">arguments</span>[<span class="number">1</span>]);</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">arg1,arg2,arg3</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">arguments</span>[<span class="number">0</span>] &amp;&amp; <span class="built_in">arguments</span>[<span class="number">1</span>] &amp;&amp; <span class="built_in">arguments</span>[<span class="number">2</span>])&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"参数："</span>+<span class="built_in">arguments</span>[<span class="number">0</span>]+<span class="built_in">arguments</span>[<span class="number">1</span>]+<span class="built_in">arguments</span>[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">foo(<span class="string">"one"</span>,<span class="string">"two"</span>,<span class="string">"three"</span>,<span class="string">"four"</span>);    <span class="comment">// "参数：onetwothree",foo 指针指向第二个定义的对象内存，并且实际运行时参数的个数可以和定义时不一致</span></span><br></pre></td></tr></table></figure>
+<h4 id="arguments-和-callee-属性"><a href="#arguments-和-callee-属性" class="headerlink" title="arguments 和 callee 属性"></a>arguments 和 callee 属性</h4><p>arguments 是一个类数组对象，内部存储着函数接受的对象，可以像数组一样 arguments[index]的读取参数。但 arguments 还包含一个 callee属性，这个属性是一个指向函数本身的指针，是和函数名指针一样指向同一块内存的指针。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function foo(arg1,arg2)&#123;</span><br><span class="line">    if(arguments[0] &amp;&amp; arguments[1])&#123;</span><br><span class="line">        console.log(&quot;两个参数：&quot;+arguments[0]+arguments[1]);</span><br><span class="line">        arguments.callee(&quot;一个参数&quot;);</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">         console.log(arguments[0]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">foo(&quot;one&quot;,&quot;two&quot;);   // &quot;两个参数：onetwo&quot;, &quot;一个参数&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="this-属性"><a href="#this-属性" class="headerlink" title="this 属性"></a>this 属性</h4><p>this是指向调用这个函数的对象(其实就是一个函数执行的环境对象)，如果是全局环境，则调用对象是 window。但是在构造函数里，this 指向的是函数的实例。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> windowProperty = <span class="string">"window property"</span>;</span><br><span class="line"><span class="keyword">var</span> name = <span class="string">"Bio"</span>;</span><br><span class="line"></span><br><span class="line">构造函数</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createFoo</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;   <span class="comment">// 这个 this 指向 createFoo 实例化后的实例对象</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.windowProperty);</span><br><span class="line">&#125;;</span><br><span class="line">foo();  <span class="comment">// "window property"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">    name: <span class="string">"Alucard"</span>,</span><br><span class="line">    isFun: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">myObj.isFun();  <span class="comment">// "Alucard"</span></span><br></pre></td></tr></table></figure>
+<h4 id="call-、apply-和-bind-方法"><a href="#call-、apply-和-bind-方法" class="headerlink" title="call()、apply() 和 bind()方法"></a>call()、apply() 和 bind()方法</h4><p>这三者主要的功能是改变函数的 this 指向，即设置定义好的函数在什么环境中执行。</p>
+<p>call()和 apply()功能完全一样，主要是改变函数的 this,仅仅第二个参数不同。bind()除了改变 this,还会创建函数的实例。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.name = <span class="string">"window-name"</span>;</span><br><span class="line"><span class="keyword">var</span> myObj = &#123;<span class="attr">name</span>: <span class="string">"myObj-name"</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// call() 和 apply(): '要调用的函数名.call(this,参数)',都是传入两个参数，第一个参数是被调用函数中 this 被改变成的 this，第二个是被调用函数的参数，call()是逐个写出，apply()是以(类)数组传入</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">foo1</span>(<span class="params">ar1,arg2</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arg1+arg2+<span class="keyword">this</span>.name+<span class="string">""</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">foo2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    foo1.call(<span class="keyword">this</span>,<span class="string">"this"</span>,<span class="string">"是 window:"</span>);</span><br><span class="line">    foo1.apply(myObj,[<span class="string">"this"</span>,<span class="string">"是 myObj:"</span>]);</span><br><span class="line"> &#125;</span><br><span class="line"> foo2();    <span class="comment">// "this是 window:window-name","this是 myObj:myObj-name"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//bind()</span></span><br><span class="line"><span class="keyword">var</span> fooInstance = foo1.bind(myObj);</span><br><span class="line">fooInstance(<span class="string">"使用"</span>,<span class="string">"bind："</span>);  <span class="comment">// "使用bind:myObj-name\"</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/02/JS变量的作用域和垃圾回收机制-读书笔记/" rel="next" title="JS变量的作用域和垃圾回收机制-读书笔记">
+                <i class="fa fa-chevron-left"></i> JS变量的作用域和垃圾回收机制-读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/03/JS对象：基本包装类型-读书笔记/" rel="prev" title="JS对象：基本包装类型-读书笔记">
+                JS对象：基本包装类型-读书笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/card.jpg"
+                alt="Alucard" />
+            
+              <p class="site-author-name" itemprop="name">Alucard</p>
+              <p class="site-description motion-element" itemprop="description">此人文字皆是胡言乱语</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-zero.png" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Function-概述"><span class="nav-number">1.</span> <span class="nav-text">Function 概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数没有重载"><span class="nav-number">2.</span> <span class="nav-text">函数没有重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arguments-和-callee-属性"><span class="nav-number">3.</span> <span class="nav-text">arguments 和 callee 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this-属性"><span class="nav-number">4.</span> <span class="nav-text">this 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#call-、apply-和-bind-方法"><span class="nav-number">5.</span> <span class="nav-text">call()、apply() 和 bind()方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<p>
+    今天是地球历<span> 2018年11月08日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+</p>
+<p><记录一些生活的琐碎></p>
+
+<p>© <span itemprop="copyrightYear">2018</span> Alucard.
+    由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
+    Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a>
+</p>
+<p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">Alucard</span>. </p>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    <canvas id="evanyou2"></canvas>
+    <!-- <canvas id="live2d" width="150" height="400" class="live2d"></canvas> -->
+
+    
+
+  </div>
+
+  <script type="text/javascript" src="/js/sagiri.min.js?v=0.0.4"></script>
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=0.0.4"></script>
+
+
+</body>
+</html>
