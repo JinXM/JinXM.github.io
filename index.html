@@ -309,6 +309,182 @@
   
   <div class="post-date">
 			<div class="post-month">11月</div>
+			<div class="post-day">12</div>
+	</div>
+  
+  <div class="post-badge">
+    
+      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Compoter-Science/" itemprop="url" rel="index">
+          <span itemprop="name">Compoter Science</span>
+        </a>
+      </span>
+    
+  </div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/12/HTTPS-皮毛/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alucard">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/alucard.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alucard">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/12/HTTPS-皮毛/" itemprop="url">HTTPS 皮毛</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-12T22:48:12+08:00">
+                2018-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">•</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Compoter-Science/" itemprop="url" rel="index">
+                    <span itemprop="name">Compoter Science</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h2><h3 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h3><p>战争时期，我方需要用书信/电报进行传输信息，但又怕被中途被敌军截获，那怎么办呢？于是大家想到了一个办法，把文本内容通过一定规则变换后再传输，那样就算被对方截获，对方也读不懂。如果安全送到我方人员手里，因为事先沟通好了规则，所以是能读出信息的。</p>
+<p>这就是一个简单的<code>加密</code>，而加密的目的是：<code>保证信息传输的安全</code>。</p>
+<h3 id="加密和解密"><a href="#加密和解密" class="headerlink" title="加密和解密"></a>加密和解密</h3><p>抽象为模型。</p>
+<p>加密是 <code>cyt = E(msg, k1)</code>，<code>msg</code>是需要被加密的原文，<code>k1</code>是加密参数（密钥），<code>E()</code>是加密的算法，<code>cyt</code> 是加密的结果（密文）。</p>
+<p>解密是 <code>msg = D(cyt, k2)</code>，<code>D()</code>是解密的算法，<code>k2</code>是解密的参数（密钥）。</p>
+<h4 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h4><p>比如我方情报加密，使用的是给每个字母向后挪3位，尾字母向首字母挪。a-&gt;d、b-&gt;e…x-&gt;a、y-&gt;b、z-&gt;c。那<code>加密算法E()</code>就是<code>字母向后挪k1位</code>，<code>3</code>就是加密<code>密钥k1</code>。</p>
+<p>但是如果敌方也知道了我们的加密算法和密钥，并截获了一份情报。那么他们就可以通过把情报内容向前挪3位获取到原文。这时候<code>解密算法D()</code>就是<code>字母向前挪k2位</code>，<code>3</code>就是解密<code>密钥k2</code>。</p>
+<p>这种可以通过加密算法，可以由<code>k1</code>反向推算出解密密钥<code>k2</code>的加密方式叫做<code>对称加密</code>。</p>
+<h4 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h4><p>我军之前因为使用对称加密，被内奸透露了加密方法和<code>k1</code>，导致情报泄露伤亡惨重。</p>
+<p>于是决定改进算法，即使对方知道了<code>cyt = E(msg, k1)</code>的算法和<code>k1</code>，也不能推出解密密钥<code>k2</code>。这样发信人使用<code>E(msg, k1)</code>，接信人使用只有自己知道的<code>k2</code>。有多个部队知道加密算法和<code>k1</code>，给司令写信，即使泄露中间被截取，敌方也不能获取到具体信息。因为解密的解密密钥<code>k2</code>只有司令一个人知道，并且无法通过<code>k1</code>推算出来。但是司令通过<code>k2</code>去加密的信息，却能被<code>k1</code>解密出来，保证了司令的命令能传达到各个部队。</p>
+<p>这种通过加密密钥<code>k1</code>加密，只能通过解密密钥<code>k2</code>解密，由<code>k2</code>加密的内容，却能被<code>k1</code>解密，并且不能由 <code>k1</code>推算出<code>k2</code>的算法叫做<code>非对称加密</code>。</p>
+<h4 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h4><ul>
+<li>对称加密要生效，k1=k2必须严格保密</li>
+<li>非对称加密要生效，写信方的k1可以不保密，但是收信方的k2必须保密</li>
+<li>对于非对称加密，A 持加密密钥k1，B 持解密密钥k2<ul>
+<li>A加密一段 msg给 B，B 能解开的话。则可推断出，A 一定是密钥k1的拥有者</li>
+<li>B 用公钥加密一段msg2给 A，则其他人都看不到原文，能解密的一定是 A。</li>
+</ul>
+</li>
+</ul>
+
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/12/HTTPS-皮毛/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">11月</div>
 			<div class="post-day">05</div>
 	</div>
   
@@ -1760,174 +1936,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-date">
-			<div class="post-month">08月</div>
-			<div class="post-day">30</div>
-	</div>
-  
-  <div class="post-badge">
-    
-      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Compoter-Science/" itemprop="url" rel="index">
-          <span itemprop="name">Compoter Science</span>
-        </a>
-      </span>
-    
-  </div>
-  
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/30/程序员装逼-▼へ▼メ-指南/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alucard">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/alucard.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alucard">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/30/程序员装逼-▼へ▼メ-指南/" itemprop="url">程序员装逼(▼へ▼メ)指南</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-30T17:21:46+08:00">
-                2018-08-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">•</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Compoter-Science/" itemprop="url" rel="index">
-                    <span itemprop="name">Compoter Science</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>其实程序员，是实际应用中和科研结合特别紧密的一个行业。</p>
-<p>所以，程序员的外(zhuang)化(bi)工程就和知识管理(PKM)模型特别像。</p>
-<p>PKM = Personal Knowledge Management</p>
-<p>PKM 有三个步骤：</p>
-<ol>
-<li>知识的获取；</li>
-<li>知识的内建；</li>
-<li>知识的输出；</li>
-</ol>
-<p>专业知识和软实力知识的学习，是后期内建和输出的基础。学习的过程包括知识、感受的获取，然后理解，初步建立记忆体系。</p>
-<p>内建，在初期的理解消化之后，多数是在实践中的进行应用、提炼总结获取的高价值知识、观念。</p>
-<p>知识的输出形式则是多样的，日常工作技能的输出、写书写博当网红、国内新技术的布道…只要你前两步做的足够强大，输出的形式只有你想不到的。</p>
-<p>这里以一个毕业工作2-3年，成长速度普通的小码农作为标本，探讨一些有效可行的外(zhuang)化(bi)手法。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/30/程序员装逼-▼へ▼メ-指南/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1983,7 +1991,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2037,7 +2045,7 @@
       <div class="footer-inner">
         
 <p>
-    今天是地球历<span> 2018年11月10日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+    今天是地球历<span> 2018年11月12日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
 </p>
 <p><记录一些生活的琐碎></p>
 
