@@ -122,7 +122,7 @@
 <meta property="og:description" content="加密引子战争时期，我方需要用书信/电报进行传输信息，但又怕被中途被敌军截获，那怎么办呢？于是大家想到了一个办法，把文本内容通过一定规则变换后再传输，那样就算被对方截获，对方也读不懂。如果安全送到我方人员手里，因为事先沟通好了规则，所以是能读出信息的。 这就是一个简单的加密，而加密的目的是：保证信息传输的安全。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/2018/11-12/ssl_and_tls.jpg">
-<meta property="og:updated_time" content="2018-11-12T12:52:24.136Z">
+<meta property="og:updated_time" content="2018-11-13T07:31:32.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTPS 皮毛">
 <meta name="twitter:description" content="加密引子战争时期，我方需要用书信/电报进行传输信息，但又怕被中途被敌军截获，那怎么办呢？于是大家想到了一个办法，把文本内容通过一定规则变换后再传输，那样就算被对方截获，对方也读不懂。如果安全送到我方人员手里，因为事先沟通好了规则，所以是能读出信息的。 这就是一个简单的加密，而加密的目的是：保证信息传输的安全。">
@@ -444,6 +444,54 @@
 <p>客户端通过DNS 解析，获取访问域名的ip 地址，与server 建立连接通信。但是如果DNS 解析结果被串改了到了伪造server，即使有了加密的传输，因为一开始建立连接的对象是假的，所以你的私密信息比如密码什么的，会是有很大风险被窃取。</p>
 <p>因此上，就需要一个证明<code>该身份</code>是<code>该身份</code>的机制，这就是<code>证书</code>。</p>
 <h3 id="Certificate-Authority"><a href="#Certificate-Authority" class="headerlink" title="Certificate Authority"></a>Certificate Authority</h3><p>CA（Certificate Authority），数字证书认证机构，即颁发证书的组织。</p>
+<table>
+<thead>
+<tr>
+<th>数字证书</th>
+<th>DV SSL</th>
+<th>OV SSL</th>
+<th>EV SSL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>介绍</td>
+<td>Domain Validated (DV) SSL，域名认证证书</td>
+<td>Organization Validated (OV) SSL，组织/企业认证证书</td>
+<td>Extended Validation (EV) SSL，增强型认证证书 </td>
+</tr>
+<tr>
+<td>用户建议</td>
+<td>个人</td>
+<td>组织、企业</td>
+<td>大型企业、金融机构</td>
+</tr>
+<tr>
+<td>公信等级</td>
+<td>一般</td>
+<td>高</td>
+<td>强</td>
+</tr>
+<tr>
+<td>认证强度</td>
+<td>网站真实性</td>
+<td>组织及企业真实性</td>
+<td>严格认证</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>一般</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr>
+<td>可信度</td>
+<td>常规</td>
+<td>中</td>
+<td>高（地址栏绿色）</td>
+</tr>
+</tbody>
+</table>
 <p>比如你大学毕业，学校给你发毕业证书。证书证明了：你读过大学，并顺利毕业。但是也有的人，通过找一些黑组织，买了假的毕业证书。</p>
 <p>那么，证书证明了你的身份，又怎么证明这个证书是真的证书呢？</p>
 <p>证书是一个树状结构，顶层是<code>根 CA 认证中心</code>，以后每一层的认证中心/证书，都是由上一层签发。</p>
@@ -464,8 +512,84 @@
 <li>证明<code>证书内容的加密文</code>能被上层的<code>公钥</code>解开，解开后内容为msg1，表示msg1和公钥都是权威认证可靠的。</li>
 <li>msg1和证书里<code>明文的证书内容</code>相同，那么证明<code>明文的证书内容</code>是可信的。</li>
 </ol>
+<h4 id="推论-1"><a href="#推论-1" class="headerlink" title="推论"></a>推论</h4><ul>
+<li>只要根 CA 可信，往后每个由上层颁发过证书的机构/证书拥有者，其被证书证明的身份都可信</li>
+</ul>
 <h2 id="SSL-TLS"><a href="#SSL-TLS" class="headerlink" title="SSL/TLS"></a>SSL/TLS</h2><p>SSL/TLS 是加密传输协议。HTTPS 传输就是依赖于 SSL/TLS 协议完成信息安全的传输。</p>
 <p><a href="/image/2018/11-12/ssl_and_tls.jpg" data-fancybox="images" data-caption="ssl_and_tls"><br>    <img class="full-story-photos center-img" src="/image/2018/11-12/ssl_and_tls.jpg" alt="ssl_and_tls"><br></a></p>
+<p><strong>Phase 1</strong></p>
+<ol>
+<li>Client: <ul>
+<li>generate random number: RNc</li>
+<li>client_hello: 向 Server 发消息，告诉Server自己支持的SSL版本、加密算法等，和随机数 RNc</li>
+</ul>
+</li>
+<li>Server:<ul>
+<li>接收客户端client_hello 消息，并generate random number RNs</li>
+<li>server_hello: 向Client 回应报文，包含服务端支持的 SSL 版本和加密算法等，和第二个随机数 RNs</li>
+</ul>
+</li>
+<li>Client<ul>
+<li>接收服务端server_hello 消息</li>
+</ul>
+</li>
+<li>此时Client 和 Server 都:<ul>
+<li>都拥有2个随机数 <code>RNc</code> 和 <code>RNs</code></li>
+<li>都知道彼此支持哪些SSL 版本和加密协议</li>
+</ul>
+</li>
+</ol>
+<p><strong>Phase 2</strong></p>
+<ol>
+<li>Server:<ul>
+<li>向Client 发送certificate 消息，消息内容主要是一个包含 Server 公钥的证书</li>
+<li>demand client certificate：发消息给client要求client 传证书证明自己（可选）</li>
+</ul>
+</li>
+<li>Client:<ul>
+<li>check server certificate: 使用上文的证书验证方法，验证证书的正确性</li>
+</ul>
+</li>
+<li>此时:<ul>
+<li>Server 向 Client证明了自己的身份（没有被伪造）</li>
+<li>Client 知道了 Server 的<code>公钥</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Phase 3</strong></p>
+<ol>
+<li>Client:<ul>
+<li>client certificate: 给 Server 发证书，证书内容是一个包含 Client 公钥的证书（可选）</li>
+</ul>
+</li>
+<li>Server:<ul>
+<li>check client certificate: 验证Client证书的正确性，确认Client 身份</li>
+</ul>
+</li>
+<li>Client:<ul>
+<li>hash over all previous messages(signed with key): 使用自己私钥加密之前的通讯信息（为了证明Phase1、Phase2通话的是自己）</li>
+</ul>
+</li>
+<li>Server:<ul>
+<li>check hash and signature: 校验数字签名，确认 RNc、RNs以及 Client 的公钥的有效性</li>
+</ul>
+</li>
+<li>Client:<ul>
+<li>generate random number pre-master-secret：生成第三个随机数PMS</li>
+<li>向Server发送随机数 PMS(被 Server的公钥加密)</li>
+</ul>
+</li>
+<li>此时Client 和 Server:<ul>
+<li>都有三把钥匙：<code>自己的私钥</code>、<code>自己的公钥</code>、<code>对方的公钥</code></li>
+<li>都有3个随机数：<code>RNc</code>、<code>RNs</code>、<code>PMS</code></li>
+<li>都使用3个随机数和约定好的算法(Phase 1中沟通过)生成本次通话的<code>会话密钥MS</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Phase 4</strong><br>前3个步骤已经完成了 SSL 加密通讯的建立，Phase 4就是加密通讯的过程：</p>
+<ul>
+<li>都使用<code>会话密钥MS</code>进行加密通讯，属于<code>对称加密</code></li>
+</ul>
 
       
     </div>
@@ -620,7 +744,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#加密"><span class="nav-number">1.</span> <span class="nav-text">加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引子"><span class="nav-number">1.1.</span> <span class="nav-text">引子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加密和解密"><span class="nav-number">1.2.</span> <span class="nav-text">加密和解密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对称加密"><span class="nav-number">1.2.1.</span> <span class="nav-text">对称加密</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非对称加密"><span class="nav-number">1.2.2.</span> <span class="nav-text">非对称加密</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推论"><span class="nav-number">1.2.3.</span> <span class="nav-text">推论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#认证"><span class="nav-number">2.</span> <span class="nav-text">认证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#另一个引子"><span class="nav-number">2.1.</span> <span class="nav-text">另一个引子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Certificate-Authority"><span class="nav-number">2.2.</span> <span class="nav-text">Certificate Authority</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证书签名"><span class="nav-number">2.3.</span> <span class="nav-text">证书签名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-TLS"><span class="nav-number">3.</span> <span class="nav-text">SSL/TLS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#加密"><span class="nav-number">1.</span> <span class="nav-text">加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引子"><span class="nav-number">1.1.</span> <span class="nav-text">引子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加密和解密"><span class="nav-number">1.2.</span> <span class="nav-text">加密和解密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对称加密"><span class="nav-number">1.2.1.</span> <span class="nav-text">对称加密</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#非对称加密"><span class="nav-number">1.2.2.</span> <span class="nav-text">非对称加密</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推论"><span class="nav-number">1.2.3.</span> <span class="nav-text">推论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#认证"><span class="nav-number">2.</span> <span class="nav-text">认证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#另一个引子"><span class="nav-number">2.1.</span> <span class="nav-text">另一个引子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Certificate-Authority"><span class="nav-number">2.2.</span> <span class="nav-text">Certificate Authority</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证书签名"><span class="nav-number">2.3.</span> <span class="nav-text">证书签名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#推论-1"><span class="nav-number">2.3.1.</span> <span class="nav-text">推论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-TLS"><span class="nav-number">3.</span> <span class="nav-text">SSL/TLS</span></a></li></ol></div>
             
 
           </div>
@@ -642,7 +766,7 @@
       <div class="footer-inner">
         
 <p>
-    今天是地球历<span> 2018年11月12日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+    今天是地球历<span> 2018年11月13日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
 </p>
 <p><记录一些生活的琐碎></p>
 
