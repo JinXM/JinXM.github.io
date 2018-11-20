@@ -113,18 +113,20 @@
 
 
 
-<meta name="description" content="问题描述 有一个由字符串组成的数组，需要对其去重。">
+<meta name="description" content="因为这张图，我决定去温习本科的数学，并对觉得高使用的部分做笔记记录。 为什么？ 那你学习那些高技巧的数学干嘛，肯定是为了让你成为一个富有创造/高解决问题能力的great programmer啦！">
 <meta name="keywords" content="blog, site, alucard">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS字符串数组去重-思考题">
-<meta property="og:url" content="http://yoursite.com/2016/06/17/JS字符串数组去重-思考题/index.html">
+<meta property="og:title" content="基础数学00">
+<meta property="og:url" content="http://yoursite.com/2017/11/19/基础数学00/index.html">
 <meta property="og:site_name" content="Alucard">
-<meta property="og:description" content="问题描述 有一个由字符串组成的数组，需要对其去重。">
+<meta property="og:description" content="因为这张图，我决定去温习本科的数学，并对觉得高使用的部分做笔记记录。 为什么？ 那你学习那些高技巧的数学干嘛，肯定是为了让你成为一个富有创造/高解决问题能力的great programmer啦！">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T06:44:02.527Z">
+<meta property="og:image" content="http://yoursite.com/image/math/math.png">
+<meta property="og:updated_time" content="2018-11-20T06:26:30.562Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS字符串数组去重-思考题">
-<meta name="twitter:description" content="问题描述 有一个由字符串组成的数组，需要对其去重。">
+<meta name="twitter:title" content="基础数学00">
+<meta name="twitter:description" content="因为这张图，我决定去温习本科的数学，并对觉得高使用的部分做笔记记录。 为什么？ 那你学习那些高技巧的数学干嘛，肯定是为了让你成为一个富有创造/高解决问题能力的great programmer啦！">
+<meta name="twitter:image" content="http://yoursite.com/image/math/math.png">
 
 
 
@@ -179,13 +181,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/17/JS字符串数组去重-思考题/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/19/基础数学00/"/>
 
 
 
 
 
-  <title>JS字符串数组去重-思考题 | Alucard</title>
+  <title>基础数学00 | Alucard</title>
   
 
 
@@ -311,15 +313,15 @@
   
   
   <div class="post-date">
-			<div class="post-month">06月</div>
-			<div class="post-day">17</div>
+			<div class="post-month">11月</div>
+			<div class="post-day">19</div>
 	</div>
   
   <div class="post-badge">
     
       <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/JavaScript-Note/" itemprop="url" rel="index">
-          <span itemprop="name">JavaScript Note</span>
+        <a href="/categories/Math/" itemprop="url" rel="index">
+          <span itemprop="name">Math</span>
         </a>
       </span>
     
@@ -327,7 +329,7 @@
   
 
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/17/JS字符串数组去重-思考题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/19/基础数学00/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alucard">
@@ -344,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JS字符串数组去重-思考题</h1>
+          <h1 class="post-title" itemprop="name headline">基础数学00</h1>
         
 
         <div class="post-meta">
@@ -356,8 +358,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-17T21:18:11+08:00">
-                2016-06-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-19T23:38:30+08:00">
+                2017-11-19
               </time>
             
 
@@ -379,8 +381,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript-Note/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript Note</span>
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
                   </a>
                 </span>
 
@@ -416,14 +418,12 @@
       
 
       
-        <p><strong>问题描述</strong></p>
-<p>有一个由字符串组成的数组，需要对其去重。</p>
+        <p><a href="/image/math/math.png" data-fancybox="images" data-caption="math"><br>    <img class="full-story-photos center-img" src="/image/math/math.png" alt="math"><br></a></p>
+<p>因为这张图，我决定去温习本科的数学，并对觉得高使用的部分做笔记记录。</p>
+<p>为什么？</p>
+<p>那你学习那些高技巧的数学干嘛，肯定是为了让你成为一个富有创造/高解决问题能力的great programmer啦！</p>
 <a id="more"></a>
-<p><strong>解决思路</strong></p>
-<p>常规的方法就不说了，这里主要介绍一个利用 JS对象下名称一样的 key只能有一个 的特性去重。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 思路</span></span><br><span class="line"><span class="keyword">var</span> myObj = &#123;&#125;;</span><br><span class="line">myObj.a = <span class="string">"first"</span>;</span><br><span class="line">myObj.a = <span class="string">"second"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(myObj.a);   <span class="comment">// "second"</span></span><br></pre></td></tr></table></figure>
-<p>示例代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"one"</span>,<span class="string">"two"</span>,<span class="string">"two"</span>,<span class="string">"six"</span>,<span class="string">"four"</span>,<span class="string">"one"</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clear</span>(<span class="params">myArr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> myObj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">var</span> newArr = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;myArr.length;i++)&#123;</span><br><span class="line">        myObj[<span class="string">""</span>+myArr[i]] = myArr[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(myObj);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> item <span class="keyword">in</span> myObj)&#123;</span><br><span class="line">        <span class="keyword">if</span>(myObj.hasOwnProperty(item))&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(item);</span><br><span class="line">            newArr.push(item)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> newArr;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> resultArr = clear(arr);</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -446,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/08/JS匿名函数和闭包-读书笔记/" rel="next" title="JS匿名函数和闭包-读书笔记">
-                <i class="fa fa-chevron-left"></i> JS匿名函数和闭包-读书笔记
+              <a href="/2016/12/27/我的追球2016/" rel="next" title="我的追球 ♥ 至2016">
+                <i class="fa fa-chevron-left"></i> 我的追球 ♥ 至2016
               </a>
             
           </div>
@@ -456,8 +456,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/22/JS事件/" rel="prev" title="JS事件">
-                JS事件 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/07/人类真的好烂漫/" rel="prev" title="人类真的好烂漫">
+                人类真的好烂漫 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
