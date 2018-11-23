@@ -734,15 +734,8 @@
       
         
           <p><a href="/image/2018/11-05/sort.png" data-fancybox="images" data-caption="sort"><br>    <img class="full-story-photos center-img" src="/image/2018/11-05/sort.png" alt="sort"><br></a></p>
-<h2 id="二分查找T-logn"><a href="#二分查找T-logn" class="headerlink" title="二分查找T(logn)"></a>二分查找T(logn)</h2><p>二分查找可以这么理解。</p>
-<blockquote>
-</blockquote>
-<p>A问你，他写了一个在0-100中间的数字x(=32)，让你猜。<br>你可以问比某个数字大还是小，如何尽快猜对。</p>
-<blockquote>
-</blockquote>
-<p>你：比50大还是小？<br>A：小。<br>你：比25大还是小？<br>A：大。<br>你：比37大还是小？<br>A：小。<br>你：比19大还是小？<br>A：大。<br>你：比28大还是小？<br>A：大。<br>你：比33大还是小？<br>A：小。<br>你：比31大还是小？<br>A：大。<br>你：是32吗？<br>A：是。</p>
-<p>即：每次询问，查询范围缩小为原来的一半<code>length/2</code>，当n 次询问后，查询范围变成1，即可得到结果。也即length 除以n次2，也即2^n=legnth，所以n=log(length)。</p>
-<p>用机器语言描述就是：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JavaScript</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createArr</span>(<span class="params">start, end</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=start; i&lt;=end; i++) &#123;</span><br><span class="line">    arr.push(i);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findX</span>(<span class="params">x, arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> lo = <span class="number">0</span>, hi = arr.length<span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">while</span>(lo&lt;=hi) &#123;</span><br><span class="line">    <span class="keyword">var</span> mid = lo + <span class="built_in">Math</span>.ceil((hi - lo)/<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">if</span>(x &gt; arr[mid]) &#123;lo = mid + <span class="number">1</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(x &lt; arr[mid]) &#123;hi = mid - <span class="number">1</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;<span class="keyword">return</span> mid;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> arr = createArr(<span class="number">0</span>, <span class="number">100</span>), x = <span class="number">32</span>;</span><br><span class="line">  <span class="keyword">var</span> index = findX(x, arr);</span><br><span class="line">  <span class="built_in">console</span>.log(index); <span class="comment">// 32</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main();</span><br></pre></td></tr></table></figure></p>
+<h2 id="关于对算法的认知"><a href="#关于对算法的认知" class="headerlink" title="关于对算法的认知"></a>关于对算法的认知</h2><p>问题→解决，中间使用的是<code>方法</code>。对于计算机领域，这个方法是<code>架构</code>或者<code>算法</code>。<br>算法描述了一套数基础数学的方法来解决计算机程序问题，<br>并使用计算机认可的<code>数据结构</code>来和计算机交互，然后利用计算机的<code>计算</code>+<code>存储</code>能力来解决问题。</p>
+<p>因为利用了计算机的<code>计算</code>+<code>存储</code>两种能力，所以评估一个算法的好坏，除了<code>简洁易懂易写</code>外，最重要的指标就是<code>时间</code>+<code>空间</code>了。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/05/algorithm-game/#more" rel="contents">
@@ -2025,7 +2018,7 @@
       <div class="footer-inner">
         
 <p>
-    今天是地球历<span> 2018年11月20日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+    今天是地球历<span> 2018年11月23日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
 </p>
 <p><记录一些生活的琐碎></p>
 
