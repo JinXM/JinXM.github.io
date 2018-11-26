@@ -5,7 +5,7 @@
 
 <html class="theme-next pisces" lang="">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -201,7 +201,7 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-48084758-7', 'auto');
   ga('send', 'pageview');
-</script>
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
@@ -216,7 +216,7 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><nav class="site-nav">
   
@@ -813,7 +813,7 @@
       <div class="footer-inner">
         
 <p>
-    今天是地球历<span> 2018年11月25日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+    今天是地球历<span> 2018年11月26日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
 </p>
 <p><记录一些生活的琐碎></p>
 
@@ -857,11 +857,33 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
   
-  <script type="text/javascript" src="/js/src/exturl.js?v=0.0.4"></script>
+  <script type="text/javascript" src="/js/src/exturl.js?v=0.0.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 </body>
