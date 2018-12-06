@@ -113,22 +113,22 @@
 
 
 
-<meta name="description" content="进程与线程1.进程的三种基本状态：就绪、阻塞、执行      含挂起的进程状态   具有创建和销毁的进程状态：   PCB 12345671. 系统时通过控制PCB控制进程的，PCB时进程的唯一标志；2. 进程控制块的内容：进程标志符、处理器状态信息、进程调度信息、进程控制信息；3. 进程控制块的组织方式：    3-1:链接方式：把具有同一个状态的PCB用指针链接成一个队列，队列排序通过优先级排">
+<meta name="description" content="一点关于进程/线程和存储器的皮毛。">
 <meta name="keywords" content="blog, site, alucard">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统-皮毛">
 <meta property="og:url" content="http://yoursite.com/2015/09/08/操作系统-皮毛/index.html">
 <meta property="og:site_name" content="Alucard">
-<meta property="og:description" content="进程与线程1.进程的三种基本状态：就绪、阻塞、执行      含挂起的进程状态   具有创建和销毁的进程状态：   PCB 12345671. 系统时通过控制PCB控制进程的，PCB时进程的唯一标志；2. 进程控制块的内容：进程标志符、处理器状态信息、进程调度信息、进程控制信息；3. 进程控制块的组织方式：    3-1:链接方式：把具有同一个状态的PCB用指针链接成一个队列，队列排序通过优先级排">
+<meta property="og:description" content="一点关于进程/线程和存储器的皮毛。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/image/2015/09-08/OperatingSystems01.png">
 <meta property="og:image" content="http://yoursite.com/image/2015/09-08/OperatingSystems02.png">
 <meta property="og:image" content="http://yoursite.com/image/2015/09-08/OperatingSystems03.png">
 <meta property="og:image" content="http://yoursite.com/image/2015/09-08/OperatingSystems04.png">
-<meta property="og:updated_time" content="2018-12-06T09:32:03.129Z">
+<meta property="og:updated_time" content="2018-12-06T09:41:17.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统-皮毛">
-<meta name="twitter:description" content="进程与线程1.进程的三种基本状态：就绪、阻塞、执行      含挂起的进程状态   具有创建和销毁的进程状态：   PCB 12345671. 系统时通过控制PCB控制进程的，PCB时进程的唯一标志；2. 进程控制块的内容：进程标志符、处理器状态信息、进程调度信息、进程控制信息；3. 进程控制块的组织方式：    3-1:链接方式：把具有同一个状态的PCB用指针链接成一个队列，队列排序通过优先级排">
+<meta name="twitter:description" content="一点关于进程/线程和存储器的皮毛。">
 <meta name="twitter:image" content="http://yoursite.com/image/2015/09-08/OperatingSystems01.png">
 
 
@@ -421,7 +421,8 @@
       
 
       
-        <h3 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h3><p>1.进程的三种基本状态：就绪、阻塞、执行<br><a href="/image/2015/09-08/OperatingSystems01.png" data-fancybox="images" data-caption="Operating Systems"><br>    <img class="full-story-photos center-img" src="/image/2015/09-08/OperatingSystems01.png" alt="Operating Systems"><br></a></p>
+        <p>一点关于进程/线程和存储器的皮毛。<br><a id="more"></a></p>
+<h3 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h3><p>1.进程的三种基本状态：就绪、阻塞、执行<br><a href="/image/2015/09-08/OperatingSystems01.png" data-fancybox="images" data-caption="Operating Systems"><br>    <img class="full-story-photos center-img" src="/image/2015/09-08/OperatingSystems01.png" alt="Operating Systems"><br></a></p>
 <ol start="2">
 <li><p>含挂起的进程状态<br><a href="/image/2015/09-08/OperatingSystems02.png" data-fancybox="images" data-caption="Operating Systems"><br> <img class="full-story-photos center-img" src="/image/2015/09-08/OperatingSystems02.png" alt="Operating Systems"><br></a></p>
 </li>
