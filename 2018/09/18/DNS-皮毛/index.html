@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Sigmar One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/social-share.js/1.0.9/css/share.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=0.0.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=0.0.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=0.0.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=0.0.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Alucard,blog">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。 一、什么是 DNS  DNS = Domain Name System   我们平时访问网页，通常都是输入一个网站的域名（eg: https://google.com ），然后游览器会返回相应的网页给我们。 游览器拿到我们输入的域名，然后通过网络，最终找到相应的服务器拿到了我们要的网页，再返回给游览器。 在万维网中，服务">
+<meta name="keywords" content="blog, site, alucard">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DNS 皮毛">
+<meta property="og:url" content="http://yoursite.com/2018/09/18/DNS-皮毛/index.html">
+<meta property="og:site_name" content="Alucard">
+<meta property="og:description" content="这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。 一、什么是 DNS  DNS = Domain Name System   我们平时访问网页，通常都是输入一个网站的域名（eg: https://google.com ），然后游览器会返回相应的网页给我们。 游览器拿到我们输入的域名，然后通过网络，最终找到相应的服务器拿到了我们要的网页，再返回给游览器。 在万维网中，服务">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-26T12:16:11.484Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DNS 皮毛">
+<meta name="twitter:description" content="这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。 一、什么是 DNS  DNS = Domain Name System   我们平时访问网页，通常都是输入一个网站的域名（eg: https://google.com ），然后游览器会返回相应的网页给我们。 游览器拿到我们输入的域名，然后通过网络，最终找到相应的服务器拿到了我们要的网页，再返回给游览器。 在万维网中，服务">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '0.0.4',
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    since: '11/17/2016 18:30',
+    onlineAPI: '',
+    site: {
+      title: 'Alucard',
+      subtitle: 'Earth, human, 90s',
+      author: 'Alucard'
+    },
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    },
+    leancloud: {
+      enable: false,
+      appID: '',
+      appKey: ''
+    },
+    favicon: {
+      visibilitychange: true,
+      narmal: '/images/favicon.ico',
+      hidden: '/images/failure.ico',
+      show_text: '原来你也在这里 |',
+      hide_text: '很久没有听闻你的消息'
+    }
+  };
+</script>
+
+
+
+  
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/18/DNS-皮毛/">
+
+
+
+
+
+  <title>DNS 皮毛 | Alucard</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48084758-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<div class="site-brand-wrapper" style="background-image: url(/images/header-alucard.jpg)">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <div class="brand">
+        <span class="logo-line-before"><i></i></span>
+        <div class="site-title">
+          <div id="animate" class="animate">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+          <div id="guide" class="guide">
+            <span>A</span><span>l</span><span>u</span><span>c</span><span>a</span><span>r</span><span>d</span>
+          </div>
+        </div>
+        <span class="logo-line-after"><i></i></span>
+      </div>
+    </div>
+      
+        <p class="site-subtitle">Earth, human, 90s</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+<div class="site-master" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-master-avatar" itemprop="image" src="/images/alucard.JPG" alt="Alucard">
+    <h2 class="site-master-description" itemprop="description">
+        <记录一些生活琐碎>
+    </记录一些生活琐碎></h2>
+</div>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">09月</div>
+			<div class="post-day">18</div>
+	</div>
+  
+  <div class="post-badge">
+    
+      <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <a href="/categories/NetWork/" itemprop="url" rel="index">
+          <span itemprop="name">NetWork</span>
+        </a>
+      </span>
+    
+  </div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/18/DNS-皮毛/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alucard">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/alucard.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alucard">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">DNS 皮毛</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-18T22:43:04+08:00">
+                2018-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">•</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/NetWork/" itemprop="url" rel="index">
+                    <span itemprop="name">NetWork</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这是一篇介绍 DNS（Domain Name System ） 皮毛的文章。</p>
+<h3 id="一、什么是-DNS"><a href="#一、什么是-DNS" class="headerlink" title="一、什么是 DNS"></a>一、什么是 DNS</h3><blockquote>
+<p> DNS = Domain Name System </p>
+</blockquote>
+<p>我们平时访问网页，通常都是输入一个网站的<code>域名</code>（eg: <a href="https://google.com" target="_blank" rel="noopener">https://google.com</a> ），然后游览器会返回相应的网页给我们。</p>
+<p>游览器拿到我们输入的<code>域名</code>，然后通过<code>网络</code>，最终找到相应的<code>服务器</code>拿到了我们要的网页，再返回给游览器。</p>
+<p>在万维网中，服务器地址通常是用 IP 进行表示的。那么，我们的输入的<code>域名</code>，是怎么变成服务器的 IP 地址呢？</p>
+<p>这个转换的过程，就是DNS 要做的。</p>
+<a id="more"></a>
+<h3 id="二、演变"><a href="#二、演变" class="headerlink" title="二、演变"></a>二、演变</h3><p><strong>雏形</strong></p>
+<p>互联网早期，只有几百台主机。所以当时的 DNS 系统，就是一个简单的 HOSTS.TXT文件，然后坐了两件事：记录和同步。</p>
+<p>HOSTS.TXT 里简单的记录了主机域名和 IP 地址的对应关系。这个文件存放在一台主机上，然后分发到整个网络。当大家通过域名访问的时候，都会HOSTS.TXT获取到域名对应的 IP 地址，然后再去访问实际的主机。</p>
+<p>如果 HOSTS.TXT 内对应关系发生变化了，更新手段也是很原始，通过电子邮件通知网络的备份，让备份重新拉去 HOSTS.TXT 进行更新。</p>
+<p><strong>DNS</strong></p>
+<p>后来互联网主机数量局增，维护和更新策略都发生了变化。<br>现代的 DNS 系统被设计成了自动更新和维护。</p>
+<h3 id="三、DNS服务器结构"><a href="#三、DNS服务器结构" class="headerlink" title="三、DNS服务器结构"></a>三、DNS服务器结构</h3><p>域名的结构是…d.c.b.a 这个形式。比如<a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a> 这个域名，<code>.com</code>是顶级域名，<code>.google.com</code>是<code>.com</code>的下一级子域名，<code>.www.google.com</code>又是<code>.google.com</code>下一层级的子域名，以此类推。</p>
+<p>DNS的域名服务器是一个倒树形，根节点是<code>根域名服务器</code>，下边的第一层树，负责各个顶级域名（eg: .com、.org、.net等等），再下层则是上一层的子域名。</p>
+<h3 id="四、一个简单的DNS请求过程"><a href="#四、一个简单的DNS请求过程" class="headerlink" title="四、一个简单的DNS请求过程"></a>四、一个简单的DNS请求过程</h3><p>比如我需要请求<code>google.com</code>这个页面，在输入url 后，回车。</p>
+<ol>
+<li>首先会查找游览器本身的DNS缓存，存在则直接返回，不存在则进入步骤2；</li>
+<li>去附近的 DNS 缓存服务器查询（是怎么知道这个 DNS 缓存服务器地址呢，这个一般是由运营商配置地址的，存在则直接返回，不存在则进入步骤3；</li>
+<li>去<code>根域名服务器</code>查到，一层一层向下查询（分为递归和迭代），直到查到域名所对应的记录为止，然后返回。</li>
+<li>返回途中，DNS缓存更新，游览器拿到 IP 地址进行访问。</li>
+</ol>
+<h3 id="五、DNS-记录都记写什么"><a href="#五、DNS-记录都记写什么" class="headerlink" title="五、DNS 记录都记写什么"></a>五、DNS 记录都记写什么</h3><p>之前说到从 DNS缓存或者 DNS服务器里查询相应记录，那<code>记录</code>到底都记了些什么呢？</p>
+<p>记录是一条一条的，每条记录分成4个字段：Name、Value、Type、TTL 四个字段。</p>
+<p>TTL（Time To Live），一个时间字段。用于标记这条记录的存活期，但超过存活期，记录就需要被更新。</p>
+<p>Type 是记录的类型，决定了 Name 和 Value 的组成。</p>
+<p>Type的常用类型有：</p>
+<p><code>A记录，Address</code><br>A 记录就是地址记录，Name 是域名，Value 是 IP 地址。因为有的域名或有多个服务器提供服务，所以会存在一个域名对应多个 IP 地址的情况。</p>
+<p>一对多的例子：</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isalucard.com</td>
+<td>192.30.252.154</td>
+</tr>
+<tr>
+<td>isalucard.com</td>
+<td>185.199.109.153</td>
+</tr>
+</tbody>
+</table>
+<p><code>CNAME 记录</code><br>CNAME是别名记录的意思。依然可以存在一个域名对应多个 IP 的 A 记录，那当然也可以为一个 IP 地址设置多个域名。比如我把博客部署在了<code>192.30.252.154</code>这台服务器上，配置了一个默认的域名<code>jinxm.github.io</code>，但是我嫌弃这个域名不好看，于是我就给他增加了一个别名<code>isalucard.com</code>。所以，<code>192.30.252.154</code>这个 IP 就对呀了两个域名。</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jinxm.github.io</td>
+<td>192.30.252.154</td>
+</tr>
+<tr>
+<td>isalucard.com</td>
+<td>jinxm.github.io</td>
+</tr>
+</tbody>
+</table>
+<p><code>NS 记录，Name Server</code></p>
+<p>域名服务器记录，用以记录这个域名由哪个域名服务器来解析，一对多关系。</p>
+<p>eg: com 域名的解析服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// dig ns com 命令查询</span><br><span class="line">com.            156404  IN  NS  c.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  b.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  i.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  e.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  f.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  d.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  m.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  g.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  a.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  l.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  h.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  j.gtld-servers.net.</span><br><span class="line">com.            156404  IN  NS  k.gtld-servers.net.</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/27/我的追球2017/" rel="next" title="我的追球 ♥ 2017">
+                <i class="fa fa-chevron-left"></i> 我的追球 ♥ 2017
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/04/我的追球2018/" rel="prev" title="我的追球 ♥ 2018">
+                我的追球 ♥ 2018 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/card.jpg" alt="Alucard">
+            
+              <p class="site-author-name" itemprop="name">Alucard</p>
+              <p class="site-description motion-element" itemprop="description">此人文字皆是胡言乱语</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-zero.png" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、什么是-DNS"><span class="nav-number">1.</span> <span class="nav-text">一、什么是 DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、演变"><span class="nav-number">2.</span> <span class="nav-text">二、演变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、DNS服务器结构"><span class="nav-number">3.</span> <span class="nav-text">三、DNS服务器结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、一个简单的DNS请求过程"><span class="nav-number">4.</span> <span class="nav-text">四、一个简单的DNS请求过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、DNS-记录都记写什么"><span class="nav-number">5.</span> <span class="nav-text">五、DNS 记录都记写什么</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<p>
+    今天是地球历<span> 2019年01月27日</span>，飞行器<i class="fa fa-fw fa-rocket"></i>已运行<span id="since"></span><span class="my-face"></span>
+</p>
+<p><记录一些生活的琐碎></记录一些生活的琐碎></p>
+
+<p>© <span itemprop="copyrightYear">2019</span> Alucard.
+    由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
+    Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a>
+</p>
+<p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">Alucard</span>. </p>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+
+    <canvas id="evanyou2"></canvas>
+    <!-- <canvas id="live2d" width="150" height="400" class="live2d"></canvas> -->
+
+    
+
+  </div>
+
+  <script type="text/javascript" src="/js/sagiri.min.js?v=0.0.4"></script>
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=0.0.4"></script>
+
+
+</body>
+</html>
